@@ -10,6 +10,12 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@material-ui/core": "^4.12.4",
+    "@mui/material": "^5.10.16",
+    "@react-native-community/cli-platform-android": "^9.3.1",
+    "@react-native-material/core": "^1.3.7",
     "react": "18.1.0",
     "react-native": "0.70.1"
   },
