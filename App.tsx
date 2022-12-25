@@ -1,104 +1,56 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {
-  AppBar,
-  Stack,
   Button,
-  ActivityIndicator,
-  FAB,
-  IconButton,
-  Avatar,
-  Box,
-  HStack,
-} from '@react-native-material/core';
-import {StyleSheet, Text, View} from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {textAlign} from '@mui/system';
+  View,
+  Text,
+  Pressable,
+  StyleSheet,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import DateTimePickerModal from 'react-native-modal-datetime-picker';
+import {Box, HStack} from '@react-native-material/core';
+import MyUpBar_0 from './src/upbar/UpBar_0';
+import MyUpBar_1 from './src/upbar/UpBar_1';
+import MyUpBar_2 from './src/upbar/UpBar_2';
 
-const App = () => (
-  <>
-    <Box w="100%" h={165} style={{backgroundColor: '#FFAF49'}}>
-      <HStack style={styles.boxline} fill center spacing={8}>
-        <Box w="12%" h={2} style={styles.boxlineDone} />
-        <Box w="12%" h={2} style={styles.boxlineDone} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-      </HStack>
-    </Box>
-    <View style={styles.container}>
-      <Stack fill center spacing={10}>
-        {/* <Avatar icon={props => <Icon name="account" {...props} />} size={70} /> */}
-        <Stack fill center spacing={20} style={{width: '100%', height: '100%'}}>
-          <Button
-            style={styles.buttonSelection}
-            title="버튼구현 1"
-            titleStyle={{color: 'black'}}
-            onPress={() => alert('select no.1')}
-          />
-          <Button
-            style={styles.buttonSelection}
-            title="버튼구현 2"
-            titleStyle={{color: 'black'}}
-            onPress={() => alert('select no.2')}
-          />
-          <Button
-            style={styles.buttonSelection}
-            title="버튼구현 3"
-            titleStyle={{color: 'black'}}
-            onPress={() => alert('select no.3')}
-          />
-          <Button
-            style={styles.buttonSelection}
-            title="버튼구현 4"
-            titleStyle={{color: 'black'}}
-            onPress={() => alert('select no.4')}
-          />
+import Q_Home from './src/screens/default/home';
+import Q_Default_1 from './src/screens/default/q_default_1';
+import Q_Default_2 from './src/screens/default/q_default_2';
+import Test from './src/screens/userA/Test';
 
-          <Button
-            style={styles.buttonNext}
-            title="다음 버튼"
-            titleStyle={{color: 'white', fontWeight: 'bold'}}
-            onPress={() => alert('to the next')}
-          />
-        </Stack>
-      </Stack>
-    </View>
-  </>
-);
+const Stack = createNativeStackNavigator();
 
-const styles = {
-  container: {
-    flex: 1,
-    backgroundColor: '#F5F5F5',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  boxline: {
-    marginTop: 80,
-    marginBottom: '10%',
-    marginRight: '3%',
-    marginLeft: '3%',
-  },
-  boxlineDone: {
-    backgroundColor: '#F47100',
-  },
-  boxlineYet: {
-    backgroundColor: '#FFFFFF',
-  },
-  buttonSelection: {
-    backgroundColor: '#F2F2F2',
-    width: 300,
-    height: 40,
-  },
-  buttonNext: {
-    marginTop: 20,
-    marginBottom: 20,
-    backgroundColor: '#F47100',
-    width: 300,
-    height: 40,
-  },
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Home"
+          component={Q_Home}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_Default_1"
+          component={Q_Default_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_Default_2"
+          component={Q_Default_2}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Test"
+          component={Test}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 };
 
 export default App;
