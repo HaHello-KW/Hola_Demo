@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   boxline: {
-    marginTop: 80,
+    marginTop: '15%',
     marginBottom: '10%',
     marginRight: '3%',
     marginLeft: '3%',

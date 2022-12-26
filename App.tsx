@@ -20,7 +20,8 @@ import MyUpBar_2 from './src/upbar/UpBar_2';
 import Q_Home from './src/screens/default/home';
 import Q_Default_1 from './src/screens/default/q_default_1';
 import Q_Default_2 from './src/screens/default/q_default_2';
-import Test from './src/screens/userA/Test';
+import Q_Default_2and3 from './src/screens/default/q_default_2and3';
+import Q_Default_2_1 from './src/screens/default/q_default_2_1';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,7 +47,12 @@ const App = () => {
         <Stack.Screen
           options={{headerShown: false}}
           name="Test"
-          component={Test}
+          component={Q_Default_2and3}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_Default_2_1"
+          component={Q_Default_2_1}
         />
       </Stack.Navigator>
     </NavigationContainer>

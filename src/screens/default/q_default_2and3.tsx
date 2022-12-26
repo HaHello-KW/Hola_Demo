@@ -1,21 +1,21 @@
 import {View, Text, Button} from 'react-native';
 import MyUpBar_1 from '../../upbar/UpBar_1';
 
-import {Styling} from '../../styling/styling';
+import {DefaultStyle} from '../../styling/defaultLayout';
 import NextButton from '../../Buttons/nextButton';
 import SelectionButton from '../../Buttons/selectionButton';
 import {alertClasses} from '@mui/material';
 import GobackButton from '../../Buttons/gobackButton';
 
-const Test = ({navigation, route}) => {
+const Q_Default_2and3 = ({navigation, route}) => {
   return (
     <>
       <MyUpBar_1 />
       <GobackButton onPress={() => navigation.pop()} />
-      <View style={[Styling.container0]}>
-        <Text style={Styling.onelinetxt}>One line question txt</Text>
+      <View style={[DefaultStyle.container0]}>
+        <Text style={DefaultStyle.onelinetxt}>One line question txt</Text>
       </View>
-      <View style={[Styling.container1]}>
+      <View style={[DefaultStyle.container1]}>
         <SelectionButton
           text={'선택지 1번'}
           textColor={'#000000'}
@@ -42,11 +42,11 @@ const Test = ({navigation, route}) => {
           onPress={() => alert('selected 5')}
         />
       </View>
-      <View style={[Styling.container2]}>
-        <NextButton onPress={() => null} />
+      <View style={[DefaultStyle.container2]}>
+        <NextButton onPress={() => navigation.navigate('Q_Default_2_1')} />
       </View>
     </>
   );
 };
 
-export default Test;
+export default Q_Default_2and3;

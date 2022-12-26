@@ -12,7 +12,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import MyUpBar_0 from '../../upbar/UpBar_0';
 import NextButton from '../../Buttons/nextButton';
-import {Styling} from '../../styling/styling';
+import {DefaultStyle, Styling} from '../../styling/defaultLayout';
 import GobackButton from '../../Buttons/gobackButton';
 
 const Q_Default_1 = ({navigation, route}) => {
@@ -171,7 +171,7 @@ const Q_Default_1 = ({navigation, route}) => {
         </TouchableOpacity>
       </View>
 
-      <View style={[Styling.container2]}>
+      <View style={[DefaultStyle.container2]}>
         <NextButton
           onPress={() => navigation.navigate('Q_Default_2')}></NextButton>
       </View>
