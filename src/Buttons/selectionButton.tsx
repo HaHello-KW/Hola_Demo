@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     width: 324,
     height: 64,
     borderRadius: 5,
-    marginBottom: '2%',
+    marginBottom: '3%',
 
     //   width: 300,
     //   height: 50,

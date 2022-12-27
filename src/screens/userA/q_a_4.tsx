@@ -1,42 +1,32 @@
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
 import MyUpBar_4 from '../../upbar/UpBar_4';
 
+import {UserStyle} from '../../styling/userLayout';
+
 import NextButton from '../../Buttons/nextButton';
 import SelectionButton from '../../Buttons/selectionButton';
 import GobackButton from '../../Buttons/gobackButton';
+import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/userA.png';
-import {UserStyle} from '../../styling/userLayout';
 import UserImg from '../../Buttons/userImg';
 
-const UserA = ({navigation, route}) => {
+const Q_A_4 = ({navigation, route}) => {
   return (
     <>
       <MyUpBar_4 />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
-      <View style={[UserStyle.container0_1]}>
-        <Text style={[UserStyle.threelinetxt]}>hi hello</Text>
+      <View style={[UserStyle.container0_1]} />
+      <View style={[UserStyle.container1_1]}>
+        <Text>this is 4</Text>
       </View>
-      <View style={[UserStyle.container1_1]}></View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => null}></NextButton>
+        <NextButton onPress={() => navigation.navigate('Q_A_4_1')}></NextButton>
       </View>
       <UserImg img={UserAimg}></UserImg>
     </>
   );
 };
 
-const styles = StyleSheet.create({
-  //   image: {
-  //     position: 'absolute',
-  //     left: 135,
-  //     top: 130,
-  //     width: 120,
-  //     height: 120,
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //   },
-});
-
-export default UserA;
+export default Q_A_4;

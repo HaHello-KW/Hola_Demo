@@ -50,6 +50,7 @@ export const DefaultStyle = StyleSheet.create({
     color: '#000000',
     marginTop: 20,
     textAlign: 'center',
+    lineHeight: 34.75,
   },
   threelinetxt: {
     fontSize: 24,
@@ -57,7 +58,9 @@ export const DefaultStyle = StyleSheet.create({
     color: '#000000',
     marginTop: 20,
     textAlign: 'center',
+    lineHeight: 34.75,
   },
 });
 
 //container 설명 필요!!
+//container flex -> 5 기준, 1 : 4, ...

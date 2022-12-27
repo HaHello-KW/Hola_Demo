@@ -2,8 +2,8 @@ import {View, Text, Button} from 'react-native';
 import MyUpBar_2 from '../../upbar/UpBar_2';
 
 import {DefaultStyle} from '../../styling/defaultLayout';
+
 import NextButton from '../../Buttons/nextButton';
-import {alertClasses} from '@mui/material';
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_H2 from '../../Buttons/2selectionButton_h';
 
@@ -28,7 +28,7 @@ const Q_Default_2_1 = ({navigation, route}) => {
         />
       </View>
       <View style={[DefaultStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('UserA')} />
+        <NextButton onPress={() => navigation.navigate('Q_A_1')} />
       </View>
     </>
   );
