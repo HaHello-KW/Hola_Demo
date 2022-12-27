@@ -4,25 +4,25 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const DefaultStyle = StyleSheet.create({
   container0: {
-    flex: 0.25,
+    flex: 1,
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
     justifyContent: 'center',
   },
   container0_1: {
-    flex: 1,
+    flex: 4,
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
     justifyContent: 'center',
   },
   container1: {
-    flex: 1,
+    flex: 4,
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   container1_1: {
-    flex: 1,
+    flex: 4,
     flexDirection: 'row',
     backgroundColor: '#F5F5F5',
     // marginTop: '10%',
@@ -31,7 +31,7 @@ export const DefaultStyle = StyleSheet.create({
     justifyContent: 'space-evenly',
   },
   container1_2: {
-    flex: 1,
+    flex: 4,
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -40,21 +40,23 @@ export const DefaultStyle = StyleSheet.create({
     position: 'absolute',
     bottom: 0,
     height: 90,
+    width: '100%',
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
-    paddingLeft: '18%',
   },
   onelinetxt: {
     fontSize: 24,
     fontWeight: '400',
     color: '#000000',
     marginTop: 20,
+    textAlign: 'center',
   },
   threelinetxt: {
     fontSize: 24,
     fontWeight: '400',
     color: '#000000',
     marginTop: 20,
+    textAlign: 'center',
   },
 });
 

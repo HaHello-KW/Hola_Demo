@@ -158,7 +158,7 @@ const Q_Default_1 = ({navigation, route}) => {
       {/* <View style={[Styling.container0]}></View> */}
       <View style={DefaultStyle.container0_1}>
         <TouchableOpacity onPress={showDatePicker}>
-          <Text style={styles.text}>나는</Text>
+          <Text style={DefaultStyle.threelinetxt}>나는</Text>
           <TextInput
             pointerEvents="none"
             style={styles.textInput}
