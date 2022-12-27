@@ -14,7 +14,7 @@ export default class NextButton extends Component<Next, any> {
   render() {
     return (
       <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
-        <Text style={styles.title}>다음 선택</Text>
+        <Text style={styles.title}>다음</Text>
       </TouchableOpacity>
     );
   }

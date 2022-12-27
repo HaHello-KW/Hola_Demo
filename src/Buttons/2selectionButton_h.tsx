@@ -33,6 +33,7 @@ const styles = StyleSheet.create({
     width: 171,
     height: 126,
     borderRadius: 12,
+    marginTop: '20%',
 
     //   width: 300,
     //   height: 50,

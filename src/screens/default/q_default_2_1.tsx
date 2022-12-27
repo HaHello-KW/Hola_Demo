@@ -17,18 +17,18 @@ const Q_Default_2_1 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container1_1]}>
         <SelectionButton_H2
-          text={'yes'}
+          text={'ㅇㅇ'}
           textColor={'#000000'}
-          onPress={() => alert('yes')}
+          onPress={() => alert('ㅇㅇ')}
         />
         <SelectionButton_H2
-          text={'no'}
+          text={'ㄴㄴ'}
           textColor={'#000000'}
-          onPress={() => alert('no')}
+          onPress={() => alert('ㄴㄴ')}
         />
       </View>
       <View style={[DefaultStyle.container2]}>
-        <NextButton onPress={() => null} />
+        <NextButton onPress={() => navigation.navigate('UserA')} />
       </View>
     </>
   );

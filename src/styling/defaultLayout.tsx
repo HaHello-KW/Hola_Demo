@@ -9,6 +9,12 @@ export const DefaultStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  container0_1: {
+    flex: 1,
+    backgroundColor: '#F5F5F5',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   container1: {
     flex: 1,
     backgroundColor: '#F5F5F5',
@@ -19,19 +25,24 @@ export const DefaultStyle = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     backgroundColor: '#F5F5F5',
-    marginTop: '10%',
-    marginLeft: '5%',
-    marginRight: '5%',
-    justifyContent: 'space-around',
+    // marginTop: '10%',
+    // marginLeft: '5%',
+    // marginRight: '5%',
+    justifyContent: 'space-evenly',
   },
-  container2: {
-    flex: 0.2,
+  container1_2: {
+    flex: 1,
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
-    // justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
-  container3: {
-    flex: 0.6,
+  container2: {
+    position: 'absolute',
+    bottom: 0,
+    height: 90,
+    backgroundColor: '#F5F5F5',
+    alignItems: 'center',
+    paddingLeft: '18%',
   },
   onelinetxt: {
     fontSize: 24,
@@ -46,3 +57,5 @@ export const DefaultStyle = StyleSheet.create({
     marginTop: 20,
   },
 });
+
+//container 설명 필요!!

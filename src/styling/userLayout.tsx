@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-export const Styling = StyleSheet.create({
+export const UserStyle = StyleSheet.create({
   //   container0: {
   //     flex: 0.25,
   //     backgroundColor: '#F5F5F5',

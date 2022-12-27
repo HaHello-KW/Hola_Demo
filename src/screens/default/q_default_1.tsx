@@ -12,7 +12,7 @@ import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import MyUpBar_0 from '../../upbar/UpBar_0';
 import NextButton from '../../Buttons/nextButton';
-import {DefaultStyle, Styling} from '../../styling/defaultLayout';
+import {DefaultStyle} from '../../styling/defaultLayout';
 import GobackButton from '../../Buttons/gobackButton';
 
 const Q_Default_1 = ({navigation, route}) => {
@@ -81,14 +81,22 @@ const Q_Default_1 = ({navigation, route}) => {
       backgroundColor: '#F5F5F5',
     },
     textInput: {
-      fontSize: 16,
-      color: '#000000',
+      fontSize: 24,
+      fontWeight: '400',
+      color: '#F47100',
       height: 50,
       width: 300,
+      textAlign: 'center',
       //borderColor: '#000000',
       //borderWidth: 1,
       //borderRadius: 12,
       padding: 10,
+    },
+    text: {
+      fontSize: 24,
+      fontWeight: '400',
+      color: '#000000',
+      textAlign: 'center',
     },
     boxline: {
       marginTop: 80,
@@ -148,9 +156,9 @@ const Q_Default_1 = ({navigation, route}) => {
       <MyUpBar_0 />
       <GobackButton onPress={() => navigation.pop()} />
       {/* <View style={[Styling.container0]}></View> */}
-      <View style={styles.container}>
+      <View style={DefaultStyle.container0_1}>
         <TouchableOpacity onPress={showDatePicker}>
-          <Text>나는</Text>
+          <Text style={styles.text}>나는</Text>
           <TextInput
             pointerEvents="none"
             style={styles.textInput}
@@ -160,7 +168,7 @@ const Q_Default_1 = ({navigation, route}) => {
             editable={false}
             value={text}
           />
-          <Text>에 태어났어</Text>
+          <Text style={styles.text}>에 태어났어</Text>
           <DateTimePickerModal
             headerTextIOS={placeholder}
             isVisible={isDatePickerVisible}
@@ -170,7 +178,7 @@ const Q_Default_1 = ({navigation, route}) => {
           />
         </TouchableOpacity>
       </View>
-
+      <View style={[DefaultStyle.container1_2]} />
       <View style={[DefaultStyle.container2]}>
         <NextButton
           onPress={() => navigation.navigate('Q_Default_2')}></NextButton>

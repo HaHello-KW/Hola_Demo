@@ -1,5 +1,5 @@
 import {useLinkProps} from '@react-navigation/native';
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 import {BottomNavigation} from 'react-native-paper';
 
