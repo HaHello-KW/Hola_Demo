@@ -17,7 +17,7 @@ const Q_A_1 = ({navigation, route}) => {
       <MyUpBar_4 />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container0_1]}>
-        <Text style={[UserStyle.threelinetxt]}>나는</Text>
+        <Text style={[UserStyle.threelinetxt]}>나는.</Text>
       </View>
       <View style={[UserStyle.container1_1]}>
         <SelectionButton
