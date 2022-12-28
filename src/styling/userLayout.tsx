@@ -54,11 +54,28 @@ export const UserStyle = StyleSheet.create({
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
   },
+  container3_1: {
+    flex: 1.5,
+    backgroundColor: '#F5F5F5',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  container3_2: {
+    flex: 1.5,
+    backgroundColor: '#f5f5f5',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  container3_3: {
+    flex: 3.2,
+    backgroundColor: '#f5f5f5',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
   onelinetxt: {
     fontSize: 24,
     fontWeight: '400',
     color: '#000000',
-    marginTop: 10,
     textAlign: 'center',
     lineHeight: 34.75,
   },
@@ -76,6 +93,17 @@ export const UserStyle = StyleSheet.create({
     lineHeight: 20,
     width: 300,
     height: 55,
+  },
+  descriptionGray: {
+    marginTop: 8,
+    marginBottom: 8,
+    fontSize: 12,
+    fontWeight: '400',
+    color: '#6F6F6F',
+    lineHeight: 20,
+    backgroundColor: '#E4E4E4',
+    alignSelf: 'center',
+    textAlign: 'center',
   },
 });
 

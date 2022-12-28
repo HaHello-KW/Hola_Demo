@@ -1,5 +1,5 @@
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
-import MyUpBar_4 from '../../upbar/UpBar_4';
+import MyUpBar_6 from '../../upbar/UpBar_6';
 
 import {UserStyle} from '../../styling/userLayout';
 
@@ -14,7 +14,7 @@ import UserImg from '../../Buttons/userImg';
 const Q_A_3 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar_4 />
+      <MyUpBar_6 />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_3]}>

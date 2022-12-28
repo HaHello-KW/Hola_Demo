@@ -163,7 +163,7 @@ const Q_Default_1 = ({navigation, route}) => {
             pointerEvents="none"
             style={styles.textInput}
             placeholder={con_day}
-            placeholderTextColor="#000000"
+            placeholderTextColor="#C1C1C1"
             underlineColorAndroid="transparent"
             editable={false}
             value={text}
