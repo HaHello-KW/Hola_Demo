@@ -18,7 +18,9 @@ const Q_A_Type = ({navigation, route}) => {
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container0_1]}></View>
       <View style={[UserStyle.container1_1]} />
-      <View style={[UserStyle.container2]}></View>
+      <View style={[UserStyle.container2]}>
+        {/* <NextButton onPress={() => navigation.navigate('BTEST')}></NextButton> */}
+      </View>
       <UserImg img={UserAimg}></UserImg>
     </>
   );

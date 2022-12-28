@@ -18,28 +18,28 @@ const Q_A_3 = ({navigation, route}) => {
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_3]}>
-        <Text style={[UserStyle.onelinetxt]}>나는</Text>
+        <Text style={[UserStyle.onelinetxt]}>나는 난자 냉동을</Text>
       </View>
       <View style={[UserStyle.container1_3]}>
         <SelectionButton
-          text={'ㅇㅇ'}
+          text={'이미 해서 보관 중이야'}
           textColor={'#000000'}
-          onPress={() => alert('ㅇㅇ')}
+          onPress={() => alert('1')}
         />
         <SelectionButton
-          text={'AA'}
+          text={'하진 않았지만, 관심 있어'}
           textColor={'#000000'}
-          onPress={() => alert('AA')}
+          onPress={() => alert('2')}
         />
         <SelectionButton
-          text={'ㅇㅇ'}
+          text={'하지 않았고, 별로 관심 없어'}
           textColor={'#000000'}
-          onPress={() => alert('ㅇㅇ')}
+          onPress={() => alert('3')}
         />
         <SelectionButton
-          text={'AA'}
+          text={'잘 모르고 있어'}
           textColor={'#000000'}
-          onPress={() => alert('AA')}
+          onPress={() => alert('4')}
         />
       </View>
       <View style={[UserStyle.container2]}>

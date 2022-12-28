@@ -18,18 +18,18 @@ const Q_A_4_1 = ({navigation, route}) => {
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_2]}>
-        <Text style={[UserStyle.onelinetxt]}>this is for test</Text>
+        <Text style={[UserStyle.onelinetxt]}>나는 생리일이</Text>
       </View>
       <View style={[UserStyle.container1_2]}>
         <SelectionButton
-          text={'4-1'}
+          text={'규칙적이야'}
           textColor={'#000000'}
-          onPress={() => alert('4-1')}
+          onPress={() => alert('regular')}
         />
         <SelectionButton
-          text={'AA'}
+          text={'불규칙적이야'}
           textColor={'#000000'}
-          onPress={() => alert('AA')}
+          onPress={() => alert('irregular')}
         />
         <Text style={[UserStyle.description]}>
           * 불규칙적 : 생리주기가 21일보다 짧아지거나 35일 이상으로 길어지는

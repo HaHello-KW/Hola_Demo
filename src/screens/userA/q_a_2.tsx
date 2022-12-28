@@ -1,5 +1,5 @@
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
-import MyUpBar_4 from '../../upbar/UpBar_4';
+import MyUpBar_5 from '../../upbar/UpBar_5';
 
 import {UserStyle} from '../../styling/userLayout';
 
@@ -14,22 +14,22 @@ import UserImg from '../../Buttons/userImg';
 const Q_A_2 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar_4 />
+      <MyUpBar_5 />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_2]}>
-        <Text style={[UserStyle.onelinetxt]}>this is for test</Text>
+        <Text style={[UserStyle.onelinetxt]}>나는 아이를</Text>
       </View>
       <View style={[UserStyle.container1_2]}>
         <SelectionButton
-          text={'ㅇㅇ'}
+          text={'갖고 싶어'}
           textColor={'#000000'}
-          onPress={() => alert('ㅇㅇ')}
+          onPress={() => alert('want')}
         />
         <SelectionButton
-          text={'AA'}
+          text={'갖고 싶은 생각이 없어'}
           textColor={'#000000'}
-          onPress={() => alert('AA')}
+          onPress={() => alert('do not')}
         />
       </View>
       <View style={[UserStyle.container2]}>

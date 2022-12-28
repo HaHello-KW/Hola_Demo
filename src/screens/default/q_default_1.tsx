@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
-import MyUpBar_0 from '../../upbar/UpBar_0';
+import MyUpBar_1 from '../../upbar/UpBar_1';
 import NextButton from '../../Buttons/nextButton';
 import {DefaultStyle} from '../../styling/defaultLayout';
 import GobackButton from '../../Buttons/gobackButton';
@@ -130,7 +130,7 @@ const Q_Default_1 = ({navigation, route}) => {
   const month = month_.toString();
   const day = date.getDate().toString();
 
-  const con_day = year + ' / ' + month + ' / ' + day;
+  const con_day = year + '년 ' + month + '월 ' + day + '일 ';
 
   const placeholder = '날짜를 입력해주세요';
 
@@ -146,19 +146,19 @@ const Q_Default_1 = ({navigation, route}) => {
   };
 
   const handleConfirm = date => {
-    console.warn('dateFormat: ', date.format('yyyy/MM/dd'));
+    //console.warn('dateFormat: ', date.format('yyyy년 MM월 dd일 '));
     hideDatePicker();
-    onChangeText(date.format('yyyy/MM/dd'));
+    onChangeText(date.format('yyyy년 MM월 dd일 '));
   };
 
   return (
     <>
-      <MyUpBar_0 />
+      <MyUpBar_1 />
       <GobackButton onPress={() => navigation.pop()} />
       {/* <View style={[Styling.container0]}></View> */}
       <View style={DefaultStyle.container0_1}>
+        <Text style={DefaultStyle.threelinetxt}>나는</Text>
         <TouchableOpacity onPress={showDatePicker}>
-          <Text style={DefaultStyle.threelinetxt}>나는</Text>
           <TextInput
             pointerEvents="none"
             style={styles.textInput}
@@ -168,7 +168,6 @@ const Q_Default_1 = ({navigation, route}) => {
             editable={false}
             value={text}
           />
-          <Text style={styles.text}>에 태어났어</Text>
           <DateTimePickerModal
             headerTextIOS={placeholder}
             isVisible={isDatePickerVisible}
@@ -177,6 +176,7 @@ const Q_Default_1 = ({navigation, route}) => {
             onCancel={hideDatePicker}
           />
         </TouchableOpacity>
+        <Text style={styles.text}>에 태어났어</Text>
       </View>
       <View style={[DefaultStyle.container1_2]} />
       <View style={[DefaultStyle.container2]}>
