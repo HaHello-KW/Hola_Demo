@@ -22,7 +22,9 @@ import Q_Default_1 from './src/screens/default/q_default_1';
 import Q_Default_2 from './src/screens/default/q_default_2';
 import Q_Default_2and3 from './src/screens/default/q_default_2and3';
 import Q_Default_2_1 from './src/screens/default/q_default_2_1';
-import UserA from './src/screens/userA/test';
+import Q_Default_3 from './src/screens/default/q_default_3';
+import Q_A_1 from './src/screens/userA/q_a_1';
+import BTEST from './src/screens/userA/BTEST';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,13 +54,23 @@ const App = () => {
         />
         <Stack.Screen
           options={{headerShown: false}}
+          name="Q_Default_3"
+          component={Q_Default_3}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
           name="Q_Default_2_1"
           component={Q_Default_2_1}
         />
         <Stack.Screen
           options={{headerShown: false}}
-          name="UserA"
-          component={UserA}
+          name="Q_A_1"
+          component={Q_A_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="BTEST"
+          component={BTEST}
         />
       </Stack.Navigator>
     </NavigationContainer>

@@ -9,14 +9,16 @@ import UserAimg from '../../../assets/images/userA.png';
 import {UserStyle} from '../../styling/userLayout';
 import UserImg from '../../Buttons/userImg';
 
-const UserA = ({navigation, route}) => {
+import {TouchableOpacity} from 'react-native-gesture-handler';
+
+const BTEST = ({navigation, route}) => {
   return (
     <>
       <MyUpBar_4 />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_1]}>
-        <Text style={[UserStyle.threelinetxt]}>hi hello</Text>
+        <Text style={[UserStyle.threelinetxt]}>hi ee</Text>
       </View>
       <View style={[UserStyle.container1_1]}></View>
       <View style={[UserStyle.container2]}>
@@ -37,6 +39,24 @@ const styles = StyleSheet.create({
   //     alignItems: 'center',
   //     justifyContent: 'center',
   //   },
+  circle: {
+    position: 'absolute',
+    left: 135,
+    top: 130,
+    backgroundColor: 'red',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 70,
+    height: 70,
+    marginBottom: 30,
+    borderRadius: 35,
+  },
+  CircleShape: {
+    width: 150,
+    height: 150,
+    borderRadius: 150 / 2,
+    backgroundColor: '#FF9800',
+  },
 });
 
-export default UserA;
+export default BTEST;

@@ -11,7 +11,8 @@ export const UserStyle = StyleSheet.create({
   },
   container0_1: {
     flex: 2,
-    backgroundColor: '#123456',
+    //backgroundColor: '#123456',
+
     alignItems: 'center',
     justifyContent: 'center',
   },
