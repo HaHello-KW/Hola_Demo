@@ -1,21 +1,29 @@
-import React, {useState} from 'react';
 import {
-  Button,
   View,
   Text,
-  Pressable,
+  Button,
+  Image,
   StyleSheet,
-  TouchableOpacity,
   TextInput,
+  TouchableOpacity,
 } from 'react-native';
+import MyUpBar_7 from '../../upbar/UpBar_7';
+
+import {UserStyle} from '../../styling/userLayout';
+
+import NextButton from '../../Buttons/nextButton';
+import SelectionButton from '../../Buttons/selectionButton';
+import GobackButton from '../../Buttons/gobackButton';
+import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
+
 import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
-import MyUpBar_1 from '../../upbar/UpBar_1';
-import NextButton from '../../Buttons/nextButton';
-import {DefaultStyle} from '../../styling/defaultLayout';
-import GobackButton from '../../Buttons/gobackButton';
 
-const Q_Default_1 = ({navigation, route}) => {
+import UserAimg from '../../../assets/images/userA.png';
+import UserImg from '../../Buttons/userImg';
+import {useState} from 'react';
+
+const Q_A_4 = ({navigation, route}) => {
   Date.prototype.format = function (f) {
     if (!this.valueOf()) return ' ';
 
@@ -73,57 +81,6 @@ const Q_Default_1 = ({navigation, route}) => {
     return this.toString().zf(len);
   };
 
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#F5F5F5',
-    },
-    textInput: {
-      fontSize: 24,
-      fontWeight: '400',
-      color: '#F47100',
-      height: 50,
-      width: 300,
-      textAlign: 'center',
-      //borderColor: '#000000',
-      //borderWidth: 1,
-      //borderRadius: 12,
-      padding: 10,
-    },
-    text: {
-      fontSize: 24,
-      fontWeight: '400',
-      color: '#000000',
-      textAlign: 'center',
-    },
-    boxline: {
-      marginTop: 80,
-      marginBottom: '10%',
-      marginRight: '3%',
-      marginLeft: '3%',
-    },
-    boxlineDone: {
-      backgroundColor: '#F47100',
-    },
-    boxlineYet: {
-      backgroundColor: '#FFFFFF',
-    },
-    buttonSelection: {
-      backgroundColor: '#F2F2F2',
-      width: 300,
-      height: 40,
-    },
-    buttonNext: {
-      marginTop: 20,
-      marginBottom: 20,
-      backgroundColor: '#F47100',
-      width: 300,
-      height: 40,
-    },
-  });
-
   const date = new Date();
   const year = date.getFullYear();
   var month_ = date.getMonth() + 1;
@@ -153,11 +110,11 @@ const Q_Default_1 = ({navigation, route}) => {
 
   return (
     <>
-      <MyUpBar_1 />
+      <MyUpBar_7 />
       <GobackButton onPress={() => navigation.pop()} />
-      {/* <View style={[Styling.container0]}></View> */}
-      <View style={DefaultStyle.container0_1}>
-        <Text style={DefaultStyle.threelinetxt}>나는</Text>
+      <View style={[UserStyle.container]} />
+      <View style={[UserStyle.container3_1]}>
+        <Text style={styles.blacktxt}>나의 마지막(최근) 생리일은</Text>
         <TouchableOpacity onPress={showDatePicker}>
           <TextInput
             pointerEvents="none"
@@ -176,15 +133,93 @@ const Q_Default_1 = ({navigation, route}) => {
             onCancel={hideDatePicker}
           />
         </TouchableOpacity>
-        <Text style={styles.text}>에 태어났어</Text>
       </View>
-      <View style={[DefaultStyle.container1_2]} />
-      <View style={[DefaultStyle.container2]}>
-        <NextButton
-          onPress={() => navigation.navigate('Q_Default_2')}></NextButton>
+      <View style={[UserStyle.container3_2]}>
+        <Text style={styles.blacktxt}>
+          나의 <Text style={styles.coloredtxt}>생리주기</Text>는
+        </Text>
+        <Text style={[UserStyle.descriptionGray]}>
+          마지막 생리일에서 다음 생리 때까지 걸리는 시기
+        </Text>
+        <Text style={styles.text}>n 일</Text>
       </View>
+      <View style={[UserStyle.container3_3]}>
+        <Text style={styles.blacktxt}>
+          나의 <Text style={styles.coloredtxt}>생리기간</Text>은
+        </Text>
+        <Text style={[UserStyle.descriptionGray]}>생리하는 기간</Text>
+        <Text style={styles.text}>n 일</Text>
+      </View>
+      <View style={[UserStyle.container2]}>
+        <NextButton onPress={() => navigation.navigate('Q_A_4_1')}></NextButton>
+      </View>
+      <UserImg img={UserAimg}></UserImg>
     </>
   );
 };
 
-export default Q_Default_1;
+const styles = StyleSheet.create({
+  // container: {
+  //   flex: 1,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  //   backgroundColor: '#F5F5F5',
+  // },
+  textInput: {
+    fontSize: 24,
+    fontWeight: '400',
+    color: '#F47100',
+    height: 50,
+    width: 300,
+    textAlign: 'center',
+    //borderColor: '#000000',
+    //borderWidth: 1,
+    //borderRadius: 12,
+    padding: 10,
+  },
+  text: {
+    fontSize: 24,
+    fontWeight: '400',
+    color: '#C1C1C1',
+    textAlign: 'center',
+  },
+  boxline: {
+    marginTop: 80,
+    marginBottom: '10%',
+    marginRight: '3%',
+    marginLeft: '3%',
+  },
+  boxlineDone: {
+    backgroundColor: '#F47100',
+  },
+  boxlineYet: {
+    backgroundColor: '#FFFFFF',
+  },
+  buttonSelection: {
+    backgroundColor: '#F2F2F2',
+    width: 300,
+    height: 40,
+  },
+  // buttonNext: {
+  //   marginTop: 20,
+  //   marginBottom: 20,
+  //   backgroundColor: '#F47100',
+  //   width: 300,
+  //   height: 40,
+  // },
+  blacktxt: {
+    fontWeight: '500',
+    fontSize: 16,
+    lineHeight: 23,
+    color: '#000000',
+    textAlign: 'center',
+  },
+  coloredtxt: {
+    fontWeight: '500',
+    fontSize: 16,
+    lineHeight: 23,
+    color: '#FF7C00',
+  },
+});
+
+export default Q_A_4;
