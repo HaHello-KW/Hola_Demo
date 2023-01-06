@@ -24,8 +24,13 @@ import Q_A_4 from './src/screens/userA/q_a_4';
 import Q_A_4_1 from './src/screens/userA/q_a_4_1';
 import Q_A_Type from './src/screens/userA/q_a_type';
 import Q_Default_3 from './src/screens/default/q_default_3';
-import BTEST from './src/screens/userA/BTEST';
+// import BTEST from './src/screens/userA/BTEST';
 import Q_Default_2 from './src/screens/default/q_default_2';
+import Q_A_1_1 from './src/screens/userA/q_a_1_1';
+import Q_B_1 from './src/screens/userB/q_b_1';
+import Q_C_1 from './src/screens/userC/q_c_1';
+import Q_D_1 from './src/screens/userD/q_d_1';
+import Q_E_1 from './src/screens/userE/q_e_1';
 // =======
 // import Q_Default_3 from './src/screens/default/q_default_3';
 // import Q_A_1 from './src/screens/userA/q_a_1';
@@ -76,6 +81,11 @@ const App = () => {
           />
           <Stack.Screen
             options={{headerShown: false}}
+            name="Q_A_1_1"
+            component={Q_A_1_1}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
             name="Q_A_2"
             component={Q_A_2}
           />
@@ -113,6 +123,26 @@ const App = () => {
             name="BTEST"
             component={BTEST}
           /> */}
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Q_B_1"
+            component={Q_B_1}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Q_C_1"
+            component={Q_C_1}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Q_D_1"
+            component={Q_D_1}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Q_E_1"
+            component={Q_E_1}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
