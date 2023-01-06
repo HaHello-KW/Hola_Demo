@@ -1,5 +1,5 @@
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
-import MyUpBar_4 from '../../upbar/UpBar_4';
+import MyUpBar_5 from '../../upbar/UpBar_5';
 
 import {UserStyle} from '../../styling/userLayout';
 
@@ -11,59 +11,38 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
 
-// =======
-
-// import BTEST from './BTEST';
-
-// >>>>>>> 61c27733845b543401eabc08a8c193456a73f6d4
 const Q_A_1 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar_4 />
+      <MyUpBar_5 />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
-      <View style={[UserStyle.container0_1]}>
-        <Text style={[UserStyle.threelinetxt]}>나는</Text>
-        <Text style={[UserStyle.threelinetxt]}>n 세</Text>
-        <Text style={[UserStyle.threelinetxt]}>쯤에 결혼하면 좋겠어</Text>
+      <View style={[UserStyle.container0_2]}>
+        <Text style={[UserStyle.onelinetxt]}>나는</Text>
       </View>
-      <View style={[UserStyle.container1_1]}>
-        <SelectionButton_V2
-          text={'결혼 생각 이 없어'}
+      <View style={[UserStyle.container1_2]}>
+        <SelectionButton
+          text={'결혼 생각이 있어'}
           textColor={'#000000'}
-          onPress={() => alert('no marriage')}
+          onPress={() => alert('want')}
         />
-        <SelectionButton_V2
-          text={'아직 잘 모르겠어'}
+        <SelectionButton
+          text={'결혼 생각이 없어'}
           textColor={'#000000'}
-          onPress={() => alert('dont know')}
+          onPress={() => alert('do not')}
+        />
+        <SelectionButton
+          text={'아직 모르겠어'}
+          textColor={'#000000'}
+          onPress={() => alert('do not know')}
         />
       </View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_2')}></NextButton>
-        {/* =======
-      <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('BTEST')} />
->>>>>>> 61c27733845b543401eabc08a8c193456a73f6d4 */}
+        <NextButton onPress={() => navigation.navigate('Q_A_1_1')}></NextButton>
       </View>
       <UserImg img={UserAimg}></UserImg>
     </>
   );
 };
 
-// <<<<<<< HEAD
-// =======
-// const styles = StyleSheet.create({
-//   //   image: {
-//   //     position: 'absolute',
-//   //     left: 135,
-//   //     top: 130,
-//   //     width: 120,
-//   //     height: 120,
-//   //     alignItems: 'center',
-//   //     justifyContent: 'center',
-//   //   },
-// });
-
-// >>>>>>> 61c27733845b543401eabc08a8c193456a73f6d4
 export default Q_A_1;

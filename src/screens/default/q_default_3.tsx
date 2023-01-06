@@ -19,31 +19,31 @@ const Q_Default_3 = ({navigation, route}) => {
         <SelectionButton
           text={'결혼을 안 했어'}
           textColor={'#000000'}
-          onPress={() => alert('selected 1')}
+          onPress={() => navigation.navigate('Q_A_1')}
         />
         <SelectionButton
           text={'결혼을 했어'}
           textColor={'#000000'}
-          onPress={() => alert('selected 2')}
+          onPress={() => navigation.navigate('Q_B_1')}
         />
         <SelectionButton
           text={'임신 준비 중이야'}
           textColor={'#000000'}
-          onPress={() => alert('selected 3')}
+          onPress={() => navigation.navigate('Q_C_1')}
         />
         <SelectionButton
           text={'자녀가 있어'}
           textColor={'#000000'}
-          onPress={() => alert('selected 4')}
+          onPress={() => navigation.navigate('Q_D_1')}
         />
         <SelectionButton
           text={'임신 중이야'}
           textColor={'#000000'}
-          onPress={() => alert('selected 5')}
+          onPress={() => navigation.navigate('Q_E_1')}
         />
       </View>
       <View style={[DefaultStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_1')} />
+        {/* <NextButton onPress={() => navigation.navigate('Q_A_1')} /> */}
       </View>
     </>
   );
