@@ -1,5 +1,5 @@
 import {View, Text, Button} from 'react-native';
-import MyUpBar_2 from '../../upbar/UpBar_2';
+import MyUpBar from '../../upbar/MyUpBar';
 
 import {DefaultStyle} from '../../styling/defaultLayout';
 import NextButton from '../../Buttons/nextButton';
@@ -10,7 +10,7 @@ import GobackButton from '../../Buttons/gobackButton';
 const Q_Default_2 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar_2 />
+      <MyUpBar level="2" />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[DefaultStyle.container0]}>
         <Text style={DefaultStyle.onelinetxt}>나는</Text>

@@ -1,5 +1,5 @@
 import {View, Text, Button} from 'react-native';
-import MyUpBar_1 from '../../upbar/UpBar_1';
+import MyUpBar_1 from '../../upbar/MyUpBar';
 
 import {DefaultStyle} from '../../styling/defaultLayout';
 import NextButton from '../../Buttons/nextButton';

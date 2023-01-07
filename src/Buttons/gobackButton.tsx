@@ -1,6 +1,13 @@
 import {useLinkProps} from '@react-navigation/native';
 import React, {Component} from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  Platform,
+  StatusBar,
+} from 'react-native';
+import {getStatusBarHeight} from 'react-native-status-bar-height';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 interface Goback {
@@ -11,7 +18,6 @@ export default class GobackButton extends Component<Goback, any> {
   constructor(props: any) {
     super(props);
   }
-
   render() {
     return (
       <Icon
@@ -28,7 +34,10 @@ const styles = StyleSheet.create({
   icon: {
     color: '#242424',
     position: 'absolute',
-    top: '3%',
+    top:
+      Platform.OS === 'android'
+        ? StatusBar.currentHeight || 0
+        : getStatusBarHeight(true),
     left: '3%',
   },
 });

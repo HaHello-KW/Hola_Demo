@@ -1,6 +1,5 @@
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
-import MyUpBar_7 from '../../upbar/UpBar_7';
-
+import MyUpBar from '../../upbar/MyUpBar';
 import {UserStyle} from '../../styling/userLayout';
 
 import NextButton from '../../Buttons/nextButton';
@@ -14,7 +13,7 @@ import UserImg from '../../Buttons/userImg';
 const Q_A_4_1 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar_7 />
+      <MyUpBar level="7" />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_2]}>
@@ -37,10 +36,9 @@ const Q_A_4_1 = ({navigation, route}) => {
         </Text>
       </View>
       <View style={[UserStyle.container2]}>
-        <NextButton
-          onPress={() => navigation.navigate('Q_A_Type')}></NextButton>
+        <NextButton onPress={() => navigation.navigate('Q_A_Type')} />
       </View>
-      <UserImg img={UserAimg}></UserImg>
+      <UserImg img={UserAimg} />
     </>
   );
 };

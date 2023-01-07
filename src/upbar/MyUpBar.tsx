@@ -1,21 +1,30 @@
 import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Box, HStack} from '@react-native-material/core';
+import PropTypes from 'prop-types';
 
-const MyUpBar_2 = () => {
+const MyUpBar = props => {
+  let arr: any = [];
+  for (let i = 1; i <= 7; i++) {
+    i <= props.level
+      ? arr.push(<Box key="{i}" w="12%" h={2} style={styles.boxlineDone} />)
+      : arr.push(<Box key="{i}" w="12%" h={2} style={styles.boxlineYet} />);
+  }
   return (
     <Box w="100%" h="18%" style={{backgroundColor: '#FFAF49'}}>
       <HStack style={styles.boxline} fill center spacing={8}>
-        <Box w="12%" h={2} style={styles.boxlineDone} />
-        <Box w="12%" h={2} style={styles.boxlineDone} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
-        <Box w="12%" h={2} style={styles.boxlineYet} />
+        {arr}
       </HStack>
     </Box>
   );
+};
+
+MyUpBar.defaultProps = {
+  level: '0',
+};
+
+MyUpBar.propTypes = {
+  level: PropTypes.string,
 };
 
 const styles = StyleSheet.create({
@@ -36,7 +45,7 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   boxline: {
-    marginTop: '15%',
+    marginTop: '20%',
     marginBottom: '10%',
     marginRight: '3%',
     marginLeft: '3%',
@@ -61,4 +70,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default MyUpBar_2;
+export default MyUpBar;

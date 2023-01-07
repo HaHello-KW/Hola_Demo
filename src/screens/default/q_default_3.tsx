@@ -1,16 +1,15 @@
-import {View, Text, Button} from 'react-native';
-import MyUpBar_3 from '../../upbar/UpBar_3';
+import {View, Text} from 'react-native';
+import MyUpBar from '../../upbar/MyUpBar';
 
 import {DefaultStyle} from '../../styling/defaultLayout';
 import NextButton from '../../Buttons/nextButton';
 import SelectionButton from '../../Buttons/selectionButton';
-import {alertClasses} from '@mui/material';
 import GobackButton from '../../Buttons/gobackButton';
 
 const Q_Default_3 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar_3 />
+      <MyUpBar level="3" />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[DefaultStyle.container0]}>
         <Text style={DefaultStyle.onelinetxt}>나는</Text>
