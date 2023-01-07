@@ -7,6 +7,8 @@ import SelectionButton from '../../Buttons/selectionButton';
 import {alertClasses} from '@mui/material';
 import GobackButton from '../../Buttons/gobackButton';
 
+var first = 'hihello';
+
 const Q_Default_2 = ({navigation, route}) => {
   return (
     <>
@@ -16,31 +18,11 @@ const Q_Default_2 = ({navigation, route}) => {
         <Text style={DefaultStyle.onelinetxt}>나는</Text>
       </View>
       <View style={[DefaultStyle.container1]}>
-        <SelectionButton
-          text={'난소 건강을 유지하고 싶어'}
-          textColor={'#000000'}
-          onPress={() => alert('selected 1')}
-        />
-        <SelectionButton
-          text={'난자 냉동 계획이 있어'}
-          textColor={'#000000'}
-          onPress={() => alert('selected 2')}
-        />
-        <SelectionButton
-          text={'난임 시술 계획이 있어'}
-          textColor={'#000000'}
-          onPress={() => alert('selected 3')}
-        />
-        <SelectionButton
-          text={'현재 시술을 하고 있어 (난자 냉동, 난임 시술)'}
-          textColor={'#000000'}
-          onPress={() => alert('selected 4')}
-        />
-        <SelectionButton
-          text={'갱년기 준비와 관리를 하고 싶어'}
-          textColor={'#000000'}
-          onPress={() => alert('selected 5')}
-        />
+        <SelectionButton txt={first} />
+        <SelectionButton txt={'난자 냉동 계획이 있어'} />
+        <SelectionButton txt={'난임 시술 계획이 있어'} />
+        <SelectionButton txt={'현재 시술을 하고 있어 (난자 냉동, 난임 시술)'} />
+        <SelectionButton txt={'갱년기 준비와 관리를 하고 싶어'} />
       </View>
       <View style={[DefaultStyle.container2]}>
         <NextButton onPress={() => navigation.navigate('Q_Default_3')} />

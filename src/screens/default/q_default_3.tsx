@@ -16,8 +16,7 @@ const Q_Default_3 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container1]}>
         <SelectionButton
-          text={'결혼을 안 했어'}
-          textColor={'#000000'}
+          txt={'결혼을 안 했어'}
           onPress={() => navigation.navigate('Q_A_1')}
         />
         <SelectionButton
@@ -42,7 +41,7 @@ const Q_Default_3 = ({navigation, route}) => {
         />
       </View>
       <View style={[DefaultStyle.container2]}>
-        {/* <NextButton onPress={() => navigation.navigate('Q_A_1')} /> */}
+        <NextButton onPress={() => navigation.navigate('Q_A_1')} />
       </View>
     </>
   );
