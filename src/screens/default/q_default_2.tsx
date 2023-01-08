@@ -19,11 +19,11 @@ const Q_Default_2 = ({navigation, route}) => {
       <View style={[DefaultStyle.container1]}>
         <SelectionButton
           txt={TxtCollection.q_d_2.first}
-          selectNum={TxtCollection.selection.select1}
+          // selectNum={TxtCollection.selection.select1}
         />
         <SelectionButton
           txt={TxtCollection.q_d_2.second}
-          selectNum={TxtCollection.selection.select2}
+          // selectNum={TxtCollection.selection.select2}
         />
         <SelectionButton txt={TxtCollection.q_d_2.third} />
         <SelectionButton txt={TxtCollection.q_d_2.fourth} />

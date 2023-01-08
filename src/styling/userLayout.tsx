@@ -13,7 +13,7 @@ export const UserStyle = StyleSheet.create({
     flex: 2.2,
     // width: 240,
     // height: 140,
-    backgroundColor: '#123123',
+    backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',

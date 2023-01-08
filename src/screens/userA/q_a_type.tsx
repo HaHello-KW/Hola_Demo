@@ -16,14 +16,30 @@ const Q_A_Type = ({navigation, route}) => {
     <>
       <View style={[UserStyle.container]} />
       <GobackButton onPress={() => navigation.pop()} />
-      <View style={[UserStyle.container0_1]}></View>
-      <View style={[UserStyle.container1_1]} />
-      <View style={[UserStyle.container2]}>
-        {/* <NextButton onPress={() => navigation.navigate('BTEST')}></NextButton> */}
+      {/* <View style={[UserStyle.container0_1]}>
+        <Text>container 0</Text>
       </View>
-      <UserImg img={UserAimg}></UserImg>
+      <View style={[UserStyle.container1_1]}>
+        <Text>container 1</Text>
+      </View>
+      <View style={[UserStyle.container2]}>
+        <Text>container 2</Text>
+      </View> */}
+      {/* <UserImg img={UserAimg}></UserImg> */}
+      <Image source={UserAimg} style={styles.image} />
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  image: {
+    //피그마에서 그대로 갖고온것, 추후 수정 필요
+    position: 'absolute',
+    width: 350,
+    height: 350,
+    left: 20,
+    top: 200,
+  },
+});
 
 export default Q_A_Type;

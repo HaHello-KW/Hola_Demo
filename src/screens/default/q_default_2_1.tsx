@@ -8,7 +8,7 @@ import SelectionButton_H2 from '../../Buttons/2selectionButton_h';
 const Q_Default_2_1 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar level="2" />
+      {/* <MyUpBar level="2" />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[DefaultStyle.container0]}>
         <Text style={DefaultStyle.onelinetxt}>One line question txt</Text>
@@ -27,7 +27,7 @@ const Q_Default_2_1 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container2]}>
         <NextButton onPress={() => navigation.navigate('Q_A_1')} />
-      </View>
+      </View> */}
     </>
   );
 };

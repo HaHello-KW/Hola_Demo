@@ -2,6 +2,10 @@ import {useLinkProps} from '@react-navigation/native';
 import React, {Component} from 'react';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 
+//encountered two children with the same key 오류 해결 필요
+//
+//
+
 interface Next {
   onPress: () => null;
   // disabled: false;

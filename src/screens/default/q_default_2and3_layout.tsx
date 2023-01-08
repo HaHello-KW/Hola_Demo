@@ -10,7 +10,7 @@ import GobackButton from '../../Buttons/gobackButton';
 const Q_Default_2and3 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar_1 />
+      {/* <MyUpBar_1 />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[DefaultStyle.container0]}>
         <Text style={DefaultStyle.onelinetxt}>One line question txt</Text>
@@ -25,12 +25,12 @@ const Q_Default_2and3 = ({navigation, route}) => {
           text={'선택지 2번'}
           textColor={'#000000'}
           onPress={() => alert('selected 2')}
-        />
+        /> 
         <SelectionButton
           text={'선택지 3번'}
           textColor={'#000000'}
           onPress={() => alert('selected 3')}
-        />
+        />      
         <SelectionButton
           text={'선택지 4번'}
           textColor={'#000000'}
@@ -44,7 +44,7 @@ const Q_Default_2and3 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container2]}>
         <NextButton onPress={() => navigation.navigate('Q_Default_2_1')} />
-      </View>
+      </View> */}
     </>
   );
 };

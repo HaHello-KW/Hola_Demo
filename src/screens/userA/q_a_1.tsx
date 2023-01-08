@@ -39,6 +39,7 @@ const Q_A_1 = ({navigation, route}) => {
       <View style={[UserStyle.container2]}>
         <NextButton onPress={() => navigation.navigate('Q_A_1_1')} />
       </View>
+      <UserImg img={UserAimg}></UserImg>
     </>
   );
 };
