@@ -1,39 +1,16 @@
 import {useLinkProps} from '@react-navigation/native';
 import React, {Component, useState} from 'react';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
-import PropTypes from 'prop-types';
+import PropTypes, {number} from 'prop-types';
 
-// interface Selection {
-//   text: string;
-//   textColor: '#000000';
-// }
+//
+//
+//route 활용해 네비게이션 기능 추가해야함
+// const showMsg = event => {
+//   const msg = event.target.gtAttribute('selectNum');
+//   console.log(msg);
+// };
 
-// export default class SelectionButton extends Component<Selection, any> {
-//   constructor(props: any) {
-//     super(props);
-//   }
-
-//   render() {
-//     return (
-//       <>
-//         <ChangeColorSelect>
-//           <Text style={[styles.txt, {color: this.props.textColor}]}>
-//             {this.props.text}
-//           </Text>
-//         </ChangeColorSelect>
-//       </>
-//     );
-//   }
-// }
-
-// const styles = StyleSheet.create({
-//   txt: {
-//     fontSize: 16,
-//     fontWeight: '400',
-//     textAlign: 'center',
-//     color: '#FBFBFB',
-//   },
-// });
 const SelectionButton = props => {
   const [isSelect, setSelected] = useState(false);
 
@@ -43,22 +20,26 @@ const SelectionButton = props => {
         styles.button,
         {backgroundColor: isSelect ? '#F47100' : '#E3E3E3'},
       ]}
-      onPressOut={() => setSelected(!isSelect)}>
-      <Text style={[styles.txt]}>{props.txt}</Text>
+      onPressOut={() => setSelected(!isSelect)}
+      // onPress={() => props.navigation.navigate()}
+    >
+      <Text style={[styles.txt, {color: isSelect ? '#fbfbfb' : '#242424'}]}>
+        {props.txt}
+      </Text>
     </TouchableOpacity>
   );
 };
 
 SelectionButton.defaultProps = {
   txt: null,
-  onPress: () => navigation.navigate(String),
+  // selectNum: number,
+  // onPressIn: () => showMsg,
 };
 
 SelectionButton.propTypes = {
   txt: PropTypes.string,
+  // selectNum: PropTypes.number,
 };
-
-// SelectionButton.
 
 const styles = StyleSheet.create({
   button: {
@@ -76,7 +57,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
     fontWeight: '500',
-    color: '#242424',
+    // color: '#242424',
   },
 });
 

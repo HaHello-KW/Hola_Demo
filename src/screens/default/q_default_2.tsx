@@ -6,8 +6,7 @@ import NextButton from '../../Buttons/nextButton';
 import SelectionButton from '../../Buttons/selectionButton';
 import {alertClasses} from '@mui/material';
 import GobackButton from '../../Buttons/gobackButton';
-
-var first = 'hihello';
+import TxtCollection from '../../txtCollection/txtcolletion';
 
 const Q_Default_2 = ({navigation, route}) => {
   return (
@@ -18,11 +17,17 @@ const Q_Default_2 = ({navigation, route}) => {
         <Text style={DefaultStyle.onelinetxt}>나는</Text>
       </View>
       <View style={[DefaultStyle.container1]}>
-        <SelectionButton txt={first} />
-        <SelectionButton txt={'난자 냉동 계획이 있어'} />
-        <SelectionButton txt={'난임 시술 계획이 있어'} />
-        <SelectionButton txt={'현재 시술을 하고 있어 (난자 냉동, 난임 시술)'} />
-        <SelectionButton txt={'갱년기 준비와 관리를 하고 싶어'} />
+        <SelectionButton
+          txt={TxtCollection.q_d_2.first}
+          selectNum={TxtCollection.selection.select1}
+        />
+        <SelectionButton
+          txt={TxtCollection.q_d_2.second}
+          selectNum={TxtCollection.selection.select2}
+        />
+        <SelectionButton txt={TxtCollection.q_d_2.third} />
+        <SelectionButton txt={TxtCollection.q_d_2.fourth} />
+        <SelectionButton txt={TxtCollection.q_d_2.fifth} />
       </View>
       <View style={[DefaultStyle.container2]}>
         <NextButton onPress={() => navigation.navigate('Q_Default_3')} />

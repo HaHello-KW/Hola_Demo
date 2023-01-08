@@ -9,6 +9,7 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
+import TxtCollection from '../../txtCollection/txtcolletion';
 
 const Q_A_2 = ({navigation, route}) => {
   return (
@@ -21,21 +22,19 @@ const Q_A_2 = ({navigation, route}) => {
       </View>
       <View style={[UserStyle.container1_2]}>
         <SelectionButton
-          text={'갖고 싶어'}
-          textColor={'#000000'}
-          onPress={() => alert('want')}
+          txt={TxtCollection.q_a_2.first}
+          // onPress={() => alert('want')}
         />
         <SelectionButton
-          text={'갖고 싶은 생각이 없어'}
-          textColor={'#000000'}
-          onPress={() => alert('do not')}
+          txt={TxtCollection.q_a_2.second}
+          // onPress={() => alert('do not')}
         />
-        <Button
+        {/* <Button
           title="test"
           disabled
           color="#ffffff"
           onPress={() => alert('cannot press')}
-        />
+        /> */}
       </View>
       <View style={[UserStyle.container2]}>
         <NextButton onPress={() => navigation.navigate('Q_A_2_1')} />

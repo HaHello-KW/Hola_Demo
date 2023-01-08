@@ -21,14 +21,12 @@ const Q_A_4_1 = ({navigation, route}) => {
       </View>
       <View style={[UserStyle.container1_2]}>
         <SelectionButton
-          text={'규칙적이야'}
-          textColor={'#000000'}
-          onPress={() => alert('regular')}
+          txt={'규칙적이야'}
+          // onPress={() => alert('regular')}
         />
         <SelectionButton
-          text={'불규칙적이야'}
-          textColor={'#000000'}
-          onPress={() => alert('irregular')}
+          txt={'불규칙적이야'}
+          // onPress={() => alert('irregular')}
         />
         <Text style={[UserStyle.description]}>
           * 불규칙적 : 생리주기가 21일보다 짧아지거나 35일 이상으로 길어지는

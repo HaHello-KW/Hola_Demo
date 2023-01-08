@@ -22,6 +22,16 @@ import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
 import {useState} from 'react';
 
+//생리주기
+interface Cycle {
+  cycle: any;
+}
+
+//생리기간
+interface Period {
+  period: any;
+}
+
 const Q_A_4 = ({navigation, route}) => {
   Date.prototype.format = function (f) {
     if (!this.valueOf()) {
@@ -109,6 +119,30 @@ const Q_A_4 = ({navigation, route}) => {
     onChangeText(date.format('yyyy년 MM월 dd일 '));
   };
 
+  //생리주기
+  const [cycle, setCycle] = useState<Cycle>({
+    cycle: 0,
+  });
+
+  const handleInputChange2 = (key: any, value: any) => {
+    setCycle(prevState => ({
+      ...prevState,
+      [key]: value,
+    }));
+  };
+
+  //생리기간
+  const [period, setPeriod] = useState<Period>({
+    period: 0,
+  });
+
+  const handleInputChange3 = (key: any, value: any) => {
+    setPeriod(prevState => ({
+      ...prevState,
+      [key]: value,
+    }));
+  };
+
   return (
     <>
       <MyUpBar level="7" />
@@ -142,14 +176,36 @@ const Q_A_4 = ({navigation, route}) => {
         <Text style={[UserStyle.descriptionGray]}>
           마지막 생리일에서 다음 생리 때까지 걸리는 시기
         </Text>
-        <Text style={styles.text}>n 일</Text>
+        <View style={styles.container_test}>
+          <TextInput
+            value={cycle.cycle}
+            style={styles.input}
+            onChangeText={num => {
+              handleInputChange2('cycle', num);
+            }}
+            placeholder="28"
+            keyboardType="numeric"
+          />
+          <Text style={styles.text}>일</Text>
+        </View>
       </View>
       <View style={[UserStyle.container3_3]}>
         <Text style={styles.blacktxt}>
           나의 <Text style={styles.coloredtxt}>생리기간</Text>은
         </Text>
         <Text style={[UserStyle.descriptionGray]}>생리하는 기간</Text>
-        <Text style={styles.text}>n 일</Text>
+        <View style={styles.container_test}>
+          <TextInput
+            value={period.period}
+            style={styles.input}
+            onChangeText={num => {
+              handleInputChange3('period', num);
+            }}
+            placeholder="5"
+            keyboardType="numeric"
+          />
+          <Text style={styles.text}>일</Text>
+        </View>
       </View>
       <View style={[UserStyle.container2]}>
         <NextButton onPress={() => navigation.navigate('Q_A_4_1')} />
@@ -220,6 +276,27 @@ const styles = StyleSheet.create({
     fontSize: 16,
     lineHeight: 23,
     color: '#FF7C00',
+  },
+  input: {
+    // fontSize: 24,
+    // fontWeight: '400',
+    // color: '#F47100',
+    alignItems: 'center',
+    // textAlign: 'center',
+    // lineHeight: 34.75,
+    fontSize: 24,
+    fontWeight: '400',
+    color: '#F47100',
+    justifyContent: 'center',
+  },
+  container_test: {
+    flexDirection: 'row',
+    // width: 240,
+    // height: 140,
+    alignItems: 'center',
+    justifyContent: 'center',
+    textAlign: 'center',
+    // lineHeight: 34.75,
   },
 });
 

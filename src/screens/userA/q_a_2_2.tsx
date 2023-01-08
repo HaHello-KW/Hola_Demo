@@ -9,6 +9,7 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
+import TxtCollection from '../../txtCollection/txtcolletion';
 
 const Q_A_2_2 = ({navigation, route}) => {
   return (
@@ -21,18 +22,16 @@ const Q_A_2_2 = ({navigation, route}) => {
       </View>
       <View style={[UserStyle.container1_2]}>
         <SelectionButton
-          text={'아이를 1명만 갖고 싶어'}
-          textColor={'#000000'}
-          onPress={() => alert('1')}
+          txt={TxtCollection.q_a_2_2.first}
+          // onPress={() => alert('1')}
         />
         <SelectionButton
-          text={'둘째도 갖고싶어'}
-          textColor={'#000000'}
-          onPress={() => alert('2')}
+          txt={TxtCollection.q_a_2_2.second}
+          // onPress={() => alert('2')}
         />
       </View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_2_1')} />
+        <NextButton onPress={() => navigation.navigate('Q_A_2_3')} />
       </View>
       <UserImg img={UserAimg} />
     </>

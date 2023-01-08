@@ -28,8 +28,6 @@ interface Age {
   age: any;
 }
 
-var first = 'hihello';
-
 const Q_A_1_1 = ({navigation, route}) => {
   const [age, setAge] = useState<Age>({
     age: 0,
@@ -47,36 +45,6 @@ const Q_A_1_1 = ({navigation, route}) => {
     setageInputVisibility(true);
   };
 
-  // return (
-  //   <>
-  //     <TextInput
-  //       value={age.age}
-  //       onChangeText={num => {
-  //         handleInputChange('age', num);
-  //       }}
-  //       style={styles.input}
-  //       placeholder="put your age"
-  //       keyboardType="numeric"
-  //     />
-  //     <Pressable onPress={() => console.log(age)}>
-  //       <Text> Submit </Text>
-  //     </Pressable>
-  //   </>
-  // );
-  // const [number, onChangeNumber] = React.useState(null);
-
-  // return (
-  //   <SafeAreaView>
-  //     <TextInput
-  //       style={styles.input}
-  //       onChangeText={onChangeNumber}
-  //       value={number}
-  //       placeholder="30 "
-  //       keyboardType="numeric"
-  //     />
-  //   </SafeAreaView>
-  // );
-
   return (
     <>
       {/* <SafeAreaView style={styles.container}> */}
@@ -85,7 +53,7 @@ const Q_A_1_1 = ({navigation, route}) => {
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_1]}>
         <View style={[UserStyle.container0_1_1]}>
-          <Text style={[UserStyle.threelinetxt]}>{first}</Text>
+          <Text style={[UserStyle.threelinetxt]}>나는</Text>
         </View>
         <View style={[UserStyle.container0_1_2]}>
           <TextInput
@@ -97,10 +65,10 @@ const Q_A_1_1 = ({navigation, route}) => {
             placeholder="30"
             keyboardType="numeric"
           />
-          <Text style={[UserStyle.threelinetxt]}> 세</Text>
+          <Text style={[UserStyle.threelinetxt]}> 살쯤에</Text>
         </View>
         <View style={[UserStyle.container0_1_3]}>
-          <Text style={[UserStyle.threelinetxt]}>에 결혼하면 좋겠어</Text>
+          <Text style={[UserStyle.threelinetxt]}>결혼하면 좋겠어</Text>
         </View>
       </View>
       <View style={[UserStyle.container1_1]}></View>
@@ -125,9 +93,38 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     color: '#F47100',
     justifyContent: 'center',
-    borderWidth: 1,
   },
   container: {flex: 1},
 });
 
 export default Q_A_1_1;
+
+// return (
+//   <>
+//     <TextInput
+//       value={age.age}
+//       onChangeText={num => {
+//         handleInputChange('age', num);
+//       }}
+//       style={styles.input}
+//       placeholder="put your age"
+//       keyboardType="numeric"
+//     />
+//     <Pressable onPress={() => console.log(age)}>
+//       <Text> Submit </Text>
+//     </Pressable>
+//   </>
+// );
+// const [number, onChangeNumber] = React.useState(null);
+
+// return (
+//   <SafeAreaView>
+//     <TextInput
+//       style={styles.input}
+//       onChangeText={onChangeNumber}
+//       value={number}
+//       placeholder="30 "
+//       keyboardType="numeric"
+//     />
+//   </SafeAreaView>
+// );

@@ -1,4 +1,4 @@
-import {View, Text, Button, Image, StyleSheet} from 'react-native';
+import {View, Text, Button, Image, StyleSheet, TextInput} from 'react-native';
 import MyUpBar from '../../upbar/MyUpBar';
 import {UserStyle} from '../../styling/userLayout';
 
@@ -9,25 +9,79 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
+import {useState} from 'react';
+
+interface Age {
+  age: any;
+}
 
 const Q_A_2_3 = ({navigation, route}) => {
+  const [age, setAge] = useState<Age>({
+    age: 0,
+  });
+
+  const handleInputChange = (key: any, value: any) => {
+    setAge(prevState => ({
+      ...prevState,
+      [key]: value,
+    }));
+  };
+
+  const [ageInputVisible, setageInputVisibility] = useState(false);
+  const showDatePicker = () => {
+    setageInputVisibility(true);
+  };
+
   return (
     <>
+      {/* <SafeAreaView style={styles.container}> */}
       <MyUpBar level="5" />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_1]}>
-        <Text style={[UserStyle.threelinetxt]}>나는</Text>
-        <Text style={[UserStyle.threelinetxt]}>n 세에</Text>
-        <Text style={[UserStyle.threelinetxt]}>둘째 아이를 갖고 싶어</Text>
+        <View style={[UserStyle.container0_1_1]}>
+          <Text style={[UserStyle.threelinetxt]}>나는</Text>
+        </View>
+        <View style={[UserStyle.container0_1_2]}>
+          <TextInput
+            value={age.age}
+            style={styles.input}
+            onChangeText={num => {
+              handleInputChange('age', num);
+            }}
+            placeholder="30"
+            keyboardType="numeric"
+          />
+          <Text style={[UserStyle.threelinetxt]}> 살에</Text>
+        </View>
+        <View style={[UserStyle.container0_1_3]}>
+          <Text style={[UserStyle.threelinetxt]}>둘째 아이를 갖고 싶어</Text>
+        </View>
       </View>
-      <View style={[UserStyle.container1_1]} />
+      <View style={[UserStyle.container1_1]}></View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_3')} />
+        <NextButton onPress={() => navigation.navigate('Q_A_3')}></NextButton>
       </View>
-      <UserImg img={UserAimg} />
+      <UserImg img={UserAimg}></UserImg>
+      {/* </SafeAreaView> */}
     </>
   );
 };
+
+const styles = StyleSheet.create({
+  input: {
+    // fontSize: 24,
+    // fontWeight: '400',
+    // color: '#F47100',
+    alignItems: 'center',
+    // textAlign: 'center',
+    // lineHeight: 34.75,
+    fontSize: 24,
+    fontWeight: '400',
+    color: '#F47100',
+    justifyContent: 'center',
+  },
+  container: {flex: 1},
+});
 
 export default Q_A_2_3;

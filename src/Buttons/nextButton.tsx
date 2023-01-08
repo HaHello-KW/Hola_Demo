@@ -4,6 +4,7 @@ import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 
 interface Next {
   onPress: () => null;
+  // disabled: false;
 }
 
 export default class NextButton extends Component<Next, any> {

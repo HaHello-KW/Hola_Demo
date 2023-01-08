@@ -31,6 +31,9 @@ import Q_B_1 from './src/screens/userB/q_b_1';
 import Q_C_1 from './src/screens/userC/q_c_1';
 import Q_D_1 from './src/screens/userD/q_d_1';
 import Q_E_1 from './src/screens/userE/q_e_1';
+import Q_A_2_2 from './src/screens/userA/q_a_2_2';
+import Q_A_2_3 from './src/screens/userA/q_a_2_3';
+import Q_A_3_1 from './src/screens/userA/q_a_3_1';
 // =======
 // import Q_Default_3 from './src/screens/default/q_default_3';
 // import Q_A_1 from './src/screens/userA/q_a_1';
@@ -96,8 +99,23 @@ const App = () => {
           />
           <Stack.Screen
             options={{headerShown: false}}
+            name="Q_A_2_2"
+            component={Q_A_2_2}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Q_A_2_3"
+            component={Q_A_2_3}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
             name="Q_A_3"
             component={Q_A_3}
+          />
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="Q_A_3_1"
+            component={Q_A_3_1}
           />
           <Stack.Screen
             options={{headerShown: false}}

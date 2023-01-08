@@ -10,7 +10,7 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
 
-const Q_A_2_3 = ({navigation, route}) => {
+const Q_A_3_1 = ({navigation, route}) => {
   return (
     <>
       <MyUpBar level="6" />
@@ -23,11 +23,11 @@ const Q_A_2_3 = ({navigation, route}) => {
       </View>
       <View style={[UserStyle.container1_1]} />
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_3')} />
+        <NextButton onPress={() => navigation.navigate('Q_A_4')} />
       </View>
       <UserImg img={UserAimg} />
     </>
   );
 };
 
-export default Q_A_2_3;
+export default Q_A_3_1;
