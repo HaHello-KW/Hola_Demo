@@ -22,11 +22,11 @@ const Q_A_2 = ({navigation, route}) => {
       </View>
       <View style={[UserStyle.container1_2]}>
         <SelectionButton
-          txt={TxtCollection.q_a_2.first}
+          txt={TxtCollection.q_a_2[0]}
           // onPress={() => alert('want')}
         />
         <SelectionButton
-          txt={TxtCollection.q_a_2.second}
+          txt={TxtCollection.q_a_2[1]}
           // onPress={() => alert('do not')}
         />
         {/* <Button

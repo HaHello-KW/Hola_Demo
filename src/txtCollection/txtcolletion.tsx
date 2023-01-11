@@ -1,4 +1,6 @@
 // text for using
+//구조 재구성 필요 -> q_a_2, q_a_2_2처럼? 혹은 다른 구조로
+//
 const TxtCollection = {
   selection: {
     select1: 1,
@@ -26,14 +28,8 @@ const TxtCollection = {
     second: '결혼 생각이 없어',
     third: '아직 모르겠어',
   },
-  q_a_2: {
-    first: '갖고 싶어',
-    second: '갖고 싶은 생각이 없어',
-  },
-  q_a_2_2: {
-    first: '아이를 1명만 갖고 싶어',
-    second: '둘째도 갖고 싶어',
-  },
+  q_a_2: ['갖고 싶어', '갖고 싶은 생각이 없어'],
+  q_a_2_2: ['아이를 1명만 갖고 싶어', '둘째도 갖고 싶어'],
   q_a_3: {
     first: '이미 해서 보관 중이야',
     second: '하지 않았지만, 관심 있어',

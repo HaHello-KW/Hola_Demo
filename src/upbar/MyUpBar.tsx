@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 import {Box, HStack} from '@react-native-material/core';
 import PropTypes from 'prop-types';
 
-const MyUpBar = props => {
+const MyUpBar = (props: {level: number}) => {
   let arr: any = [];
   for (let i = 1; i <= 7; i++) {
     i <= props.level
