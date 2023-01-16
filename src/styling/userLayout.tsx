@@ -9,6 +9,9 @@ export const UserStyle = StyleSheet.create({
     // height: 80,
     backgroundColor: '#f5f5f5',
   },
+  //
+  //질문 스타일링
+  //container0_1, 0_1_n -> 3줄 질문 스타일링
   container0_1: {
     flex: 2.2,
     // width: 240,
@@ -52,19 +55,22 @@ export const UserStyle = StyleSheet.create({
     textAlign: 'center',
     // lineHeight: 34.75,
   },
+  //한줄 질문 스타일링 && 선택지박스 2개 이하
   container0_2: {
     flex: 1.2,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  //한줄 질문 스타일링 && 선택지박스 3개 이상
   container0_3: {
     flex: 0.9,
     backgroundColor: '#f5f5f5',
-
     alignItems: 'center',
     justifyContent: 'center',
   },
+  //
+  //선택지박스 스타일링
   container1_1: {
     flex: 4,
     backgroundColor: '#f5f5f5',
@@ -83,6 +89,8 @@ export const UserStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
+  //
+  //다음버튼 스타일링
   container2: {
     position: 'absolute',
     bottom: 0,
@@ -91,6 +99,8 @@ export const UserStyle = StyleSheet.create({
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
   },
+  //
+  //생리주기 생리기간 스타일링 - default 예상
   container3_1: {
     flex: 1.5,
     backgroundColor: '#F5F5F5',
@@ -109,9 +119,7 @@ export const UserStyle = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-  container_test: {
-    flexDirection: 'row',
-  },
+  //one? three?? 결국 같은거같은데 이거 수정 ㄱㄱ
   onelinetxt: {
     fontSize: 24,
     fontWeight: '400',
@@ -126,6 +134,7 @@ export const UserStyle = StyleSheet.create({
     textAlign: 'center',
     lineHeight: 34.75,
   },
+  //생리주기 보충설명 스타일링
   description: {
     fontSize: 12,
     fontWeight: '400',
@@ -134,6 +143,7 @@ export const UserStyle = StyleSheet.create({
     width: 300,
     height: 55,
   },
+  //보충설명 스타일링 gray 버전
   descriptionGray: {
     marginTop: 8,
     marginBottom: 8,

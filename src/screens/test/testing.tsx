@@ -5,24 +5,30 @@ import PropTypes, {array, number, string} from 'prop-types';
 import SelectionButton from '../../Buttons/selectionButton';
 import TxtCollection from '../../txtCollection/txtcolletion';
 import {UserStyle} from '../../styling/userLayout';
+import NextButton from '../../Buttons/nextButton';
+import UserImg from '../../Buttons/userImg';
 
 type props = {
   title: string;
   content: string[];
-  count: number;
-  destination: string;
+  count: number; //엇 그럼 필요없어지나? map으로 content 내용 개수만큼 갖고오면?
+  // next: string;
+  imgsrc: string;
 };
 
-function Button_Selector(
-  {title, content, count, destination}: props,
-  navigation,
-) {
-  //여기 접근만 어떻게 잘 하면 가능할거같은데 어케해..??
+function Button_Selector({title, content, count, imgsrc}: props) {
   //왜 두개 다 같이 선택되는 거지 -> 하나의 state에 몽땅 넣어버려서 그럼
   //
   //이거는 부겸이가 한거 - map사용
   //selectionbutton 써서 하는거 ㅊㅊ하더라
   //txt갖고오는거 다시해봐 똥멍청아;;
+
+  const setCount = () => {
+    count = content.length;
+    return count;
+  };
+
+  var num = setCount();
 
   return (
     //bextbutton 네비게이션 오류 수정 및 기능 추가 필요
@@ -33,7 +39,8 @@ function Button_Selector(
     //
 
     <>
-      <View style={[UserStyle.container0_2]}>
+      <View style={[UserStyle.container]} />
+      <View style={num > 2 ? UserStyle.container0_3 : UserStyle.container0_2}>
         <Text>{title}</Text>
       </View>
       <View style={[UserStyle.container1_2]}>
@@ -41,13 +48,7 @@ function Button_Selector(
           return <SelectionButton key={index} txt={value} />;
         })}
       </View>
-      <View style={[UserStyle.container2]}>
-        <TouchableOpacity
-          style={styles.nextbutton}
-          onPress={() => navigation.navigate(destination)}>
-          <Text style={styles.next}>다음</Text>
-        </TouchableOpacity>
-      </View>
+      <UserImg img={imgsrc}></UserImg>
     </>
   );
 }

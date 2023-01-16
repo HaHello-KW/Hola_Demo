@@ -61,7 +61,9 @@ const Q_A_2_1 = ({navigation, route}) => {
       </View>
       <View style={[UserStyle.container1_1]}></View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_2_2')}></NextButton>
+        <NextButton
+          onPress={() => navigation.navigate('Q_A_2_2')}
+          disable={false}></NextButton>
       </View>
       <UserImg img={UserAimg}></UserImg>
       {/* </SafeAreaView> */}

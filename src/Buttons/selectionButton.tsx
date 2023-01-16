@@ -1,7 +1,8 @@
 import {useLinkProps} from '@react-navigation/native';
 import React, {Component, useState} from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, TouchableOpacity, Text, View} from 'react-native';
 import PropTypes, {number} from 'prop-types';
+import {UserStyle} from '../styling/userLayout';
 
 //
 //
@@ -11,24 +12,32 @@ import PropTypes, {number} from 'prop-types';
 //   console.log(msg);
 // };
 
-const SelectionButton = props => {
-  const [isSelect, setSelected] = useState(false);
-
-  return (
-    <TouchableOpacity
-      style={[
-        styles.button,
-        {backgroundColor: isSelect ? '#F47100' : '#E3E3E3'},
-      ]}
-      onPressOut={() => setSelected(!isSelect)}
-      // onPress={() => props.navigation.navigate()}
-    >
-      <Text style={[styles.txt, {color: isSelect ? '#fbfbfb' : '#242424'}]}>
-        {props.txt}
-      </Text>
-    </TouchableOpacity>
-  );
+type props = {
+  txt: string;
 };
+
+function SelectionButton({txt}: props) {
+  const [isSelect, setSelected] = useState(false);
+  // const disabled = () => {
+  //   if (isSelect) return false;
+  //   else return true;
+  // };
+  // console.log(disabled());
+  return (
+    <>
+      <TouchableOpacity
+        style={[
+          styles.button,
+          {backgroundColor: isSelect ? '#F47100' : '#E3E3E3'},
+        ]}
+        onPressOut={() => setSelected(!isSelect)}>
+        <Text style={[styles.txt, {color: isSelect ? '#fbfbfb' : '#242424'}]}>
+          {txt}
+        </Text>
+      </TouchableOpacity>
+    </>
+  );
+}
 
 SelectionButton.defaultProps = {
   txt: null,

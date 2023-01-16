@@ -5,18 +5,21 @@ import {UserStyle} from '../../styling/userLayout';
 import TxtCollection from '../../txtCollection/txtcolletion';
 import MyUpBar from '../../upbar/MyUpBar';
 import Button_Selector from '../test/testing';
+import UserAimg from '../../../assets/images/userA.png';
 import TestPage from '../test/testing';
 
-const BTEST = ({navigation, route}) => {
+const BTEST = () => {
   return (
     <>
       <MyUpBar level={5} />
       <Button_Selector
         title="hehe"
-        count={3}
-        content={TxtCollection.q_a_2_2}
-        destination="Home"
+        content={TxtCollection.q_a_2}
+        imgsrc={UserAimg}
       />
+      <View style={[UserStyle.container2]}>
+        <NextButton destination="Home" disable={false} />
+      </View>
     </>
   );
 };

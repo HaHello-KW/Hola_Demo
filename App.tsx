@@ -40,14 +40,20 @@ import BTEST from './src/screens/userA/BTEST';
 // import Q_A_1 from './src/screens/userA/q_a_1';
 // import BTEST from './src/screens/userA/BTEST';
 // >>>>>>> 61c27733845b543401eabc08a8c193456a73f6d4
-enableScreens();
+
+// export type RootStackParamList = {
+//   BTEST: undefined;
+//   Q_Home: undefined;
+//   Q_Default_1: undefined;
+// };
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator>
+        <Stack.Navigator initialRouteName="BTEST">
           <Stack.Screen
             options={{headerShown: false}}
             name="BTEST"
@@ -64,7 +70,7 @@ const App = () => {
             name="Q_Default_1"
             component={Q_Default_1}
           />
-          <Stack.Screen
+          {/* <Stack.Screen
             options={{headerShown: false}}
             name="Q_Default_2"
             component={Q_Default_2}
@@ -159,7 +165,7 @@ const App = () => {
             options={{headerShown: false}}
             name="Q_E_1"
             component={Q_E_1}
-          />
+          /> */}
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

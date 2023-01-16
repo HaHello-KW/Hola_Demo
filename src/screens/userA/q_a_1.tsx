@@ -13,7 +13,7 @@ import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
 import TxtCollection from '../../txtCollection/txtcolletion';
 
-const Q_A_1 = ({navigation, route}) => {
+const Q_A_1 = () => {
   return (
     <>
       <MyUpBar level="4" />

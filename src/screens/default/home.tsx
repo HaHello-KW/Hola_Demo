@@ -1,3 +1,5 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
 import {
   Button,
@@ -11,12 +13,16 @@ import {
 } from 'react-native';
 
 import {ImageBackground} from 'react-native';
+import {RootStackParamList} from '../../../App';
 import Homebg from '../../../assets/images/home_start.png';
+import GobackButton from '../../Buttons/gobackButton';
 import NextButton from '../../Buttons/nextButton';
 
-const Q_Home = ({navigation, route}) => {
+const Q_Home = () => {
+  const navigation = useNavigation();
   return (
     <ImageBackground source={Homebg} style={styles.image}>
+      <GobackButton onPress={() => navigation.pop()} />
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={styles.welcometxt}>환영합니다, 하해호님!</Text>
         <Text style={styles.descriptxt}>

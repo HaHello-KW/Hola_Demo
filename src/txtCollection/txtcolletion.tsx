@@ -2,13 +2,7 @@
 //구조 재구성 필요 -> q_a_2, q_a_2_2처럼? 혹은 다른 구조로
 //
 const TxtCollection = {
-  selection: {
-    select1: 1,
-    select2: 2,
-    select3: 3,
-    select4: 4,
-    select5: 5,
-  },
+  selection: ['1', '2', '3', '4'],
   q_d_2: {
     first: '난소 건강을 유지하고 싶어',
     second: '난자 냉동 계획이 있어',

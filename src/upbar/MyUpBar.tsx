@@ -2,20 +2,27 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Box, HStack} from '@react-native-material/core';
 import PropTypes from 'prop-types';
+import GobackButton from '../Buttons/gobackButton';
 
-const MyUpBar = (props: {level: number}) => {
+type props = {
+  level: number;
+};
+const MyUpBar = ({level}: props, {navigation}) => {
   let arr: any = [];
   for (let i = 1; i <= 7; i++) {
-    i <= props.level
+    i <= level
       ? arr.push(<Box key="{i}" w="12%" h={2} style={styles.boxlineDone} />)
       : arr.push(<Box key="{i}" w="12%" h={2} style={styles.boxlineYet} />);
   }
   return (
-    <Box w="100%" h="18%" style={{backgroundColor: '#FFAF49'}}>
-      <HStack style={styles.boxline} fill center spacing={8}>
-        {arr}
-      </HStack>
-    </Box>
+    <>
+      <Box w="100%" h="18%" style={{backgroundColor: '#FFAF49'}}>
+        <HStack style={styles.boxline} fill center spacing={8}>
+          {arr}
+        </HStack>
+      </Box>
+      <GobackButton onPress={() => navigation.pop()} />
+    </>
   );
 };
 
