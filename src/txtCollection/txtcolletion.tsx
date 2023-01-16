@@ -2,6 +2,10 @@
 //구조 재구성 필요 -> q_a_2, q_a_2_2처럼? 혹은 다른 구조로
 //
 const TxtCollection = {
+  imgPath: {
+    first: '../../img/userA.png',
+    second: '../../img/userB.png',
+  },
   selection: ['1', '2', '3', '4'],
   q_d_2: {
     first: '난소 건강을 유지하고 싶어',

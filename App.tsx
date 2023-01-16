@@ -53,18 +53,17 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="BTEST">
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="BTEST"
-            component={BTEST}
-          />
+        <Stack.Navigator>
           <Stack.Screen
             options={{headerShown: false}}
             name="Home"
             component={Q_Home}
           />
-
+          <Stack.Screen
+            options={{headerShown: false}}
+            name="BTEST"
+            component={BTEST}
+          />
           <Stack.Screen
             options={{headerShown: false}}
             name="Q_Default_1"
