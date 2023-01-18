@@ -14,30 +14,28 @@ import {ImageBackground} from 'react-native';
 import Homebg from '../../../assets/images/home_start.png';
 import NextButton from '../../Buttons/nextButton';
 
-const Q_Home = ({navigation, route}) => {
+import {UserStyle} from '../../styling/userLayout';
+import GobackButton from '../../Buttons/gobackButton';
+
+const Q_RESULT = ({navigation, route}) => {
   return (
-    <ImageBackground source={Homebg} style={styles.image}>
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text style={styles.welcometxt}>환영합니다, 하해호님!</Text>
-        <Text style={styles.descriptxt}>
-          나의 유형을 체크하면 맞춤형 콘텐츠와 건강관리를 받아보실 수 있어요!
-        </Text>
-      </View>
-      {/* <TouchableOpacity
-        style={styles.startbutton}
-        onPress={() => navigation.navigate('Q_Default_1')}>
-        <Text style={styles.starttxt}>시작하기</Text>
-      </TouchableOpacity> */}
-      {/* 질문 홈화면에서 바로 결과페이지로 넘어가게끔 잠시 바꿔줌 */}
-      <TouchableOpacity
-        style={styles.startbutton}
-        onPress={() => navigation.navigate('RESULT_HOME')}>
-        <Text style={styles.starttxt}>시작하기</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.laterbutton} onPress={() => null}>
-        <Text style={styles.latertxt}>나중에 할래요</Text>
-      </TouchableOpacity>
-    </ImageBackground>
+    <>
+      <ImageBackground source={Homebg} style={styles.image}>
+        <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+          <Text style={styles.welcometxt}>수고하셨습니다!</Text>
+          <Text style={styles.descriptxt}>
+            검사가 완료되었습니다. {'\n'}나의 유형을 확인해보세요
+          </Text>
+        </View>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={styles.button}
+          onPress={() => navigation.navigate('RESULT')}>
+          <Text style={styles.text3}>다음</Text>
+        </TouchableOpacity>
+      </ImageBackground>
+      <GobackButton onPress={() => navigation.pop()} />
+    </>
   );
 };
 
@@ -48,7 +46,7 @@ const styles = StyleSheet.create({
   },
   welcometxt: {
     position: 'absolute',
-    left: 52,
+    left: 92,
     top: 280,
     color: '#FFFFFF',
     fontSize: 32,
@@ -101,5 +99,24 @@ const styles = StyleSheet.create({
     fontSize: 16,
     textAlign: 'center',
   },
+  button: {
+    //다음
+    position: 'absolute',
+    left: 65,
+    top: 670,
+    width: 260,
+    height: 48,
+    backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 4,
+  },
+  text3: {
+    fontSize: 16,
+    fontWeight: '215',
+    lineHeight: 24,
+    fontFamily: 'Noto Sans KR',
+    color: '#000000',
+  },
 });
-export default Q_Home;
+export default Q_RESULT;

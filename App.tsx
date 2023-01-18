@@ -26,96 +26,144 @@ import Q_A_Type from './src/screens/userA/q_a_type';
 import Q_Default_3 from './src/screens/default/q_default_3';
 import BTEST from './src/screens/userA/BTEST';
 import Q_Default_2 from './src/screens/default/q_default_2';
-// =======
-// import Q_Default_3 from './src/screens/default/q_default_3';
-// import Q_A_1 from './src/screens/userA/q_a_1';
-// import BTEST from './src/screens/userA/BTEST';
-// >>>>>>> 61c27733845b543401eabc08a8c193456a73f6d4
-enableScreens();
+
+import WQ_1 from './src/screens/WQ/wq_1';
+import WQ_2 from './src/screens/WQ/wq_2';
+import WQ_3 from './src/screens/WQ/wq_3';
+import WQ_4 from './src/screens/WQ/wq_4';
+
+import FQ_1 from './src/screens/OTHERQ/fq_1';
+import NQ_1 from './src/screens/OTHERQ/nq_1';
+import ALQ_1 from './src/screens/OTHERQ/alq_1';
+import IQ_1 from './src/screens/OTHERQ/iq_1';
+import Q_RESULT from './src/screens/OTHERQ/q_result';
+
+//결과페이지
+import RESULT_HOME from './src/screens/result/result_home';
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Home"
-            component={Q_Home}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_Default_1"
-            component={Q_Default_1}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_Default_2"
-            component={Q_Default_2}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Test"
-            component={Q_Default_2and3}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_Default_3"
-            component={Q_Default_3}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_Default_2_1"
-            component={Q_Default_2_1}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_A_1"
-            component={Q_A_1}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_A_2"
-            component={Q_A_2}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_A_2_1"
-            component={Q_A_2_1}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_A_3"
-            component={Q_A_3}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_A_4"
-            component={Q_A_4}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_A_4_1"
-            component={Q_A_4_1}
-          />
-          <Stack.Screen
-            options={{headerShown: false}}
-            name="Q_A_Type"
-            component={Q_A_Type}
-            // =======
-            //           name="BTEST"
-            //           component={BTEST}
-            // >>>>>>> 61c27733845b543401eabc08a8c193456a73f6d4
-          />
-          {/* <Stack.Screen
-            options={{headerShown: false}}
-            name="BTEST"
-            component={BTEST}
-          /> */}
-        </Stack.Navigator>
-      </NavigationContainer>
-    </SafeAreaProvider>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Home"
+          component={Q_Home}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_Default_1"
+          component={Q_Default_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_Default_2"
+          component={Q_Default_2}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Test"
+          component={Q_Default_2and3}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_Default_3"
+          component={Q_Default_3}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_Default_2_1"
+          component={Q_Default_2_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_A_1"
+          component={Q_A_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_A_2"
+          component={Q_A_2}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_A_2_1"
+          component={Q_A_2_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_A_3"
+          component={Q_A_3}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_A_4"
+          component={Q_A_4}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_A_4_1"
+          component={Q_A_4_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_A_Type"
+          component={Q_A_Type}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="WQ_1"
+          component={WQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="WQ_2"
+          component={WQ_2}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="WQ_3"
+          component={WQ_3}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="WQ_4"
+          component={WQ_4}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="FQ_1"
+          component={FQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="NQ_1"
+          component={NQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="ALQ_1"
+          component={ALQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="IQ_1"
+          component={IQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_RESULT"
+          component={Q_RESULT}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="RESULT_HOME"
+          component={RESULT_HOME}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
