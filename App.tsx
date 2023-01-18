@@ -40,6 +40,14 @@ import WQ_2 from './src/screens/WQ/wq_2';
 import WQ_3 from './src/screens/WQ/wq_3';
 import WQ_4 from './src/screens/WQ/wq_4';
 
+import FQ_1 from './src/screens/OTHERQ/fq_1';
+import NQ_1 from './src/screens/OTHERQ/nq_1';
+import ALQ_1 from './src/screens/OTHERQ/alq_1';
+import IQ_1 from './src/screens/OTHERQ/iq_1';
+import Q_RESULT from './src/screens/OTHERQ/q_result';
+
+//결과페이지
+import RESULT_HOME from './src/screens/result/result_home';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -131,9 +139,39 @@ const App = () => {
           name="WQ_4"
           component={WQ_4}
         />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="FQ_1"
+          component={FQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="NQ_1"
+          component={NQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="ALQ_1"
+          component={ALQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="IQ_1"
+          component={IQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="Q_RESULT"
+          component={Q_RESULT}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="RESULT_HOME"
+          component={RESULT_HOME}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
-//ggg
+
 export default App;
