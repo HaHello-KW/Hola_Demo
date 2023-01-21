@@ -23,17 +23,17 @@ const Q_Home = ({navigation, route}) => {
           나의 유형을 체크하면 맞춤형 콘텐츠와 건강관리를 받아보실 수 있어요!
         </Text>
       </View>
-      {/* <TouchableOpacity
+      <TouchableOpacity
         style={styles.startbutton}
         onPress={() => navigation.navigate('Q_Default_1')}>
         <Text style={styles.starttxt}>시작하기</Text>
-      </TouchableOpacity> */}
-      {/* 질문 홈화면에서 바로 결과페이지로 넘어가게끔 잠시 바꿔줌 */}
-      <TouchableOpacity
+      </TouchableOpacity>
+      {/* 질문 홈화면에서 바로 결과페이지로 넘어가게끔 잠시 바꿔줌
+      {/* <TouchableOpacity
         style={styles.startbutton}
         onPress={() => navigation.navigate('RESULT_HOME')}>
         <Text style={styles.starttxt}>시작하기</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
       <TouchableOpacity style={styles.laterbutton} onPress={() => null}>
         <Text style={styles.latertxt}>나중에 할래요</Text>
       </TouchableOpacity>

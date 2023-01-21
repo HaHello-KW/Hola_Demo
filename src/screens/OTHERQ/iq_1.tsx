@@ -18,7 +18,7 @@ import SelectionButton from '../../Buttons/selectionButton';
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
-import UserAimg from '../../../assets/images/userA.png';
+import UserAimg from '../../../assets/images/iq1Img.png';
 import UserImg from '../../Buttons/userImg';
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
@@ -36,7 +36,8 @@ import {useState} from 'react';
 
 const IQ_1 = ({navigation, route}) => {
   const [isSelect, selectFunc] = useState([false, false, false, false]); //버튼 다중선택을 위한 state
-  const Tfun = (num: number) => {
+  const selectChangeFunction = (num: number) => {
+    // 해당 인덱스에 해당하는 isSelect배열의 값을 바꿔주는 함수
     selectFunc([
       ...isSelect.slice(0, num),
       !isSelect[num],
@@ -113,7 +114,7 @@ const IQ_1 = ({navigation, route}) => {
           {backgroundColor: isSelect[0] ? '#F47100' : '#E0E0E0'},
         ]}
         //첫번째 버튼(고혈압) -> 첫번째 배열의 index는 0
-        onPress={() => 0}>
+        onPress={() => selectChangeFunction(0)}>
         <Text style={styles.text}>고혈압</Text>
       </TouchableOpacity>
       <TouchableOpacity
@@ -122,7 +123,7 @@ const IQ_1 = ({navigation, route}) => {
           styles.button2,
           {backgroundColor: isSelect[1] ? '#F47100' : '#E0E0E0'},
         ]}
-        onPress={() => Tfun(1)}>
+        onPress={() => selectChangeFunction(1)}>
         <Text style={styles.text}>당뇨</Text>
       </TouchableOpacity>
       <TouchableOpacity
@@ -131,7 +132,7 @@ const IQ_1 = ({navigation, route}) => {
           styles.button3,
           {backgroundColor: isSelect[2] ? '#F47100' : '#E0E0E0'},
         ]}
-        onPress={() => Tfun(2)}>
+        onPress={() => selectChangeFunction(2)}>
         <Text style={styles.text}>갑상선 항진증</Text>
       </TouchableOpacity>
       <TouchableOpacity
@@ -140,7 +141,7 @@ const IQ_1 = ({navigation, route}) => {
           styles.button4,
           {backgroundColor: isSelect[3] ? '#F47100' : '#E0E0E0'},
         ]}
-        onPress={() => Tfun(3)}>
+        onPress={() => selectChangeFunction(3)}>
         <Text style={styles.text}>갑상선 저하증</Text>
       </TouchableOpacity>
       <TouchableOpacity
@@ -160,7 +161,7 @@ const IQ_1 = ({navigation, route}) => {
       <TouchableOpacity
         activeOpacity={0.8}
         style={styles.button7}
-        onPress={() => navigation.navigate('RESULT')}>
+        onPress={() => navigation.navigate('Q_RESULT')}>
         <Text style={styles.text3}>다음</Text>
       </TouchableOpacity>
       <UserImg img={UserAimg}></UserImg>

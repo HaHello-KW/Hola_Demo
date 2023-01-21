@@ -8,7 +8,7 @@ import SelectionButton from '../../Buttons/selectionButton';
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
-import UserAimg from '../../../assets/images/userA.png';
+import UserAimg from '../../../assets/images/fq1Img.png';
 import UserImg from '../../Buttons/userImg';
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';

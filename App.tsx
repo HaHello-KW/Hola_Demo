@@ -46,6 +46,10 @@ import ALQ_1 from './src/screens/OTHERQ/alq_1';
 import IQ_1 from './src/screens/OTHERQ/iq_1';
 import Q_RESULT from './src/screens/OTHERQ/q_result';
 
+import HQ_1 from './src/screens/HQ/HQ_1';
+import HQ_2 from './src/screens/HQ/HQ_2';
+import HQ_3 from './src/screens/HQ/HQ_3';
+
 //결과페이지
 import RESULT_HOME from './src/screens/result/result_home';
 const Stack = createNativeStackNavigator();
@@ -118,6 +122,21 @@ const App = () => {
           options={{headerShown: false}}
           name="Q_A_Type"
           component={Q_A_Type}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="HQ_1"
+          component={HQ_1}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="HQ_2"
+          component={HQ_2}
+        />
+        <Stack.Screen
+          options={{headerShown: false}}
+          name="HQ_3"
+          component={HQ_3}
         />
         <Stack.Screen
           options={{headerShown: false}}

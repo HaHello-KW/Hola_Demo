@@ -30,7 +30,7 @@ const Q_RESULT = ({navigation, route}) => {
         <TouchableOpacity
           activeOpacity={0.8}
           style={styles.button}
-          onPress={() => navigation.navigate('RESULT')}>
+          onPress={() => navigation.navigate('RESULT_HOME')}>
           <Text style={styles.text3}>다음</Text>
         </TouchableOpacity>
       </ImageBackground>

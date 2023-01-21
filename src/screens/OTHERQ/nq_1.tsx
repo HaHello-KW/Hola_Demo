@@ -15,7 +15,7 @@ import SelectionButton from '../../Buttons/selectionButton';
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
-import UserAimg from '../../../assets/images/userA.png';
+import UserAimg from '../../../assets/images/nq1Img.png';
 import UserImg from '../../Buttons/userImg';
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
@@ -23,6 +23,43 @@ import MyUpBar_wq from '../../upbar/UpBar_WQ';
 import {useState} from 'react';
 
 const NQ_1 = ({navigation, route}) => {
+  const [isSelect, selectFunc] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]); //버튼 다중선택을 위한 state
+  const selectChangeFunction = (num: number) => {
+    // 해당 인덱스에 해당하는 isSelect배열의 값을 바꿔주는 함수
+    selectFunc([
+      ...isSelect.slice(0, num),
+      !isSelect[num],
+      ...isSelect.slice(num + 1),
+    ]);
+  };
+  const changeAllFalse = () => {
+    for (let i = 0; i < 16; i++) {
+      selectFunc([
+        ...isSelect.slice(0, i),
+        !isSelect[i],
+        ...isSelect.slice(i + 1),
+      ]);
+    }
+  };
+
   return (
     <>
       <MyUpBar_wq />
@@ -50,104 +87,158 @@ const NQ_1 = ({navigation, route}) => {
 
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button1}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button1,
+          {backgroundColor: isSelect[0] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(0)}>
         <Text style={styles.text}>종합비타민</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button2}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button2,
+          {backgroundColor: isSelect[1] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(1)}>
         <Text style={styles.text}>칼슘</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button3}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button3,
+          {backgroundColor: isSelect[2] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(2)}>
         <Text style={styles.text}>철분</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button4}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button4,
+          {backgroundColor: isSelect[3] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(3)}>
         <Text style={styles.text}>엽산</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button5}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button5,
+          {backgroundColor: isSelect[4] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(4)}>
         <Text style={styles.text}>마그네슘</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button6}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button6,
+          {backgroundColor: isSelect[5] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(5)}>
         <Text style={styles.text}>오메가 3</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button7}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button7,
+          {backgroundColor: isSelect[6] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(6)}>
         <Text style={styles.text}>코엔자임큐텐</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button8}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button8,
+          {backgroundColor: isSelect[7] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(7)}>
         <Text style={styles.text}>아세틸시스테인</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button9}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button9,
+          {backgroundColor: isSelect[8] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(8)}>
         <Text style={styles.text}>아연</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button10}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button10,
+          {backgroundColor: isSelect[9] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(9)}>
         <Text style={styles.text}>레스베라트롤</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button11}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button11,
+          {backgroundColor: isSelect[10] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(10)}>
         <Text style={styles.text}>이노시톨</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button12}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button12,
+          {backgroundColor: isSelect[11] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(11)}>
         <Text style={styles.text}>요오드</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button13}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button13,
+          {backgroundColor: isSelect[12] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(12)}>
         <Text style={styles.text}>셀레늄</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button14}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button14,
+          {backgroundColor: isSelect[13] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(13)}>
         <Text style={styles.text}>프로바이오틱스</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button15}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button15,
+          {backgroundColor: isSelect[14] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(14)}>
         <Text style={styles.text}>글루타치온</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button16}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button16,
+          {backgroundColor: isSelect[15] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => selectChangeFunction(15)}>
         <Text style={styles.text}>타이로신</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button17}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button17,
+          {backgroundColor: isSelect[16] ? '#F47100' : '#E0E0E0'},
+        ]}
+        onPress={() => {
+          selectChangeFunction(16);
+          changeAllFalse;
+        }}>
         <Text style={styles.text}>영양제를 먹고 있지 않아</Text>
       </TouchableOpacity>
       <View style={[UserStyle.container2]}>

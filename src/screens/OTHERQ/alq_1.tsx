@@ -15,12 +15,25 @@ import SelectionButton from '../../Buttons/selectionButton';
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
-import UserAimg from '../../../assets/images/userA.png';
+import UserAimg from '../../../assets/images/alq1Img.png';
 import UserImg from '../../Buttons/userImg';
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
 
+import {useState} from 'react';
+import {alertClasses} from '@mui/material';
+
 const ALQ_1 = ({navigation, route}) => {
+  const [isSelect, selectFunc] = useState([false, false]); //버튼 다중선택을 위한 state
+  const selectChangeFunction = (num: number) => {
+    // 해당 인덱스에 해당하는 isSelect배열의 값을 바꿔주는 함수
+    selectFunc([
+      ...isSelect.slice(0, num),
+      !isSelect[num],
+      ...isSelect.slice(num + 1),
+    ]);
+  };
+
   return (
     <>
       <MyUpBar_wq />
@@ -37,19 +50,34 @@ const ALQ_1 = ({navigation, route}) => {
       </Text>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button1}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button2,
+          {
+            backgroundColor: isSelect[0] ? '#F47100' : '#E0E0E0',
+          },
+        ]}
+        onPress={() => selectChangeFunction(0)}>
         <Text style={styles.text}>있어</Text>
       </TouchableOpacity>
       <TouchableOpacity
         activeOpacity={0.8}
-        style={styles.button2}
-        onPress={() => alert('NQ_1')}>
+        style={[
+          styles.button1,
+          {
+            backgroundColor: isSelect[1] ? '#F47100' : '#E0E0E0',
+          },
+        ]}
+        onPress={() => selectChangeFunction(1)}>
         <Text style={styles.text}>없어</Text>
       </TouchableOpacity>
 
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('IQ_1')}></NextButton>
+        <NextButton
+          onPress={
+            isSelect[0] && isSelect[1]
+              ? () => alert('선택지중 하나면 선택하세요')
+              : () => navigation.navigate('IQ_1')
+          }></NextButton>
       </View>
       <UserImg img={UserAimg}></UserImg>
     </>
@@ -73,7 +101,7 @@ const styles = StyleSheet.create({
     top: 300,
     width: 171,
     height: 126,
-    backgroundColor: '#E0E0E0',
+    //backgroundColor: '#E0E0E0',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
@@ -84,7 +112,7 @@ const styles = StyleSheet.create({
     top: 300,
     width: 171,
     height: 126,
-    backgroundColor: '#E0E0E0',
+    //backgroundColor: '#E0E0E0',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 12,
