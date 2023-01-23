@@ -21,6 +21,7 @@ import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
 import {useState} from 'react';
+import TxtCollection from '../../txtCollection/txtcolletion';
 
 //생리주기
 interface Cycle {
@@ -180,6 +181,7 @@ const Q_A_4 = ({navigation, route}) => {
           <TextInput
             value={cycle.cycle}
             style={styles.input}
+            placeholderTextColor="#C1C1C1"
             onChangeText={num => {
               handleInputChange2('cycle', num);
             }}
@@ -198,6 +200,7 @@ const Q_A_4 = ({navigation, route}) => {
           <TextInput
             value={period.period}
             style={styles.input}
+            placeholderTextColor="#C1C1C1"
             onChangeText={num => {
               handleInputChange3('period', num);
             }}
@@ -208,20 +211,14 @@ const Q_A_4 = ({navigation, route}) => {
         </View>
       </View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_4_1')} />
+        <NextButton disabled={false} destination="Q_userA_4_1" />
       </View>
-      <UserImg img={UserAimg} />
+      <Image source={TxtCollection.q_a_1_1.imgPath} style={styles.image} />
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  // container: {
-  //   flex: 1,
-  //   justifyContent: 'center',
-  //   alignItems: 'center',
-  //   backgroundColor: '#F5F5F5',
-  // },
   textInput: {
     fontSize: 24,
     fontWeight: '400',
@@ -257,13 +254,6 @@ const styles = StyleSheet.create({
     width: 300,
     height: 40,
   },
-  // buttonNext: {
-  //   marginTop: 20,
-  //   marginBottom: 20,
-  //   backgroundColor: '#F47100',
-  //   width: 300,
-  //   height: 40,
-  // },
   blacktxt: {
     fontWeight: '500',
     fontSize: 16,
@@ -278,25 +268,31 @@ const styles = StyleSheet.create({
     color: '#FF7C00',
   },
   input: {
-    // fontSize: 24,
-    // fontWeight: '400',
-    // color: '#F47100',
     alignItems: 'center',
-    // textAlign: 'center',
-    // lineHeight: 34.75,
     fontSize: 24,
     fontWeight: '400',
     color: '#F47100',
     justifyContent: 'center',
   },
   container_test: {
+    // flex: 1,
     flexDirection: 'row',
     // width: 240,
     // height: 140,
+    // backgroundColor: '#008000',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
     // lineHeight: 34.75,
+  },
+  image: {
+    position: 'absolute',
+    left: '36%',
+    top: '13%',
+    width: 105,
+    height: 105,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 

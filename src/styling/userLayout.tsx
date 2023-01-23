@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 export const UserStyle = StyleSheet.create({
   container: {
-    flex: 0.8,
+    flex: 1,
     // width: '100%',
     // height: 80,
     backgroundColor: '#f5f5f5',
@@ -13,7 +13,7 @@ export const UserStyle = StyleSheet.create({
   //질문 스타일링
   //container0_1, 0_1_n -> 3줄 질문 스타일링
   container0_1: {
-    flex: 2.2,
+    flex: 2.5,
     // width: 240,
     // height: 140,
     backgroundColor: '#f5f5f5',
@@ -23,48 +23,48 @@ export const UserStyle = StyleSheet.create({
     // lineHeight: 34.75,
   },
   container0_1_1: {
-    flex: 1,
+    // flex: 1,
     flexDirection: 'row',
     // width: 240,
     // height: 140,
-    backgroundColor: '#ff0000',
+    backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    // lineHeight: 34.75,
+    lineHeight: 34.75,
   },
   container0_1_2: {
-    flex: 1,
+    // flex: 1,
     flexDirection: 'row',
     // width: 240,
     // height: 140,
-    backgroundColor: '#0000ff',
+    backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    // lineHeight: 34.75,
+    lineHeight: 34.75,
   },
   container0_1_3: {
-    flex: 1,
+    // flex: 1,
     flexDirection: 'row',
     // width: 240,
     // height: 140,
-    backgroundColor: '#008000',
+    backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
-    // lineHeight: 34.75,
+    lineHeight: 34.75,
   },
   //한줄 질문 스타일링 && 선택지박스 2개 이하
   container0_2: {
-    flex: 1.2,
+    flex: 1.5,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
   },
   //한줄 질문 스타일링 && 선택지박스 3개 이상
   container0_3: {
-    flex: 0.9,
+    flex: 1.2,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'center',
@@ -72,19 +72,21 @@ export const UserStyle = StyleSheet.create({
   //
   //선택지박스 스타일링
   container1_1: {
-    flex: 4,
+    flex: 3.5,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
+  //2개 이하
   container1_2: {
-    flex: 5,
+    flex: 4.5,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
+  //3개 이상
   container1_3: {
-    flex: 5.3,
+    flex: 4.8,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -92,9 +94,10 @@ export const UserStyle = StyleSheet.create({
   //
   //다음버튼 스타일링
   container2: {
-    position: 'absolute',
-    bottom: 0,
-    height: 90,
+    // position: 'absolute',
+    // bottom: 0,
+    // height: 90,
+    flex: 1.5,
     width: '100%',
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
@@ -103,21 +106,45 @@ export const UserStyle = StyleSheet.create({
   //생리주기 생리기간 스타일링 - default 예상
   container3_1: {
     flex: 1.5,
+    // flexDirection: 'row'
     backgroundColor: '#F5F5F5',
     alignItems: 'center',
     justifyContent: 'center',
   },
   container3_2: {
-    flex: 1.5,
+    flex: 2,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   container3_3: {
-    flex: 3.2,
+    flex: 2.5,
     backgroundColor: '#f5f5f5',
     alignItems: 'center',
     justifyContent: 'flex-start',
+  },
+  //type result page container
+  containerR_0: {
+    flex: 1,
+    backgroundColor: '#ffffff',
+  },
+  containerR_1: {
+    flex: 4.5,
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  containerR_2: {
+    flex: 9,
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
+  containerR_3: {
+    flex: 5,
+    backgroundColor: '#ffffff',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   //one? three?? 결국 같은거같은데 이거 수정 ㄱㄱ
   onelinetxt: {
@@ -147,7 +174,7 @@ export const UserStyle = StyleSheet.create({
   descriptionGray: {
     marginTop: 8,
     marginBottom: 8,
-    fontSize: 12,
+    fontSize: 10,
     fontWeight: '400',
     color: '#6F6F6F',
     lineHeight: 20,

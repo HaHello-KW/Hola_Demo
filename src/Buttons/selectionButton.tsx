@@ -1,7 +1,7 @@
 import {useLinkProps} from '@react-navigation/native';
 import React, {Component, useState} from 'react';
 import {StyleSheet, TouchableOpacity, Text, View} from 'react-native';
-import PropTypes, {number} from 'prop-types';
+import PropTypes, {element, number} from 'prop-types';
 import {UserStyle} from '../styling/userLayout';
 
 //
@@ -14,10 +14,13 @@ import {UserStyle} from '../styling/userLayout';
 
 type props = {
   txt: string;
+  isSelected: any | boolean;
+  handlePress: any;
+  elementIndex: number;
 };
 
-function SelectionButton({txt}: props) {
-  const [isSelect, setSelected] = useState(false);
+function SelectionButton({txt, isSelected, handlePress, elementIndex}: props) {
+  // const [isSelect, setSelected] = useState(false);
   // const disabled = () => {
   //   if (isSelect) return false;
   //   else return true;
@@ -28,27 +31,16 @@ function SelectionButton({txt}: props) {
       <TouchableOpacity
         style={[
           styles.button,
-          {backgroundColor: isSelect ? '#F47100' : '#E3E3E3'},
+          {backgroundColor: isSelected ? '#F47100' : '#E3E3E3'},
         ]}
-        onPressOut={() => setSelected(!isSelect)}>
-        <Text style={[styles.txt, {color: isSelect ? '#fbfbfb' : '#242424'}]}>
+        onPress={() => handlePress(elementIndex)}>
+        <Text style={[styles.txt, {color: isSelected ? '#fbfbfb' : '#242424'}]}>
           {txt}
         </Text>
       </TouchableOpacity>
     </>
   );
 }
-
-SelectionButton.defaultProps = {
-  txt: null,
-  // selectNum: number,
-  // onPressIn: () => showMsg,
-};
-
-SelectionButton.propTypes = {
-  txt: PropTypes.string,
-  // selectNum: PropTypes.number,
-};
 
 const styles = StyleSheet.create({
   button: {
@@ -57,7 +49,7 @@ const styles = StyleSheet.create({
     width: 324,
     height: 64,
     borderRadius: 8,
-    marginBottom: '2%',
+    marginTop: '2%',
 
     //   width: 300,
     //   height: 50,

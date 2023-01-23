@@ -23,6 +23,7 @@ import {TouchableOpacity} from 'react-native-gesture-handler';
 
 //new from seungho
 import MyUpBar from '../../upbar/MyUpBar';
+import TxtCollection from '../../txtCollection/txtcolletion';
 
 interface Age {
   age: any;
@@ -73,10 +74,9 @@ const Q_A_1_1 = ({navigation, route}) => {
       </View>
       <View style={[UserStyle.container1_1]}></View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_2')}></NextButton>
+        <NextButton disabled={false} destination="Q_userA_2" />
       </View>
-      <UserImg img={UserAimg}></UserImg>
-      {/* </SafeAreaView> */}
+      <Image source={TxtCollection.q_a_1_1.imgPath} style={styles.image} />
     </>
   );
 };
@@ -95,6 +95,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   container: {flex: 1},
+  image: {
+    position: 'absolute',
+    left: '36%',
+    top: '13%',
+    width: 105,
+    height: 105,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default Q_A_1_1;

@@ -5,5 +5,6 @@ const images = {
   userC: require('./userC.png'),
   userD: require('./userD.png'),
   userE: require('./userE.png'),
+  null: null,
 };
 export default images;

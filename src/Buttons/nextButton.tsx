@@ -33,19 +33,19 @@ import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 
 type props = {
   destination: string;
-  disable: boolean;
+  disabled: boolean;
   //disable = true -> disabled!!, disabled=false -> enabled!!
   // onPress: () => void;
 };
 
-function NextButton({destination, disable}: props) {
+function NextButton({destination, disabled}: props) {
   const navigation = useNavigation();
   // const [disable, setDisable] = useState(true);
 
   return (
     <TouchableOpacity
-      style={disable ? styles.disable : styles.enable}
-      disabled={disable}
+      style={disabled ? styles.disable : styles.enable}
+      disabled={disabled}
       onPress={() => navigation.navigate(destination as never)}>
       <Text style={styles.title}>다음</Text>
     </TouchableOpacity>

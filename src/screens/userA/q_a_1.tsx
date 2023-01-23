@@ -12,34 +12,18 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
 import TxtCollection from '../../txtCollection/txtcolletion';
+import Button_Selector from '../component/ButtonSelector';
 
 const Q_A_1 = () => {
   return (
     <>
-      <MyUpBar level="4" />
-      <GobackButton onPress={() => navigation.pop()} />
-      <View style={[UserStyle.container]} />
-      <View style={[UserStyle.container0_2]}>
-        <Text style={[UserStyle.onelinetxt]}>나는</Text>
-      </View>
-      <View style={[UserStyle.container1_2]}>
-        <SelectionButton
-          txt={TxtCollection.q_a_1.first}
-          // onPress={() => alert('want')}
-        />
-        <SelectionButton
-          txt={TxtCollection.q_a_1.second}
-          // onPress={() => alert('do not')}
-        />
-        <SelectionButton
-          txt={TxtCollection.q_a_1.third}
-          // onPress={() => alert('do not know')}
-        />
-      </View>
-      <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_1_1')} />
-      </View>
-      <UserImg img={UserAimg}></UserImg>
+      <Button_Selector
+        pglevel={TxtCollection.q_a_1.level}
+        title={TxtCollection.q_a_1.questionTitle}
+        content={TxtCollection.q_a_1.contents}
+        count={TxtCollection.q_a_1.count}
+        imgpath={TxtCollection.q_a_1.imgPath}
+        nextpage={'Q_userA_1_1'}></Button_Selector>
     </>
   );
 };

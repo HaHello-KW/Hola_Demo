@@ -22,7 +22,6 @@ const Q_Home = () => {
   const navigation = useNavigation();
   return (
     <ImageBackground source={Homebg} style={styles.image}>
-      <GobackButton onPress={() => navigation.pop()} />
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
         <Text style={styles.welcometxt}>환영합니다, 하해호님!</Text>
         <Text style={styles.descriptxt}>
@@ -31,7 +30,7 @@ const Q_Home = () => {
       </View>
       <TouchableOpacity
         style={styles.startbutton}
-        onPress={() => navigation.navigate('BTEST')}>
+        onPress={() => navigation.navigate('Q_Default_1')}>
         <Text style={styles.starttxt}>시작하기</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.laterbutton} onPress={() => null}>

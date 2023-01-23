@@ -10,6 +10,7 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
 import {useState} from 'react';
+import TxtCollection from '../../txtCollection/txtcolletion';
 
 interface Age {
   age: any;
@@ -60,9 +61,9 @@ const Q_A_2_3 = ({navigation, route}) => {
       </View>
       <View style={[UserStyle.container1_1]}></View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_3')}></NextButton>
+        <NextButton disabled={false} destination="Q_userA_3" />
       </View>
-      <UserImg img={UserAimg}></UserImg>
+      <Image source={TxtCollection.q_a_1_1.imgPath} style={styles.image} />
       {/* </SafeAreaView> */}
     </>
   );
@@ -82,6 +83,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   container: {flex: 1},
+  image: {
+    position: 'absolute',
+    left: '36%',
+    top: '13%',
+    width: 105,
+    height: 105,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 });
 
 export default Q_A_2_3;

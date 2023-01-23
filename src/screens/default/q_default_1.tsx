@@ -156,7 +156,7 @@ const Q_Default_1 = ({navigation, route}) => {
 
   return (
     <>
-      <MyUpBar level="1" />
+      <MyUpBar level={1} />
       <GobackButton onPress={() => navigation.pop()} />
       {/* <View style={[Styling.container0]}></View> */}
       <View style={DefaultStyle.container0_1}>
@@ -183,7 +183,7 @@ const Q_Default_1 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container1_2]} />
       <View style={[DefaultStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_Default_2')} />
+        <NextButton destination={'Q_Default_2'} disabled={false} />
       </View>
     </>
   );

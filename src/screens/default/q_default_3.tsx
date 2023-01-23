@@ -6,40 +6,18 @@ import NextButton from '../../Buttons/nextButton';
 import SelectionButton from '../../Buttons/selectionButton';
 import GobackButton from '../../Buttons/gobackButton';
 import TxtCollection from '../../txtCollection/txtcolletion';
+import Button_Selector from '../component/ButtonSelector';
 
-const Q_Default_3 = ({navigation, route}) => {
+const Q_Default_3 = () => {
   return (
     <>
-      <MyUpBar level="3" />
-      <GobackButton onPress={() => navigation.pop()} />
-      <View style={[DefaultStyle.container0]}>
-        <Text style={DefaultStyle.onelinetxt}>나는</Text>
-      </View>
-      <View style={[DefaultStyle.container1]}>
-        <SelectionButton
-          txt={TxtCollection.q_d_2_1.first}
-          // onPress={() => navigation.navigate('Q_A_1')}
-        />
-        <SelectionButton
-          txt={TxtCollection.q_d_2_1.second}
-          // onPress={() => navigation.navigate('Q_B_1')}
-        />
-        <SelectionButton
-          txt={TxtCollection.q_d_2_1.third}
-          // onPress={() => navigation.navigate('Q_C_1')}
-        />
-        <SelectionButton
-          txt={TxtCollection.q_d_2_1.fourth}
-          // onPress={() => navigation.navigate('Q_D_1')}
-        />
-        <SelectionButton
-          txt={TxtCollection.q_d_2_1.fifth}
-          // onPress={() => navigation.navigate('Q_E_1')}
-        />
-      </View>
-      <View style={[DefaultStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_1')} />
-      </View>
+      <Button_Selector
+        pglevel={TxtCollection.q_d_3.level}
+        title={TxtCollection.q_d_3.questionTitle}
+        content={TxtCollection.q_d_3.contents}
+        count={TxtCollection.q_d_3.count}
+        imgpath={TxtCollection.q_d_3.imgPath}
+        nextpage={TxtCollection.q_d_3.nextpage[0]}></Button_Selector>
     </>
   );
 };

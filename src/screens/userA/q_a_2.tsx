@@ -10,38 +10,32 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
 import TxtCollection from '../../txtCollection/txtcolletion';
+import Button_Selector from '../component/ButtonSelector';
 
 const Q_A_2 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar level="5" />
-      <GobackButton onPress={() => navigation.pop()} />
-      <View style={[UserStyle.container]} />
-      <View style={[UserStyle.container0_2]}>
-        <Text style={[UserStyle.onelinetxt]}>나는 아이를</Text>
-      </View>
-      <View style={[UserStyle.container1_2]}>
-        <SelectionButton
-          txt={TxtCollection.q_a_2[0]}
-          // onPress={() => alert('want')}
-        />
-        <SelectionButton
-          txt={TxtCollection.q_a_2[1]}
-          // onPress={() => alert('do not')}
-        />
-        {/* <Button
-          title="test"
-          disabled
-          color="#ffffff"
-          onPress={() => alert('cannot press')}
-        /> */}
-      </View>
-      <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_2_1')} />
-      </View>
-      <UserImg img={UserAimg} />
+      <Button_Selector
+        pglevel={TxtCollection.q_a_2.level}
+        title={TxtCollection.q_a_2.questionTitle}
+        content={TxtCollection.q_a_2.contents}
+        count={TxtCollection.q_a_2.count}
+        imgpath={TxtCollection.q_a_2.imgPath}
+        nextpage={'Q_userA_2_1'}
+      />
     </>
   );
 };
+const styles = StyleSheet.create({
+  image: {
+    position: 'absolute',
+    left: '36%',
+    top: '13%',
+    width: 105,
+    height: 105,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default Q_A_2;
