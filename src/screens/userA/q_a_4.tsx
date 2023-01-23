@@ -7,8 +7,7 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import MyUpBar_7 from '../../upbar/UpBar_7';
-
+import MyUpBar from '../../upbar/MyUpBar';
 import {UserStyle} from '../../styling/userLayout';
 
 import NextButton from '../../Buttons/nextButton';
@@ -25,7 +24,9 @@ import {useState} from 'react';
 
 const Q_A_4 = ({navigation, route}) => {
   Date.prototype.format = function (f) {
-    if (!this.valueOf()) return ' ';
+    if (!this.valueOf()) {
+      return ' ';
+    }
 
     var weekName = [
       '일요일',
@@ -110,7 +111,7 @@ const Q_A_4 = ({navigation, route}) => {
 
   return (
     <>
-      <MyUpBar_7 />
+      <MyUpBar level="7" />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container3_1]}>
@@ -151,9 +152,9 @@ const Q_A_4 = ({navigation, route}) => {
         <Text style={styles.text}>n 일</Text>
       </View>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('Q_A_4_1')}></NextButton>
+        <NextButton onPress={() => navigation.navigate('Q_A_4_1')} />
       </View>
-      <UserImg img={UserAimg}></UserImg>
+      <UserImg img={UserAimg} />
     </>
   );
 };

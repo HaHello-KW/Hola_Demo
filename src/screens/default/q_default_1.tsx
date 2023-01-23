@@ -10,14 +10,16 @@ import {
 } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
-import MyUpBar_1 from '../../upbar/UpBar_1';
+import MyUpBar from '../../upbar/MyUpBar';
 import NextButton from '../../Buttons/nextButton';
 import {DefaultStyle} from '../../styling/defaultLayout';
 import GobackButton from '../../Buttons/gobackButton';
 
 const Q_Default_1 = ({navigation, route}) => {
   Date.prototype.format = function (f) {
-    if (!this.valueOf()) return ' ';
+    if (!this.valueOf()) {
+      return ' ';
+    }
 
     var weekName = [
       '일요일',
@@ -153,7 +155,7 @@ const Q_Default_1 = ({navigation, route}) => {
 
   return (
     <>
-      <MyUpBar_1 />
+      <MyUpBar level="1" />
       <GobackButton onPress={() => navigation.pop()} />
       {/* <View style={[Styling.container0]}></View> */}
       <View style={DefaultStyle.container0_1}>
@@ -180,8 +182,7 @@ const Q_Default_1 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container1_2]} />
       <View style={[DefaultStyle.container2]}>
-        <NextButton
-          onPress={() => navigation.navigate('Q_Default_2')}></NextButton>
+        <NextButton onPress={() => navigation.navigate('Q_Default_2')} />
       </View>
     </>
   );

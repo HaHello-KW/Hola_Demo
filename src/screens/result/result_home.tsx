@@ -22,10 +22,132 @@ import UserAimg from '../../../assets/images/userA.png';
 import base from '../../../assets/images/Rectangle_base.png';
 import base_1 from '../../../assets/images/Rectangle_1.png';
 import {height} from '@mui/system';
+import rectangle_hospital from '../../../assets/images/Rectangle_hospital.png';
 
-//import AMH from '../../../assets/images/AMH_result.png';
+import {useState} from 'react';
 
 const RESULT_HOME = ({navigation, route}) => {
+  const [amh_isopen, openFunc] = useState(true);
+
+  const graph_box_open_amh = () => {
+    return (
+      <View style={styles.hormone_box_openMode}>
+        <Image
+          style={styles.amh}
+          source={require('../../../assets/images/AMH_result.png')}
+        />
+
+        <Text style={styles.hormone_text}>정상</Text>
+        <Text style={styles.hormone_value}>1.91 ng/ml</Text>
+        <TouchableOpacity onPress={() => alert('aa')}>
+          <Image
+            style={styles.hormone_button1}
+            source={require('../../../assets/images/hormone_open.png')}
+          />
+        </TouchableOpacity>
+        <View style={styles.graph_base}>
+          <Text style={styles.graph_xValue1}>34세</Text>
+          <Text style={styles.graph_xValue2}>35세</Text>
+          <Text style={styles.graph_xValue3}>36세</Text>
+          <Text style={styles.graph_xValue4}>37세</Text>
+          <Text style={styles.graph_yValue1}>87.5</Text>
+          <Text style={styles.graph_yValue2}>75.5</Text>
+          <Text style={styles.graph_yValue3}>62.5</Text>
+          <Text style={styles.graph_yValue4}>50.1</Text>
+          <Text style={styles.graph_yValue5}>37.6</Text>
+          {graph()}
+        </View>
+      </View>
+    );
+  };
+
+  const graph_box_closed_fsh = () => {
+    return (
+      <View style={styles.hormone_box_fsh_closeMode}>
+        <Image
+          style={styles.fsh}
+          source={require('../../../assets/images/FSH_result.png')}
+        />
+
+        <Text style={styles.hormone_text}>정상</Text>
+        <Text style={styles.hormone_value}>1.91 ng/ml</Text>
+        <TouchableOpacity onPress={() => alert('aa')}>
+          <Image
+            style={styles.hormone_button1}
+            source={require('../../../assets/images/hormone_open.png')}
+          />
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
+  const graph_box_closed_lh = () => {
+    return (
+      <View style={styles.hormone_box_lh_closeMode}>
+        <Image
+          style={styles.lh}
+          source={require('../../../assets/images/LH_result.png')}
+        />
+
+        <Text style={styles.hormone_text}>정상</Text>
+        <Text style={styles.hormone_value}>1.91 ng/ml</Text>
+        <TouchableOpacity onPress={() => alert('aa')}>
+          <Image
+            style={styles.hormone_button1}
+            source={require('../../../assets/images/hormone_open.png')}
+          />
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
+  const graph = () => {
+    return (
+      <>
+        <Image
+          style={styles.line_y0}
+          source={require('../../../assets/images/Line1.png')}
+        />
+        <Image
+          style={styles.line_y1}
+          source={require('../../../assets/images/Line1.png')}
+        />
+        <Image
+          style={styles.line_y2}
+          source={require('../../../assets/images/Line1.png')}
+        />
+        <Image
+          style={styles.line_y3}
+          source={require('../../../assets/images/Line1.png')}
+        />
+        <Image
+          style={styles.line_y4}
+          source={require('../../../assets/images/Line1.png')}
+        />
+        <Image
+          style={styles.line_x0}
+          source={require('../../../assets/images/Line2.png')}
+        />
+        <Image
+          style={styles.line_x1}
+          source={require('../../../assets/images/Line2.png')}
+        />
+        <Image
+          style={styles.line_x2}
+          source={require('../../../assets/images/Line2.png')}
+        />
+        <Image
+          style={styles.line_x3}
+          source={require('../../../assets/images/Line2.png')}
+        />
+        <Image
+          style={styles.line_x4}
+          source={require('../../../assets/images/Line2.png')}
+        />
+      </>
+    );
+  };
+
   return (
     <SafeAreaView>
       <ScrollView>
@@ -66,49 +188,367 @@ const RESULT_HOME = ({navigation, route}) => {
                 호르몬 수치 입력하기 {'>'}
               </Text>
             </TouchableOpacity>
-
-            <View style={styles.hormone_box}>
-              <Image
-                style={styles.amh}
-                source={require('../../../assets/images/AMH_result.png')}
-              />
-
-              <Text style={styles.hormone_text}>정상</Text>
-              <Text style={styles.hormone_value}>1.91 ng/ml</Text>
-
-              <View style={styles.graph_base}>
-                <Text style={styles.graph_xValue1}>34세</Text>
-                <Text style={styles.graph_xValue2}>35세</Text>
-                <Text style={styles.graph_xValue3}>36세</Text>
-                <Text style={styles.graph_xValue4}>37세</Text>
-                <Text style={styles.graph_yValue1}>87.5</Text>
-                <Text style={styles.graph_yValue2}>75.5</Text>
-                <Text style={styles.graph_yValue3}>62.5</Text>
-                <Text style={styles.graph_yValue4}>50.1</Text>
-                <Text style={styles.graph_yValue5}>37.6</Text>
-                <Image
-                  style={styles.line_y0}
-                  source={require('../../../assets/images/Line1.png')}
-                />
-                <Image
-                  style={styles.line_y1}
-                  source={require('../../../assets/images/Line1.png')}
-                />
-                <Image
-                  style={styles.line_y2}
-                  source={require('../../../assets/images/Line1.png')}
-                />
-                <Image
-                  style={styles.line_y3}
-                  source={require('../../../assets/images/Line1.png')}
-                />
-                <Image
-                  style={styles.line_y4}
-                  source={require('../../../assets/images/Line1.png')}
-                />
-              </View>
-            </View>
+            {graph_box_open_amh()}
+            {graph_box_closed_fsh()}
+            {graph_box_closed_lh()}
           </ImageBackground>
+          <ImageBackground
+            source={rectangle_hospital}
+            style={{
+              position: 'absolute',
+              left: 0,
+              top: 1398,
+              height: 367,
+              width: 390,
+            }}>
+            <Image
+              style={{
+                position: 'absolute',
+                left: 104,
+                top: 22.6,
+                width: 185.62,
+                height: 113.77,
+              }}
+              source={require('../../../assets/images/twoHand.png')}
+            />
+            <Text
+              style={{
+                position: 'absolute',
+                left: 97,
+                top: 140,
+                width: 206.94,
+                height: 33,
+                textAlign: 'center',
+                fontSize: 18,
+                fontWeight: '700',
+                color: '#000000',
+              }}>
+              근처 여성병원 검색하기
+            </Text>
+            <Text
+              style={{
+                position: 'absolute',
+                left: 105,
+                top: 172,
+                width: 190.48,
+                height: 40,
+                textAlign: 'center',
+                fontSize: 12,
+                fontWeight: '400',
+                color: '#000000',
+                letterSpacing: -0.03,
+              }}>
+              여성호르몬 수치를 검사받을 수 있는 병원을 찾아보세요
+            </Text>
+            {/* 병원 검색하기 버튼 */}
+            <TouchableOpacity onPress={() => alert('병원검색')}>
+              <View
+                style={{
+                  position: 'absolute',
+                  left: 65,
+                  top: 223,
+                  width: 260,
+                  height: 48,
+                  backgroundColor: '#F47100',
+                  borderRadius: 4,
+                }}>
+                <Text
+                  style={{
+                    textAlign: 'center',
+                    top: 12,
+                    fontSize: 16,
+                    fontWeight: '400',
+                    color: '#FBFBFB',
+                  }}>
+                  병원 검색하기
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </ImageBackground>
+          {/* 밑은 건강여정 포함된 박스 */}
+          <View style={styles.otherBox}>
+            <Text
+              style={{
+                left: 24,
+                top: 66,
+                width: 189,
+                height: 28,
+                fontSize: 24,
+                fontWeight: '700',
+                color: '#F47100',
+              }}>
+              하해호님 건강여정
+            </Text>
+            <View style={styles.timeLine_ex}>
+              <ScrollView nestedScrollEnabled={true}>
+                <Text
+                  style={{
+                    left: 22,
+                    top: 6,
+                    width: 29,
+                    height: 15,
+                    fontSize: 12,
+                    fontWeight: '400',
+                    color: '#9D9D9D',
+                  }}>
+                  2022
+                </Text>
+                <Text
+                  style={{
+                    left: 1,
+                    top: 6,
+                    width: 42,
+                    height: 30,
+                    fontSize: 20,
+                    fontWeight: '700',
+                    color: '#9D9D9D',
+                  }}>
+                  32세
+                </Text>
+                <Text>aa</Text>
+                <Text>aa</Text>
+                <Text>aa</Text>
+                <Text>aa</Text>
+                <Text>aa</Text>
+                <Text>aa2</Text>
+                <Text>aa3</Text>
+                <Text>aa4</Text>
+                <Text>aa5</Text>
+                <Text>aa6</Text>
+                <Text>aa7</Text>
+                <Text>aa8</Text>
+              </ScrollView>
+              <TouchableOpacity onPress={() => alert('타임라인수정')}>
+                <Image
+                  style={{left: 311, top: 2, width: 48, height: 48}}
+                  source={require('../../../assets/images/changeTimelineButton.png')}
+                />
+              </TouchableOpacity>
+            </View>
+          </View>
+          <TouchableOpacity onPress={() => alert('시술정보')}>
+            <ImageBackground
+              style={styles.medicalInfo}
+              source={require('../../../assets/images/medical_info.png')}>
+              <Text
+                style={{
+                  left: 10,
+                  top: 70,
+                  width: 110,
+                  height: 27,
+                  fontSize: 24,
+                  fontWeight: '700',
+                  color: '#FFFFFF',
+                }}>
+                시술 정보
+              </Text>
+              <Text
+                style={{
+                  left: 8,
+                  top: 80,
+                  width: 250,
+                  height: 20,
+                  fontSize: 14,
+                  fontWeight: '400',
+                  color: '#FFFFFF',
+                }}>
+                난자 냉동, 난임 시술 정보를 확인해보세요
+              </Text>
+            </ImageBackground>
+          </TouchableOpacity>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 30,
+              top: 2586,
+              width: 215,
+              height: 22,
+              fontSize: 18,
+              fontWeight: '700',
+              color: '#242424',
+            }}>
+            하해호님을 위한 건강 컨텐츠
+          </Text>
+          <TouchableOpacity onPress={() => alert('골반스트레칭')}>
+            <Image
+              //style={styles.strecth}
+              style={{
+                position: 'absolute',
+                left: 30,
+                top: 1810,
+                width: 160,
+                height: 132,
+              }}
+              source={require('../../../assets/images/stretch.png')}
+            />
+          </TouchableOpacity>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 30,
+              top: 2760,
+              width: 128,
+              height: 25,
+              fontSize: 14,
+              fontWeight: '700',
+              color: '#545454',
+            }}>
+            골반 허벅지 스트레칭
+          </Text>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 30,
+              top: 2782,
+              width: 154,
+              height: 18,
+              fontSize: 12,
+              fontWeight: '400',
+              color: '#545454',
+            }}>
+            쉽고 재미있게 따라할 수 있어요
+          </Text>
+          <TouchableOpacity onPress={() => alert('음악명상')}>
+            <Image
+              //style={styles.strecth}
+              style={{
+                position: 'absolute',
+                left: 200,
+                top: 1810,
+                width: 160,
+                height: 132,
+              }}
+              source={require('../../../assets/images/music.png')}
+            />
+          </TouchableOpacity>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 203,
+              top: 2760,
+              width: 151,
+              height: 25,
+              fontSize: 14,
+              fontWeight: '700',
+              color: '#545454',
+            }}>
+            내면에 집중하는 음악명상
+          </Text>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 203,
+              top: 2782,
+              width: 154,
+              height: 18,
+              fontSize: 12,
+              fontWeight: '400',
+              color: '#545454',
+            }}>
+            마음건강은 곧 신체건강 !
+          </Text>
+          <TouchableOpacity onPress={() => alert('영양제추천')}>
+            <Image
+              //style={styles.strecth}
+              style={{
+                position: 'absolute',
+                left: 30,
+                top: 2000,
+                width: 160,
+                height: 132,
+              }}
+              source={require('../../../assets/images/folicAcid.png')}
+            />
+          </TouchableOpacity>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 30,
+              top: 2952,
+              width: 151,
+              height: 25,
+              fontSize: 14,
+              fontWeight: '700',
+              color: '#545454',
+            }}>
+            엽산이 필요해요
+          </Text>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 30,
+              top: 2976,
+              width: 154,
+              height: 18,
+              fontSize: 12,
+              fontWeight: '400',
+              color: '#545454',
+            }}>
+            꼭 필요한 영야제를 모아봤어요
+          </Text>
+          <TouchableOpacity onPress={() => alert('음식정보')}>
+            <Image
+              //style={styles.strecth}
+              style={{
+                position: 'absolute',
+                left: 203,
+                top: 2000,
+                width: 160,
+                height: 132,
+              }}
+              source={require('../../../assets/images/food.png')}
+            />
+          </TouchableOpacity>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 203,
+              top: 2952,
+              width: 151,
+              height: 25,
+              fontSize: 14,
+              fontWeight: '700',
+              color: '#545454',
+            }}>
+            식물성 단백질 샐러드
+          </Text>
+          <Text
+            style={{
+              position: 'absolute',
+              left: 203,
+              top: 2976,
+              width: 154,
+              height: 18,
+              fontSize: 12,
+              fontWeight: '400',
+              color: '#545454',
+            }}>
+            이런 레시피 어때요?
+          </Text>
+          <TouchableOpacity onPress={() => alert('더많은 컨텐츠 보러 가기')}>
+            <View
+              style={{
+                position: 'absolute',
+                left: 65,
+                top: 2220,
+                width: 260,
+                height: 48,
+                alignItems: 'center',
+                backgroundColor: '#F47100',
+                borderRadius: 4,
+              }}>
+              <Text
+                style={{
+                  position: 'absolute',
+                  top: 15,
+                  fontSize: 14,
+                  fontWeight: '500',
+                  color: '#FBFBFB',
+                }}>
+                더 많은 컨텐츠 보러가기
+              </Text>
+            </View>
+          </TouchableOpacity>
         </ImageBackground>
       </ScrollView>
     </SafeAreaView>
@@ -202,11 +642,29 @@ const styles = StyleSheet.create({
     color: '#151111',
   },
   //호르몬 수치 박스
-  hormone_box: {
+  hormone_box_openMode: {
     position: 'absolute',
     left: 30,
     top: 732,
     height: 434,
+    width: 330,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 8,
+  },
+  hormone_box_fsh_closeMode: {
+    position: 'absolute',
+    left: 30,
+    top: 1181,
+    height: 72,
+    width: 330,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 8,
+  },
+  hormone_box_lh_closeMode: {
+    position: 'absolute',
+    left: 30,
+    top: 1265,
+    height: 72,
     width: 330,
     backgroundColor: '#FFFFFF',
     borderRadius: 8,
@@ -217,12 +675,20 @@ const styles = StyleSheet.create({
     height: 51.65,
     left: 14,
     top: 14.25,
-    // fontSize: 14,
-    // fontWeight: '400',
-    // //lineHeight: '100%',
-    // textAlign: 'center',
-    // letterSpacing: -0.006,
-    // color: '#151111',
+  },
+  fsh: {
+    position: 'absolute',
+    width: 50.04,
+    height: 50,
+    left: 14,
+    top: 12.66,
+  },
+  lh: {
+    position: 'absolute',
+    width: 50.04,
+    height: 50,
+    left: 14,
+    top: 11,
   },
   //호르몬 수치 표현 text ( ex)정상 )
   hormone_text: {
@@ -246,6 +712,13 @@ const styles = StyleSheet.create({
     color: '#242424',
     //lineHeight: 100,
   },
+  hormone_button1: {
+    position: 'absolute',
+    left: 293,
+    top: 31.5,
+    width: 20,
+    height: 11,
+  },
   //그래프 박스
   graph_base: {
     position: 'absolute',
@@ -254,7 +727,7 @@ const styles = StyleSheet.create({
     left: 15,
     top: 78,
     //backgroundColor: '#F7F7F7',
-    backgroundColor: 'red',
+    backgroundColor: '#F7F7F7',
   },
   graph_xValue1: {
     position: 'absolute',
@@ -346,30 +819,91 @@ const styles = StyleSheet.create({
     fontWeight: '400',
     color: '#151111',
   },
+  line_x0: {
+    position: 'absolute',
+    left: 74,
+    top: 0,
+  },
   line_y0: {
     position: 'absolute',
     left: 74,
     top: 147,
   },
+  line_x1: {
+    position: 'absolute',
+    left: 134,
+    top: 0,
+  },
   line_y1: {
     position: 'absolute',
     left: 74,
-    top: 114,
+    top: 115,
+  },
+  line_x2: {
+    position: 'absolute',
+    left: 194,
+    top: 0,
   },
   line_y2: {
     position: 'absolute',
     left: 74,
     top: 83,
   },
+  line_x3: {
+    position: 'absolute',
+    left: 254,
+    top: 0,
+  },
   line_y3: {
     position: 'absolute',
     left: 74,
     top: 50,
   },
+  line_x4: {
+    position: 'absolute',
+    left: 314,
+    top: 0,
+  },
   line_y4: {
     position: 'absolute',
     left: 74,
-    top: 19,
+    top: 18,
+  },
+  otherBox: {
+    position: 'absolute',
+    left: 0,
+    top: 1703,
+    width: '100%',
+    height: '100%',
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    backgroundColor: '#FFFFFF',
+    //border-top-left-radius: '24',
+  },
+  timeLine_ex: {
+    position: 'absolute',
+    left: 20,
+    top: 134,
+    width: 330,
+    height: 250,
+    //height: 350,
+  },
+  medicalInfo: {
+    position: 'absolute',
+    left: 20,
+    //top: 2110,
+    top: 1310,
+    width: 350,
+    height: 150,
+    borderRadius: 8,
+  },
+  strecth: {
+    position: 'absolute',
+    left: 30,
+    top: 2620,
+    width: 160,
+    height: 132,
+    borderRadius: 8,
   },
 });
 export default RESULT_HOME;

@@ -1,21 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
+import 'react-native-gesture-handler';
+import {enableScreens} from 'react-native-screens';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {
-  Button,
-  View,
-  Text,
-  Pressable,
-  StyleSheet,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
+
 import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import {Box, HStack} from '@react-native-material/core';
-import MyUpBar_0 from './src/upbar/UpBar_0';
-import MyUpBar_1 from './src/upbar/UpBar_1';
-import MyUpBar_2 from './src/upbar/UpBar_2';
 
 import Q_Home from './src/screens/default/home';
 import Q_Default_1 from './src/screens/default/q_default_1';
@@ -52,6 +44,7 @@ import HQ_3 from './src/screens/HQ/HQ_3';
 
 //결과페이지
 import RESULT_HOME from './src/screens/result/result_home';
+
 const Stack = createNativeStackNavigator();
 
 const App = () => {
