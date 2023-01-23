@@ -26,7 +26,7 @@ import {Alert, alertClasses} from '@mui/material';
 
 const HQ_3 = ({navigation, route}) => {
   //0: AMH, 1: FSH, 2: LH, 3: TSH, 4: E2
-  const [isSelect, selectFunc] = useState([false, false, false, false]); //버튼 다중선택을 위한 state
+  const [isSelect, selectFunc] = useState([false, false, false, false, false]); //버튼 다중선택을 위한 state
   const selectChange = (num: number) => {
     selectFunc([
       ...isSelect.slice(0, num),
