@@ -11,13 +11,13 @@ import MyUpBar_4 from '../../upbar/UpBar_4';
 
 import {UserStyle} from '../../styling/userLayout';
 
-import NextButton from '../../Buttons/nextButton';
-import SelectionButton from '../../Buttons/selectionButton';
+import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
+import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/userA.png';
-import UserImg from '../../Buttons/userImg';
+import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import {Box, HStack} from '@react-native-material/core';
 
@@ -111,8 +111,8 @@ const WQ_1 = ({navigation, route}) => {
           <View style={styles.container_1_3}>
             <View style={styles.container_1_3_1}></View>
             <View style={styles.container_1_3_2}>
-              <NextButton
-                onPress={() => navigation.navigate('WQ_2')}></NextButton>
+              <NextButtonHQ
+                onPress={() => navigation.navigate('WQ_2')}></NextButtonHQ>
             </View>
           </View>
         </View>

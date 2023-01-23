@@ -10,13 +10,13 @@ import MyUpBar_5 from '../../upbar/UpBar_5';
 
 import {UserStyle} from '../../styling/userLayout';
 
-import NextButton from '../../Buttons/nextButton';
-import SelectionButton from '../../Buttons/selectionButton';
+import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
+import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/alq1Img.png';
-import UserImg from '../../Buttons/userImg';
+import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
 
@@ -72,12 +72,12 @@ const ALQ_1 = ({navigation, route}) => {
       </TouchableOpacity>
 
       <View style={[UserStyle.container2]}>
-        <NextButton
+        <NextButtonHQ
           onPress={
             isSelect[0] && isSelect[1]
               ? () => alert('선택지중 하나면 선택하세요')
               : () => navigation.navigate('IQ_1')
-          }></NextButton>
+          }></NextButtonHQ>
       </View>
       <UserImg img={UserAimg}></UserImg>
     </>

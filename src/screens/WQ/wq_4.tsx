@@ -3,23 +3,25 @@ import MyUpBar_5 from '../../upbar/UpBar_5';
 
 import {UserStyle} from '../../styling/userLayout';
 
-import NextButton from '../../Buttons/nextButton';
-import SelectionButton from '../../Buttons/selectionButton';
+import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
+import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/userA.png';
-import UserImg from '../../Buttons/userImg';
+import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
 
-import SelectionButton2 from '../../Buttons/selectionButton2';
+//import SelectionButton2 from '../../Buttons/selectionButton2';
 
 import {DefaultStyle} from '../../styling/defaultLayout';
 
 import React from 'react';
 import {useState} from 'react';
 import {textAlign} from '@mui/system';
+
+import SelectionButton2 from '../../Buttons/selectionButton2';
 
 const WQ_4 = ({navigation, route}) => {
   const [text, onChangeText] = React.useState('Useless Text');

@@ -1,62 +1,35 @@
-import {View, Text, Button, Image, StyleSheet} from 'react-native';
-import MyUpBar_4 from '../../upbar/UpBar_4';
-
+import React from 'react';
+import {View} from 'react-native';
 import NextButton from '../../Buttons/nextButton';
-import SelectionButton from '../../Buttons/selectionButton';
-import GobackButton from '../../Buttons/gobackButton';
-
-import UserAimg from '../../../assets/images/userA.png';
+import images from '../../img';
 import {UserStyle} from '../../styling/userLayout';
-import UserImg from '../../Buttons/userImg';
+import TxtCollection from '../../txtCollection/txtcolletion';
+import MyUpBar from '../../upbar/MyUpBar';
+import Button_Selector from '../component/ButtonSelector';
+// import UserAimg from '../../../assets/images/userA.png';
+import TestPage from '../component/ButtonSelector';
 
-import {TouchableOpacity} from 'react-native-gesture-handler';
-
-const BTEST = ({navigation, route}) => {
+const BTEST = () => {
   return (
     <>
-      <MyUpBar_4 />
-      <GobackButton onPress={() => navigation.pop()} />
-      <View style={[UserStyle.container]} />
-      <View style={[UserStyle.container0_1]}>
-        <Text style={[UserStyle.threelinetxt]}>hi ee</Text>
-      </View>
-      <View style={[UserStyle.container1_1]}></View>
-      <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => null}></NextButton>
-      </View>
-      <UserImg img={UserAimg}></UserImg>
+      {/* <MyUpBar level={5} /> 
+      여기다 따로 빼는게 나은지 button_selector에 넣는게 나은지...
+      */}
+      <Button_Selector
+        pglevel={2}
+        title={TxtCollection.q_d_2_1.title}
+        content={TxtCollection.q_a_2}
+        imgpath={images.userA}
+        nextpage={'Q_Default_1'}
+        count={0}
+      />
+      {/* <View style={[UserStyle.container2]}>
+        <NextButton destination="Home" disable={false} />
+      </View> 
+      마찬가지로 next button도 한곳에 넣는게 나은지 아니면 따로 빼는게 나은지...
+      */}
     </>
   );
 };
-
-const styles = StyleSheet.create({
-  //   image: {
-  //     position: 'absolute',
-  //     left: 135,
-  //     top: 130,
-  //     width: 120,
-  //     height: 120,
-  //     alignItems: 'center',
-  //     justifyContent: 'center',
-  //   },
-  circle: {
-    position: 'absolute',
-    left: 135,
-    top: 130,
-    backgroundColor: 'red',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: 70,
-    height: 70,
-    marginBottom: 30,
-    borderRadius: 35,
-  },
-  CircleShape: {
-    width: 150,
-    height: 150,
-    borderRadius: 150 / 2,
-    backgroundColor: '#FF9800',
-  },
-});
 
 export default BTEST;

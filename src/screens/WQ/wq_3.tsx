@@ -11,13 +11,13 @@ import {
 import DateTimePicker from '@react-native-community/datetimepicker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
-import NextButton from '../../Buttons/nextButton';
+import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
+import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import {DefaultStyle} from '../../styling/defaultLayout';
 import GobackButton from '../../Buttons/gobackButton';
 
 import UserAimg from '../../../assets/images/userA.png';
-import UserImg from '../../Buttons/userImg';
-
+import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 const WQ_3 = ({navigation, route}) => {
   Date.prototype.format = function (f) {
     if (!this.valueOf()) return ' ';
@@ -183,7 +183,8 @@ const WQ_3 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container1_2]} />
       <View style={[DefaultStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('WQ_4')}></NextButton>
+        <NextButtonHQ
+          onPress={() => navigation.navigate('WQ_4')}></NextButtonHQ>
       </View>
       <UserImg img={UserAimg}></UserImg>
     </>

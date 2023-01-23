@@ -1,3 +1,5 @@
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 import React from 'react';
 import {
   Button,
@@ -11,10 +13,13 @@ import {
 } from 'react-native';
 
 import {ImageBackground} from 'react-native';
+// import {RootStackParamList} from '../../../App';
 import Homebg from '../../../assets/images/home_start.png';
+import GobackButton from '../../Buttons/gobackButton';
 import NextButton from '../../Buttons/nextButton';
 
-const Q_Home = ({navigation, route}) => {
+const Q_Home = () => {
+  const navigation = useNavigation();
   return (
     <ImageBackground source={Homebg} style={styles.image}>
       <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -28,12 +33,6 @@ const Q_Home = ({navigation, route}) => {
         onPress={() => navigation.navigate('Q_Default_1')}>
         <Text style={styles.starttxt}>시작하기</Text>
       </TouchableOpacity>
-      {/* 질문 홈화면에서 바로 결과페이지로 넘어가게끔 잠시 바꿔줌
-      {/* <TouchableOpacity
-        style={styles.startbutton}
-        onPress={() => navigation.navigate('RESULT_HOME')}>
-        <Text style={styles.starttxt}>시작하기</Text>
-      </TouchableOpacity> */}
       <TouchableOpacity style={styles.laterbutton} onPress={() => null}>
         <Text style={styles.latertxt}>나중에 할래요</Text>
       </TouchableOpacity>

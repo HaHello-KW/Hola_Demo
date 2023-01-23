@@ -1,5 +1,14 @@
-import {View, Text, Button, Image, StyleSheet, TextInput} from 'react-native';
-import MyUpBar from '../../upbar/MyUpBar';
+import {
+  View,
+  Text,
+  Button,
+  Image,
+  StyleSheet,
+  TextInput,
+  SafeAreaView,
+  Pressable,
+} from 'react-native';
+import React, {Component, useState} from 'react';
 
 import {UserStyle} from '../../styling/userLayout';
 
@@ -10,14 +19,17 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImg';
-import {useState} from 'react';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+
+//new from seungho
+import MyUpBar from '../../upbar/MyUpBar';
 import TxtCollection from '../../txtCollection/txtcolletion';
 
 interface Age {
   age: any;
 }
 
-const Q_A_2_1 = ({navigation, route}) => {
+const Q_A_1_1 = ({navigation, route}) => {
   const [age, setAge] = useState<Age>({
     age: 0,
   });
@@ -29,15 +41,15 @@ const Q_A_2_1 = ({navigation, route}) => {
     }));
   };
 
-  // const [ageInputVisible, setageInputVisibility] = useState(false);
-  // const showDatePicker = () => {
-  //   setageInputVisibility(true);
-  // };
+  const [ageInputVisible, setageInputVisibility] = useState(false);
+  const showDatePicker = () => {
+    setageInputVisibility(true);
+  };
 
   return (
     <>
       {/* <SafeAreaView style={styles.container}> */}
-      <MyUpBar level="5" />
+      <MyUpBar level="4" />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_1]}>
@@ -54,18 +66,17 @@ const Q_A_2_1 = ({navigation, route}) => {
             placeholder="30"
             keyboardType="numeric"
           />
-          <Text style={[UserStyle.threelinetxt]}> 살에</Text>
+          <Text style={[UserStyle.threelinetxt]}> 살쯤에</Text>
         </View>
         <View style={[UserStyle.container0_1_3]}>
-          <Text style={[UserStyle.threelinetxt]}>첫째 아이를 갖고 싶어</Text>
+          <Text style={[UserStyle.threelinetxt]}>결혼하면 좋겠어</Text>
         </View>
       </View>
       <View style={[UserStyle.container1_1]}></View>
       <View style={[UserStyle.container2]}>
-        <NextButton disabled={false} destination="Q_userA_2_2" />
+        <NextButton disabled={false} destination="Q_userA_2" />
       </View>
       <Image source={TxtCollection.q_a_1_1.imgPath} style={styles.image} />
-      {/* </SafeAreaView> */}
     </>
   );
 };
@@ -95,4 +106,34 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Q_A_2_1;
+export default Q_A_1_1;
+
+// return (
+//   <>
+//     <TextInput
+//       value={age.age}
+//       onChangeText={num => {
+//         handleInputChange('age', num);
+//       }}
+//       style={styles.input}
+//       placeholder="put your age"
+//       keyboardType="numeric"
+//     />
+//     <Pressable onPress={() => console.log(age)}>
+//       <Text> Submit </Text>
+//     </Pressable>
+//   </>
+// );
+// const [number, onChangeNumber] = React.useState(null);
+
+// return (
+//   <SafeAreaView>
+//     <TextInput
+//       style={styles.input}
+//       onChangeText={onChangeNumber}
+//       value={number}
+//       placeholder="30 "
+//       keyboardType="numeric"
+//     />
+//   </SafeAreaView>
+// );

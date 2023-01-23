@@ -11,12 +11,12 @@ import {
 } from 'react-native';
 
 import {UserStyle} from '../../styling/userLayout';
-import NextButton from '../../Buttons/nextButton';
-import SelectionButton from '../../Buttons/selectionButton';
+import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
+import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 
 import HQimg from '../../../assets/images/HQ1.png';
-import UserImg from '../../Buttons/userImg';
+import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
 //import {Image} from 'react-native-paper/lib/typescript/components/Avatar/Avatar';
@@ -165,7 +165,7 @@ const HQ_3 = ({navigation, route}) => {
         </Pressable>
         <UserImg img={HQimg}></UserImg>
         <View style={styles.nextContainer}>
-          <NextButton onPress={() => navigation.navigate('WQ_1')} />
+          <NextButtonHQ onPress={() => navigation.navigate('WQ_1')} />
         </View>
       </View>
     </>

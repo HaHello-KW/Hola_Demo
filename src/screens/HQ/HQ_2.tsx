@@ -11,8 +11,8 @@ import MyUpBar_wq from '../../upbar/UpBar_WQ';
 
 import {UserStyle} from '../../styling/userLayout';
 
-import NextButton from '../../Buttons/nextButton';
-import SelectionButton from '../../Buttons/selectionButton';
+import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
+import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
@@ -20,7 +20,7 @@ import DateTimePicker from 'react-native-modal-datetime-picker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import {DefaultStyle} from '../../styling/defaultLayout';
 import HQimg from '../../../assets/images/HQ1.png';
-import UserImg from '../../Buttons/userImg';
+import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 import {useState} from 'react';
 
 const HQ_2 = ({navigation, route}) => {
@@ -188,7 +188,8 @@ const HQ_2 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container1_2]} />
       <View style={[DefaultStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('HQ_3')}></NextButton>
+        <NextButtonHQ
+          onPress={() => navigation.navigate('HQ_3')}></NextButtonHQ>
       </View>
       <UserImg img={HQimg}></UserImg>
     </>

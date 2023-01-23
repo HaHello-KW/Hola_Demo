@@ -1,45 +1,48 @@
 import {View, Text, Button, Image, StyleSheet} from 'react-native';
-import MyUpBar_5 from '../../upbar/UpBar_5';
 
 import {UserStyle} from '../../styling/userLayout';
-import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
-import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
+
+import NextButton from '../../Buttons/nextButton';
+import SelectionButton from '../../Buttons/selectionButton';
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/userA.png';
-import UserImg from '../../Buttons/userImgHQ'; //HQ부터
+import UserImg from '../../Buttons/userImg';
+import MyUpBar from '../../upbar/MyUpBar';
 
-import MyUpBar_wq from '../../upbar/UpBar_WQ';
-
-const WQ_2 = ({navigation, route}) => {
+const Q_B_1 = ({navigation, route}) => {
   return (
     <>
-      <MyUpBar_wq />
+      <MyUpBar level="5" />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_2]}>
-        <Text style={[UserStyle.onelinetxt]}>나는 체성분 측정을</Text>
+        <Text style={[UserStyle.onelinetxt]}>나는</Text>
       </View>
       <View style={[UserStyle.container1_2]}>
-        <SelectionButtonHQ
-          text={'해봤고, 내 상태를 알아'}
+        <SelectionButton
+          text={'결혼 생각이 있어 user b'}
           textColor={'#000000'}
           onPress={() => alert('want')}
         />
-        <SelectionButtonHQ
-          text={'해본적 없어'}
+        <SelectionButton
+          text={'결혼 생각이 없어'}
           textColor={'#000000'}
           onPress={() => alert('do not')}
         />
+        <SelectionButton
+          text={'아직 모르겠어'}
+          textColor={'#000000'}
+          onPress={() => alert('do not know')}
+        />
       </View>
       <View style={[UserStyle.container2]}>
-        <NextButtonHQ
-          onPress={() => navigation.navigate('WQ_3')}></NextButtonHQ>
+        <NextButton onPress={() => null}></NextButton>
       </View>
       <UserImg img={UserAimg}></UserImg>
     </>
   );
 };
 
-export default WQ_2;
+export default Q_B_1;

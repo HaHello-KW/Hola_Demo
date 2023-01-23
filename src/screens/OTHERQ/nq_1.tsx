@@ -10,13 +10,13 @@ import MyUpBar_5 from '../../upbar/UpBar_5';
 
 import {UserStyle} from '../../styling/userLayout';
 
-import NextButton from '../../Buttons/nextButton';
-import SelectionButton from '../../Buttons/selectionButton';
+import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
+import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
 import UserAimg from '../../../assets/images/nq1Img.png';
-import UserImg from '../../Buttons/userImg';
+import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
 
@@ -242,7 +242,8 @@ const NQ_1 = ({navigation, route}) => {
         <Text style={styles.text}>영양제를 먹고 있지 않아</Text>
       </TouchableOpacity>
       <View style={[UserStyle.container2]}>
-        <NextButton onPress={() => navigation.navigate('ALQ_1')}></NextButton>
+        <NextButtonHQ
+          onPress={() => navigation.navigate('ALQ_1')}></NextButtonHQ>
       </View>
       <UserImg img={UserAimg}></UserImg>
     </>

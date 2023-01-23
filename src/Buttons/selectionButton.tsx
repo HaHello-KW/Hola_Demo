@@ -1,46 +1,65 @@
 import {useLinkProps} from '@react-navigation/native';
 import React, {Component, useState} from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
-import {BottomNavigation} from 'react-native-paper';
+import {StyleSheet, TouchableOpacity, Text, View} from 'react-native';
+import PropTypes, {element, number} from 'prop-types';
+import {UserStyle} from '../styling/userLayout';
 
-interface Selection {
-  text: string;
-  textColor: '#000000';
-  onPress: () => null;
-}
+//
+//
+//route 활용해 네비게이션 기능 추가해야함
+// const showMsg = event => {
+//   const msg = event.target.gtAttribute('selectNum');
+//   console.log(msg);
+// };
 
-export default class SelectionButton extends Component<Selection, any> {
-  constructor(props: any) {
-    super(props);
-  }
+type props = {
+  txt: string;
+  isSelected: any | boolean;
+  handlePress: any;
+  elementIndex: number;
+};
 
-  render() {
-    return (
-      <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
-        <Text style={[styles.title, {color: this.props.textColor}]}>
-          {this.props.text}
+function SelectionButton({txt, isSelected, handlePress, elementIndex}: props) {
+  // const [isSelect, setSelected] = useState(false);
+  // const disabled = () => {
+  //   if (isSelect) return false;
+  //   else return true;
+  // };
+  // console.log(disabled());
+  return (
+    <>
+      <TouchableOpacity
+        style={[
+          styles.button,
+          {backgroundColor: isSelected ? '#F47100' : '#E3E3E3'},
+        ]}
+        onPress={() => handlePress(elementIndex)}>
+        <Text style={[styles.txt, {color: isSelected ? '#fbfbfb' : '#242424'}]}>
+          {txt}
         </Text>
       </TouchableOpacity>
-    );
-  }
+    </>
+  );
 }
 
 const styles = StyleSheet.create({
   button: {
     justifyContent: 'center',
-    backgroundColor: '#E3E3E3',
+    // backgroundColor: '#E3E3E3',
     width: 324,
     height: 64,
-    borderRadius: 5,
-    marginBottom: '2%',
+    borderRadius: 8,
+    marginTop: '2%',
 
     //   width: 300,
     //   height: 50,
   },
-  title: {
+  txt: {
     fontSize: 16,
     textAlign: 'center',
     fontWeight: '500',
-    color: '#242424',
+    // color: '#242424',
   },
 });
+
+export default SelectionButton;
