@@ -39,7 +39,7 @@ const Q_A_Type = ({navigation, route}) => {
       <View style={[UserStyle.containerR_3]}>
         <TouchableOpacity
           style={styles.startbutton}
-          onPress={() => alert('to the next part')}>
+          onPress={() => navigation.navigate('HQ_1')}>
           <Text style={styles.starttxt}>컨텐츠 추천 받기</Text>
         </TouchableOpacity>
         <TouchableOpacity

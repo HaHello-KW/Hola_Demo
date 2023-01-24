@@ -159,6 +159,14 @@ const TxtCollection = {
     ],
     imgPath: images.userA,
   },
+  hq_1: {
+    title: '나는 여성호르몬 검사를',
+    contents: [
+      '해봤고, 내 상태를 알아',
+      '알고 있지만, 해 본 적 없어',
+      '잘 모르고 있어',
+    ],
+  },
 };
 
 export default TxtCollection;
