@@ -37,7 +37,6 @@ const WQ_4 = ({navigation, route}) => {
     <>
       <MyUpBar_wq />
       <GobackButton onPress={() => navigation.pop()} />
-      <UserImg img={UserAimg}></UserImg>
 
       <View style={styles.container}>
         <View style={styles.container_0}></View>
@@ -165,28 +164,30 @@ const WQ_4 = ({navigation, route}) => {
         </View>
 
         <View style={styles.container_2}>
-          <View style={styles.container_2_1}>
-            <SelectionButton2
-              text={'나중에 입력할래'}
-              textColor={'#000000'}
-              onPress={() => alert('want')}
-            />
-          </View>
-          <View style={styles.container_2_2}>
-            <SelectionButton2
-              text={'다음'}
-              textColor={'#000000'}
-              onPress={() => navigation.navigate('FQ_1')}
-            />
-          </View>
+          {/* <View style={styles.container_2_1}> */}
+          <SelectionButton2
+            text={'나중에 입력할래'}
+            textColor={'#000000'}
+            onPress={() => navigation.navigate('FQ_1')}
+          />
+          {/* </View> */}
+          {/* <View style={styles.container_2_2}> */}
+          <SelectionButton2
+            text={'다음'}
+            textColor={'#000000'}
+            onPress={() => navigation.navigate('FQ_1')}
+          />
+          {/* </View> */}
         </View>
       </View>
+      <UserImg img={UserAimg}></UserImg>
     </>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: '#FFFFFF',
     flex: 1,
   },
   container_0: {
@@ -208,6 +209,8 @@ const styles = StyleSheet.create({
     flex: 0.8,
     //backgroundColor: 'yellow',
     flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
   container_2_1: {
     flex: 1,

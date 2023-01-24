@@ -22,6 +22,7 @@ import {DefaultStyle} from '../../styling/defaultLayout';
 import HQimg from '../../../assets/images/HQ1.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 import {useState} from 'react';
+import NextButton from '../../Buttons/nextButton';
 
 const HQ_2 = ({navigation, route}) => {
   Date.prototype.format = function (f) {
@@ -188,8 +189,7 @@ const HQ_2 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container1_2]} />
       <View style={[DefaultStyle.container2]}>
-        <NextButtonHQ
-          onPress={() => navigation.navigate('HQ_3')}></NextButtonHQ>
+        <NextButton disabled={false} destination={'HQ_3'} />
       </View>
       <UserImg img={HQimg}></UserImg>
     </>

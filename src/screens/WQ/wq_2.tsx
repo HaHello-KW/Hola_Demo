@@ -11,27 +11,38 @@ import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
+import TxtCollection from '../../txtCollection/txtcolletion';
+import {useState} from 'react';
+import SelectionButton from '../../Buttons/selectionButton';
 
 const WQ_2 = ({navigation, route}) => {
+  const [isButtonSelect, setIsButtonSelect] = useState('');
+  const newArr = Array(TxtCollection.wq_2.contents.length).fill(false);
+  const handlePress = (idx: number | any) => {
+    newArr[idx] = true;
+    setIsButtonSelect(newArr);
+  };
+
   return (
     <>
       <MyUpBar_wq />
       <GobackButton onPress={() => navigation.pop()} />
       <View style={[UserStyle.container]} />
       <View style={[UserStyle.container0_2]}>
-        <Text style={[UserStyle.onelinetxt]}>나는 체성분 측정을</Text>
+        <Text style={[UserStyle.onelinetxt]}>{TxtCollection.wq_2.title}</Text>
       </View>
       <View style={[UserStyle.container1_2]}>
-        <SelectionButtonHQ
-          text={'해봤고, 내 상태를 알아'}
-          textColor={'#000000'}
-          onPress={() => alert('want')}
-        />
-        <SelectionButtonHQ
-          text={'해본적 없어'}
-          textColor={'#000000'}
-          onPress={() => alert('do not')}
-        />
+        {TxtCollection.wq_2.contents.map(function (value: any, index: number) {
+          return (
+            <SelectionButton
+              key={index}
+              isSelected={isButtonSelect[index]}
+              handlePress={handlePress}
+              elementIndex={index}
+              txt={value}
+            />
+          );
+        })}
       </View>
       <View style={[UserStyle.container2]}>
         <NextButtonHQ

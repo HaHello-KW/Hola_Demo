@@ -25,39 +25,43 @@ import {height} from '@mui/system';
 import rectangle_hospital from '../../../assets/images/Rectangle_hospital.png';
 
 import {useState} from 'react';
+import GobackButton from '../../Buttons/gobackButton';
 
 const RESULT_HOME = ({navigation, route}) => {
   const [amh_isopen, openFunc] = useState(true);
 
   const graph_box_open_amh = () => {
     return (
-      <View style={styles.hormone_box_openMode}>
-        <Image
-          style={styles.amh}
-          source={require('../../../assets/images/AMH_result.png')}
-        />
-
-        <Text style={styles.hormone_text}>정상</Text>
-        <Text style={styles.hormone_value}>1.91 ng/ml</Text>
-        <TouchableOpacity onPress={() => alert('aa')}>
+      <>
+        <GobackButton onPress={() => navigation.pop()}></GobackButton>
+        <View style={styles.hormone_box_openMode}>
           <Image
-            style={styles.hormone_button1}
-            source={require('../../../assets/images/hormone_open.png')}
+            style={styles.amh}
+            source={require('../../../assets/images/AMH_result.png')}
           />
-        </TouchableOpacity>
-        <View style={styles.graph_base}>
-          <Text style={styles.graph_xValue1}>34세</Text>
-          <Text style={styles.graph_xValue2}>35세</Text>
-          <Text style={styles.graph_xValue3}>36세</Text>
-          <Text style={styles.graph_xValue4}>37세</Text>
-          <Text style={styles.graph_yValue1}>87.5</Text>
-          <Text style={styles.graph_yValue2}>75.5</Text>
-          <Text style={styles.graph_yValue3}>62.5</Text>
-          <Text style={styles.graph_yValue4}>50.1</Text>
-          <Text style={styles.graph_yValue5}>37.6</Text>
-          {graph()}
+
+          <Text style={styles.hormone_text}>정상</Text>
+          <Text style={styles.hormone_value}>1.91 ng/ml</Text>
+          <TouchableOpacity onPress={() => alert('aa')}>
+            <Image
+              style={styles.hormone_button1}
+              source={require('../../../assets/images/hormone_open.png')}
+            />
+          </TouchableOpacity>
+          <View style={styles.graph_base}>
+            <Text style={styles.graph_xValue1}>34세</Text>
+            <Text style={styles.graph_xValue2}>35세</Text>
+            <Text style={styles.graph_xValue3}>36세</Text>
+            <Text style={styles.graph_xValue4}>37세</Text>
+            <Text style={styles.graph_yValue1}>87.5</Text>
+            <Text style={styles.graph_yValue2}>75.5</Text>
+            <Text style={styles.graph_yValue3}>62.5</Text>
+            <Text style={styles.graph_yValue4}>50.1</Text>
+            <Text style={styles.graph_yValue5}>37.6</Text>
+            {graph()}
+          </View>
         </View>
-      </View>
+      </>
     );
   };
 
@@ -183,7 +187,7 @@ const RESULT_HOME = ({navigation, route}) => {
 
             <Text style={styles.content3}>하해호님 호르몬 수치</Text>
 
-            <TouchableOpacity onPress={() => alert('호르몬수치 입력')}>
+            <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
               <Text style={styles.input_hormone}>
                 호르몬 수치 입력하기 {'>'}
               </Text>
@@ -241,7 +245,8 @@ const RESULT_HOME = ({navigation, route}) => {
               여성호르몬 수치를 검사받을 수 있는 병원을 찾아보세요
             </Text>
             {/* 병원 검색하기 버튼 */}
-            <TouchableOpacity onPress={() => alert('병원검색')}>
+            <TouchableOpacity
+              onPress={() => () => alert('병원검색 컨텐츠 준비 중입니다.')}>
               <View
                 style={{
                   position: 'absolute',
@@ -318,7 +323,8 @@ const RESULT_HOME = ({navigation, route}) => {
                 <Text>aa7</Text>
                 <Text>aa8</Text>
               </ScrollView>
-              <TouchableOpacity onPress={() => alert('타임라인수정')}>
+              <TouchableOpacity
+                onPress={() => alert('타임라인수정 컨텐츠 준비 중입니다.')}>
                 <Image
                   style={{left: 311, top: 2, width: 48, height: 48}}
                   source={require('../../../assets/images/changeTimelineButton.png')}
@@ -326,7 +332,8 @@ const RESULT_HOME = ({navigation, route}) => {
               </TouchableOpacity>
             </View>
           </View>
-          <TouchableOpacity onPress={() => alert('시술정보')}>
+          <TouchableOpacity
+            onPress={() => alert('시술정보 컨텐츠 준비 중입니다.')}>
             <ImageBackground
               style={styles.medicalInfo}
               source={require('../../../assets/images/medical_info.png')}>
@@ -369,7 +376,7 @@ const RESULT_HOME = ({navigation, route}) => {
             }}>
             하해호님을 위한 건강 컨텐츠
           </Text>
-          <TouchableOpacity onPress={() => alert('골반스트레칭')}>
+          <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
             <Image
               //style={styles.strecth}
               style={{
@@ -408,7 +415,7 @@ const RESULT_HOME = ({navigation, route}) => {
             }}>
             쉽고 재미있게 따라할 수 있어요
           </Text>
-          <TouchableOpacity onPress={() => alert('음악명상')}>
+          <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
             <Image
               //style={styles.strecth}
               style={{
@@ -447,7 +454,7 @@ const RESULT_HOME = ({navigation, route}) => {
             }}>
             마음건강은 곧 신체건강 !
           </Text>
-          <TouchableOpacity onPress={() => alert('영양제추천')}>
+          <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
             <Image
               //style={styles.strecth}
               style={{
@@ -486,7 +493,7 @@ const RESULT_HOME = ({navigation, route}) => {
             }}>
             꼭 필요한 영야제를 모아봤어요
           </Text>
-          <TouchableOpacity onPress={() => alert('음식정보')}>
+          <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
             <Image
               //style={styles.strecth}
               style={{
@@ -546,6 +553,30 @@ const RESULT_HOME = ({navigation, route}) => {
                   color: '#FBFBFB',
                 }}>
                 더 많은 컨텐츠 보러가기
+              </Text>
+            </View>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+            <View
+              style={{
+                position: 'absolute',
+                left: 65,
+                top: 2285,
+                width: 260,
+                height: 48,
+                alignItems: 'center',
+                backgroundColor: '#F47100',
+                borderRadius: 4,
+              }}>
+              <Text
+                style={{
+                  position: 'absolute',
+                  top: 15,
+                  fontSize: 14,
+                  fontWeight: '500',
+                  color: '#FBFBFB',
+                }}>
+                홈으로 돌아가기
               </Text>
             </View>
           </TouchableOpacity>

@@ -27,6 +27,7 @@ import {unstable_getNormalizedScrollLeft} from '@mui/utils';
 
 import React, {Component} from 'react';
 import ScrollPicker from 'react-native-wheel-scrollview-picker';
+import NextButton from '../../Buttons/nextButton';
 
 const heightSource = new Array(); // 키 배열 객체 선언
 
@@ -111,8 +112,7 @@ const WQ_1 = ({navigation, route}) => {
           <View style={styles.container_1_3}>
             <View style={styles.container_1_3_1}></View>
             <View style={styles.container_1_3_2}>
-              <NextButtonHQ
-                onPress={() => navigation.navigate('WQ_2')}></NextButtonHQ>
+              <NextButton disabled={false} destination={'WQ_2'} />
             </View>
           </View>
         </View>
@@ -170,10 +170,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   container_1_3_1: {
-    flex: 2,
+    flex: 0.8,
   },
   container_1_3_2: {
-    flex: 1.3,
+    flex: 1.5,
   },
   infoText: {
     position: 'absolute',

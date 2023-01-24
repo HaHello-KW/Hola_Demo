@@ -23,6 +23,7 @@ import MyUpBar_wq from '../../upbar/UpBar_WQ';
 
 import {useState} from 'react';
 import {Alert, alertClasses} from '@mui/material';
+import NextButton from '../../Buttons/nextButton';
 
 const HQ_3 = ({navigation, route}) => {
   //0: AMH, 1: FSH, 2: LH, 3: TSH, 4: E2
@@ -170,7 +171,7 @@ const HQ_3 = ({navigation, route}) => {
         </Pressable>
       </View>
       <View style={[UserStyle.container2]}>
-        <NextButtonHQ onPress={() => navigation.navigate('WQ_1')} />
+        <NextButton disabled={false} destination={'WQ_1'} />
       </View>
       {/* </View> */}
       <UserImg img={HQimg} />
