@@ -63,48 +63,53 @@ const HQ_3 = ({navigation, route}) => {
 
   return (
     <>
-      <View style={styles.container}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-            //alert('Modal has been closed.');
-            setModalVisible(!modalVisible);
-          }}
-          onShow={() => {
-            //alert('Modal has been open.');
-          }}>
-          <View style={styles.centeredView}>
-            <View style={styles.modalView}>
-              <Text style={styles.modalText}>나의 AMH수치는</Text>
-              <TextInput
-                style={styles.inputText}
-                onChangeText={amhChange}
-                value={amh}
-                placeholder="0.00"
-                keyboardType="numeric"
-              />
-              <Pressable
-                // isNull함수의 리턴값에 따라 Modal창의 확인 버튼의 색이 달라짐 -> 수치값을 입력하지 않으면 회색, 입력했으면 주황색
-                style={[
-                  styles.button,
-                  styles.buttonClose,
-                  {backgroundColor: isNull() ? '#BDBDBD' : '#FF7C00'},
-                ]}
-                //amh수치값이 입력되지 않았으면 modal을 닫을 수 없음
-                disabled={isNull()}
-                onPress={() => setModalVisible(!modalVisible)}>
-                <Text style={styles.textStyle}>확인</Text>
-              </Pressable>
-            </View>
+      {/* <View style={styles.container}> */}
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          //alert('Modal has been closed.');
+          setModalVisible(!modalVisible);
+        }}
+        onShow={() => {
+          //alert('Modal has been open.');
+        }}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>나의 AMH수치는</Text>
+            <TextInput
+              style={styles.inputText}
+              onChangeText={amhChange}
+              value={amh}
+              placeholder="0.00"
+              keyboardType="numeric"
+            />
+            <Pressable
+              // isNull함수의 리턴값에 따라 Modal창의 확인 버튼의 색이 달라짐 -> 수치값을 입력하지 않으면 회색, 입력했으면 주황색
+              style={[
+                styles.button,
+                styles.buttonClose,
+                {backgroundColor: isNull() ? '#BDBDBD' : '#FF7C00'},
+              ]}
+              //amh수치값이 입력되지 않았으면 modal을 닫을 수 없음
+              disabled={isNull()}
+              onPress={() => setModalVisible(!modalVisible)}>
+              <Text style={styles.textStyle}>확인</Text>
+            </Pressable>
           </View>
-        </Modal>
+        </View>
+      </Modal>
 
-        <MyUpBar_wq />
-        <GobackButton onPress={() => navigation.pop()} />
+      <MyUpBar_wq />
+      <GobackButton onPress={() => navigation.pop()} />
+      <View style={[UserStyle.container]} />
+
+      {/* <View style={styles.container}> */}
+      <View style={[UserStyle.container0_3]}>
         <Text style={styles.text}>나는 이런 검사를 받았어</Text>
-
+      </View>
+      <View style={[UserStyle.container1_3]}>
         {/* AMH버튼.. */}
         <Pressable
           onPress={() => {
@@ -115,8 +120,8 @@ const HQ_3 = ({navigation, route}) => {
           <Image
             style={{
               position: 'absolute',
-              left: 28,
-              top: 180,
+              left: -160,
+              top: 40,
               width: 100,
               height: 100,
               borderRadius: 100,
@@ -143,9 +148,9 @@ const HQ_3 = ({navigation, route}) => {
           <Image
             style={{
               position: 'absolute',
-              //left: 148,
-              left: '21.03%',
-              top: 300,
+              left: -100,
+              // left: '21.03%',
+              top: 160,
               //bottom: '20%',
               width: 100,
               height: 100,
@@ -163,11 +168,13 @@ const HQ_3 = ({navigation, route}) => {
             }
           />
         </Pressable>
-        <UserImg img={HQimg}></UserImg>
-        <View style={styles.nextContainer}>
-          <NextButtonHQ onPress={() => navigation.navigate('WQ_1')} />
-        </View>
       </View>
+      <View style={[UserStyle.container2]}>
+        <NextButtonHQ onPress={() => navigation.navigate('WQ_1')} />
+      </View>
+      {/* </View> */}
+      <UserImg img={HQimg} />
+      {/* </View> */}
     </>
   );
 };
@@ -178,16 +185,15 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   text: {
-    position: 'absolute',
-    top: 240,
-    left: 70,
-    justifyContent: 'center',
+    // position: 'absolute',
+    // top: 240,
+    // left: 70,
     fontSize: 24,
     fontWeight: '400',
     color: '#000000',
     textAlign: 'center',
     lineHeight: 34.75,
-    //backgroundColor: '#F47100',
+    backgroundColor: '#',
   },
   //
   centeredView: {
@@ -249,12 +255,25 @@ const styles = StyleSheet.create({
     borderWidth: 0,
     padding: 10,
   },
+  topContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    background: '#f5f5f5',
+  },
+  middleContainer: {
+    flex: 4,
+    justifyContent: 'center',
+  },
   nextContainer: {
-    position: 'absolute',
-    //justifyContent: 'center',
-    //alignItems: 'center',
-    left: '16%',
-    top: 650,
+    // position: 'absolute',
+    // //justifyContent: 'center',
+    // //alignItems: 'center',
+    flex: 1.5,
+    width: '100%',
+    backgroundColor: '#F5F5F5',
+    alignItems: 'center',
+    // left: '16%',
+    // top: 650,
   },
 });
 

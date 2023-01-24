@@ -7,7 +7,7 @@ export const UserStyle = StyleSheet.create({
     flex: 1,
     // width: '100%',
     // height: 80,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
   },
   //
   //질문 스타일링
@@ -16,7 +16,7 @@ export const UserStyle = StyleSheet.create({
     flex: 2.5,
     // width: 240,
     // height: 140,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
@@ -27,7 +27,7 @@ export const UserStyle = StyleSheet.create({
     flexDirection: 'row',
     // width: 240,
     // height: 140,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
@@ -38,7 +38,7 @@ export const UserStyle = StyleSheet.create({
     flexDirection: 'row',
     // width: 240,
     // height: 140,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
@@ -49,7 +49,7 @@ export const UserStyle = StyleSheet.create({
     flexDirection: 'row',
     // width: 240,
     // height: 140,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
     textAlign: 'center',
@@ -58,14 +58,14 @@ export const UserStyle = StyleSheet.create({
   //한줄 질문 스타일링 && 선택지박스 2개 이하
   container0_2: {
     flex: 1.5,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   //한줄 질문 스타일링 && 선택지박스 3개 이상
   container0_3: {
     flex: 1.2,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -73,21 +73,21 @@ export const UserStyle = StyleSheet.create({
   //선택지박스 스타일링
   container1_1: {
     flex: 3.5,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   //2개 이하
   container1_2: {
     flex: 4.5,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   //3개 이상
   container1_3: {
     flex: 4.8,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
@@ -99,7 +99,7 @@ export const UserStyle = StyleSheet.create({
     // height: 90,
     flex: 1.5,
     width: '100%',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
   },
   //
@@ -107,19 +107,19 @@ export const UserStyle = StyleSheet.create({
   container3_1: {
     flex: 1.5,
     // flexDirection: 'row'
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   container3_2: {
     flex: 2,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
   container3_3: {
     flex: 2.5,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },

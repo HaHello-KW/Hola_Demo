@@ -5,19 +5,19 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 export const DefaultStyle = StyleSheet.create({
   container0: {
     flex: 1.5,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   container0_1: {
     flex: 4,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   container1: {
     flex: 5.5,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
@@ -32,7 +32,7 @@ export const DefaultStyle = StyleSheet.create({
   // },
   container1_2: {
     flex: 3,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
@@ -42,7 +42,7 @@ export const DefaultStyle = StyleSheet.create({
     // height: 90,
     flex: 1.5,
     width: '100%',
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#ffffff',
     alignItems: 'center',
   },
   onelinetxt: {
