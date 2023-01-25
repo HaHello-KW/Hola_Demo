@@ -31,7 +31,7 @@ const Q_RESULT = ({navigation, route}) => {
           activeOpacity={0.8}
           style={styles.button}
           onPress={() => navigation.navigate('RESULT_HOME')}>
-          <Text style={styles.text3}>다음</Text>
+          <Text style={styles.text3}>검사결과보기</Text>
         </TouchableOpacity>
       </ImageBackground>
       <GobackButton onPress={() => navigation.pop()} />
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     //다음
     position: 'absolute',
     left: 65,
-    top: 670,
+    bottom: 40,
     width: 260,
     height: 48,
     backgroundColor: '#FFFFFF',
@@ -113,10 +113,10 @@ const styles = StyleSheet.create({
   },
   text3: {
     fontSize: 16,
-    fontWeight: '215',
+    fontWeight: '800',
     lineHeight: 24,
     fontFamily: 'Noto Sans KR',
-    color: '#000000',
+    color: '#F47100',
   },
 });
 export default Q_RESULT;

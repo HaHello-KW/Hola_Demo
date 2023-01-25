@@ -13,6 +13,7 @@ import MyUpBar_wq from '../../upbar/UpBar_WQ';
 import TxtCollection from '../../txtCollection/txtcolletion';
 import SelectionButton from '../../Buttons/selectionButton';
 import {useState} from 'react';
+import NextButton from '../../Buttons/nextButton';
 
 const HQ_1 = ({navigation, route}) => {
   const [isButtonSelect, setIsButtonSelect] = useState('');
@@ -44,8 +45,7 @@ const HQ_1 = ({navigation, route}) => {
         })}
       </View>
       <View style={[UserStyle.container2]}>
-        <NextButtonHQ
-          onPress={() => navigation.navigate('HQ_2')}></NextButtonHQ>
+        <NextButton disabled={false} destination={'HQ_2'} />
       </View>
       <UserImg img={HQimg}></UserImg>
     </>

@@ -18,6 +18,7 @@ import GobackButton from '../../Buttons/gobackButton';
 
 import UserAimg from '../../../assets/images/userA.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
+import NextButton from '../../Buttons/nextButton';
 const WQ_3 = ({navigation, route}) => {
   Date.prototype.format = function (f) {
     if (!this.valueOf()) return ' ';
@@ -183,8 +184,7 @@ const WQ_3 = ({navigation, route}) => {
       </View>
       <View style={[DefaultStyle.container1_2]} />
       <View style={[DefaultStyle.container2]}>
-        <NextButtonHQ
-          onPress={() => navigation.navigate('WQ_4')}></NextButtonHQ>
+        <NextButton disabled={false} destination={'WQ_4'} />
       </View>
       <UserImg img={UserAimg}></UserImg>
     </>

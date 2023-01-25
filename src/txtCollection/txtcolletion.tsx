@@ -167,6 +167,22 @@ const TxtCollection = {
       '잘 모르고 있어',
     ],
   },
+  wq_2: {
+    title: '나는 체성분 측정을',
+    contents: ['해봤고, 내 상태를 알아', '해본적 없어'],
+  },
+  fq_1: {
+    title: '나는 요리를',
+    contents: [
+      '좋아해서 직접 만들어 먹어',
+      '바빠서 못하지만 건강하게 먹고 싶어',
+      '할 때도 있고, 안 할 때도 있어',
+    ],
+  },
+  alq_1: {
+    title: '나는 해산물 알러지가',
+    contents: ['있어', '없어'],
+  },
 };
 
 export default TxtCollection;
