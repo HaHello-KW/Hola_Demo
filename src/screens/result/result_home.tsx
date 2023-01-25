@@ -26,6 +26,8 @@ import rectangle_hospital from '../../../assets/images/Rectangle_hospital.png';
 
 import {useState} from 'react';
 
+//수정필요
+
 const RESULT_HOME = ({navigation, route}) => {
   const [amh_isopen, openFunc] = useState(true);
 
