@@ -71,9 +71,9 @@ const IQ_1 = ({navigation, route}) => {
         borderWidth: 1,
         borderRadius: 2,
         marginBottom: 20,
-        position: 'absolute',
-        left: 19,
-        top: 437,
+        // position: 'absolute',
+        // left: 19,
+        // top: 437,
       }}
       // Adding hint in TextInput using Placeholder option.
       placeholder="입력해주세요"
