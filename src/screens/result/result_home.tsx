@@ -25,45 +25,70 @@ import {height} from '@mui/system';
 import rectangle_hospital from '../../../assets/images/Rectangle_hospital.png';
 
 import {useState} from 'react';
-import GobackButton from '../../Buttons/gobackButton';
 
-//수정필요
+//차트 라이브러리 테스트를 위함
+import Chart from './chartExam';
+
+import TimeLine from './timeLineFullPage';
 
 const RESULT_HOME = ({navigation, route}) => {
+  const [target, change] = useState(false);
   const [amh_isopen, openFunc] = useState(true);
 
   const graph_box_open_amh = () => {
     return (
-      <>
-        <GobackButton onPress={() => navigation.pop()}></GobackButton>
-        <View style={styles.hormone_box_openMode}>
-          <Image
-            style={styles.amh}
-            source={require('../../../assets/images/AMH_result.png')}
-          />
+      <View style={styles.hormone_box_openMode}>
+        <Image
+          style={styles.amh}
+          source={require('../../../assets/images/AMH_result.png')}
+        />
 
-          <Text style={styles.hormone_text}>정상</Text>
-          <Text style={styles.hormone_value}>1.91 ng/ml</Text>
-          <TouchableOpacity onPress={() => alert('aa')}>
-            <Image
-              style={styles.hormone_button1}
-              source={require('../../../assets/images/hormone_open.png')}
-            />
-          </TouchableOpacity>
-          <View style={styles.graph_base}>
-            <Text style={styles.graph_xValue1}>34세</Text>
-            <Text style={styles.graph_xValue2}>35세</Text>
-            <Text style={styles.graph_xValue3}>36세</Text>
-            <Text style={styles.graph_xValue4}>37세</Text>
-            <Text style={styles.graph_yValue1}>87.5</Text>
-            <Text style={styles.graph_yValue2}>75.5</Text>
-            <Text style={styles.graph_yValue3}>62.5</Text>
-            <Text style={styles.graph_yValue4}>50.1</Text>
-            <Text style={styles.graph_yValue5}>37.6</Text>
-            {graph()}
-          </View>
+        <Text style={styles.hormone_text}>정상</Text>
+        <Text style={styles.hormone_value}>1.91 ng/ml</Text>
+        <TouchableOpacity onPress={() => change(!target)}>
+          <Image
+            style={styles.hormone_button1}
+            source={require('../../../assets/images/hormone_open.png')}
+          />
+        </TouchableOpacity>
+        <View style={styles.graph_base}>
+          {/* <Text style={styles.graph_xValue1}>34세</Text>
+          <Text style={styles.graph_xValue2}>35세</Text>
+          <Text style={styles.graph_xValue3}>36세</Text>
+          <Text style={styles.graph_xValue4}>37세</Text>
+          <Text style={styles.graph_yValue1}>87.5</Text>
+          <Text style={styles.graph_yValue2}>75.5</Text>
+          <Text style={styles.graph_yValue3}>62.5</Text>
+          <Text style={styles.graph_yValue4}>50.1</Text>
+          <Text style={styles.graph_yValue5}>37.6</Text>
+          {graph()} */}
+          <>{Chart()}</>
         </View>
-      </>
+      </View>
+    );
+  };
+
+  const graph_box_closed_amh = () => {
+    return (
+      <View style={styles.hormone_box_closeMode}>
+        <Image
+          style={styles.amh}
+          source={require('../../../assets/images/AMH_result.png')}
+        />
+
+        <Text style={styles.hormone_text}>정상</Text>
+        <Text style={styles.hormone_value}>1.91 ng/ml</Text>
+        <TouchableOpacity onPress={() => change(!target)}>
+          <Image
+            style={styles.hormone_button1}
+            source={require('../../../assets/images/hormone_close.png')}
+          />
+        </TouchableOpacity>
+        {/* <View style={styles.graph_base}>
+          
+          <>{Chart()}</>
+        </View> */}
+      </View>
     );
   };
 
@@ -107,53 +132,6 @@ const RESULT_HOME = ({navigation, route}) => {
     );
   };
 
-  const graph = () => {
-    return (
-      <>
-        <Image
-          style={styles.line_y0}
-          source={require('../../../assets/images/Line1.png')}
-        />
-        <Image
-          style={styles.line_y1}
-          source={require('../../../assets/images/Line1.png')}
-        />
-        <Image
-          style={styles.line_y2}
-          source={require('../../../assets/images/Line1.png')}
-        />
-        <Image
-          style={styles.line_y3}
-          source={require('../../../assets/images/Line1.png')}
-        />
-        <Image
-          style={styles.line_y4}
-          source={require('../../../assets/images/Line1.png')}
-        />
-        <Image
-          style={styles.line_x0}
-          source={require('../../../assets/images/Line2.png')}
-        />
-        <Image
-          style={styles.line_x1}
-          source={require('../../../assets/images/Line2.png')}
-        />
-        <Image
-          style={styles.line_x2}
-          source={require('../../../assets/images/Line2.png')}
-        />
-        <Image
-          style={styles.line_x3}
-          source={require('../../../assets/images/Line2.png')}
-        />
-        <Image
-          style={styles.line_x4}
-          source={require('../../../assets/images/Line2.png')}
-        />
-      </>
-    );
-  };
-
   return (
     <SafeAreaView>
       <ScrollView>
@@ -189,14 +167,18 @@ const RESULT_HOME = ({navigation, route}) => {
 
             <Text style={styles.content3}>하해호님 호르몬 수치</Text>
 
-            <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
+            <TouchableOpacity onPress={() => alert('호르몬수치 입력')}>
               <Text style={styles.input_hormone}>
                 호르몬 수치 입력하기 {'>'}
               </Text>
             </TouchableOpacity>
-            {graph_box_open_amh()}
-            {graph_box_closed_fsh()}
-            {graph_box_closed_lh()}
+            {/* {graph_box_open_amh()} */}
+            <View>
+              {/* {target ? graph_box_open_amh() : graph_box_closed_amh()} */}
+              {target ? graph_box_open_amh() : graph_box_closed_amh()}
+              {graph_box_closed_fsh()}
+              {graph_box_closed_lh()}
+            </View>
           </ImageBackground>
           <ImageBackground
             source={rectangle_hospital}
@@ -247,8 +229,7 @@ const RESULT_HOME = ({navigation, route}) => {
               여성호르몬 수치를 검사받을 수 있는 병원을 찾아보세요
             </Text>
             {/* 병원 검색하기 버튼 */}
-            <TouchableOpacity
-              onPress={() => () => alert('병원검색 컨텐츠 준비 중입니다.')}>
+            <TouchableOpacity onPress={() => alert('병원검색')}>
               <View
                 style={{
                   position: 'absolute',
@@ -288,7 +269,7 @@ const RESULT_HOME = ({navigation, route}) => {
             </Text>
             <View style={styles.timeLine_ex}>
               <ScrollView nestedScrollEnabled={true}>
-                <Text
+                {/* <Text
                   style={{
                     left: 22,
                     top: 6,
@@ -323,10 +304,10 @@ const RESULT_HOME = ({navigation, route}) => {
                 <Text>aa5</Text>
                 <Text>aa6</Text>
                 <Text>aa7</Text>
-                <Text>aa8</Text>
+                <Text>aa8</Text> */}
+                <TimeLine />
               </ScrollView>
-              <TouchableOpacity
-                onPress={() => alert('타임라인수정 컨텐츠 준비 중입니다.')}>
+              <TouchableOpacity onPress={() => alert('타임라인수정')}>
                 <Image
                   style={{left: 311, top: 2, width: 48, height: 48}}
                   source={require('../../../assets/images/changeTimelineButton.png')}
@@ -334,8 +315,7 @@ const RESULT_HOME = ({navigation, route}) => {
               </TouchableOpacity>
             </View>
           </View>
-          <TouchableOpacity
-            onPress={() => alert('시술정보 컨텐츠 준비 중입니다.')}>
+          <TouchableOpacity onPress={() => alert('시술정보')}>
             <ImageBackground
               style={styles.medicalInfo}
               source={require('../../../assets/images/medical_info.png')}>
@@ -365,6 +345,36 @@ const RESULT_HOME = ({navigation, route}) => {
               </Text>
             </ImageBackground>
           </TouchableOpacity>
+          <TouchableOpacity onPress={() => alert('시술정보')}>
+            <ImageBackground
+              style={styles.column}
+              source={require('../../../assets/images/column.png')}>
+              <Text
+                style={{
+                  left: 10,
+                  top: 70,
+                  width: 120,
+                  height: 27,
+                  fontSize: 24,
+                  fontWeight: '700',
+                  color: '#FFFFFF',
+                }}>
+                전문가 칼럼
+              </Text>
+              <Text
+                style={{
+                  left: 8,
+                  top: 80,
+                  width: 250,
+                  height: 20,
+                  fontSize: 14,
+                  fontWeight: '400',
+                  color: '#FFFFFF',
+                }}>
+                전문가들이 조언하는 난소 건강 관리 방법
+              </Text>
+            </ImageBackground>
+          </TouchableOpacity>
           <Text
             style={{
               position: 'absolute',
@@ -378,7 +388,7 @@ const RESULT_HOME = ({navigation, route}) => {
             }}>
             하해호님을 위한 건강 컨텐츠
           </Text>
-          <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
+          <TouchableOpacity onPress={() => alert('골반스트레칭')}>
             <Image
               //style={styles.strecth}
               style={{
@@ -417,7 +427,7 @@ const RESULT_HOME = ({navigation, route}) => {
             }}>
             쉽고 재미있게 따라할 수 있어요
           </Text>
-          <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
+          <TouchableOpacity onPress={() => alert('음악명상')}>
             <Image
               //style={styles.strecth}
               style={{
@@ -456,7 +466,7 @@ const RESULT_HOME = ({navigation, route}) => {
             }}>
             마음건강은 곧 신체건강 !
           </Text>
-          <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
+          <TouchableOpacity onPress={() => alert('영양제추천')}>
             <Image
               //style={styles.strecth}
               style={{
@@ -495,7 +505,7 @@ const RESULT_HOME = ({navigation, route}) => {
             }}>
             꼭 필요한 영야제를 모아봤어요
           </Text>
-          <TouchableOpacity onPress={() => alert('컨텐츠 준비 중입니다.')}>
+          <TouchableOpacity onPress={() => alert('음식정보')}>
             <Image
               //style={styles.strecth}
               style={{
@@ -555,30 +565,6 @@ const RESULT_HOME = ({navigation, route}) => {
                   color: '#FBFBFB',
                 }}>
                 더 많은 컨텐츠 보러가기
-              </Text>
-            </View>
-          </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-            <View
-              style={{
-                position: 'absolute',
-                left: 65,
-                top: 2285,
-                width: 260,
-                height: 48,
-                alignItems: 'center',
-                backgroundColor: '#F47100',
-                borderRadius: 4,
-              }}>
-              <Text
-                style={{
-                  position: 'absolute',
-                  top: 15,
-                  fontSize: 14,
-                  fontWeight: '500',
-                  color: '#FBFBFB',
-                }}>
-                홈으로 돌아가기
               </Text>
             </View>
           </TouchableOpacity>
@@ -680,6 +666,16 @@ const styles = StyleSheet.create({
     left: 30,
     top: 732,
     height: 434,
+    width: 330,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 8,
+  },
+  hormone_box_closeMode: {
+    position: 'absolute',
+    left: 30,
+    //left: '5%',
+    top: 732,
+    height: 72,
     width: 330,
     backgroundColor: '#FFFFFF',
     borderRadius: 8,
@@ -925,7 +921,16 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 20,
     //top: 2110,
-    top: 1310,
+    top: 1410,
+    width: 350,
+    height: 150,
+    borderRadius: 8,
+  },
+  column: {
+    position: 'absolute',
+    left: 20,
+    //top: 2110,
+    top: 1580,
     width: 350,
     height: 150,
     borderRadius: 8,
