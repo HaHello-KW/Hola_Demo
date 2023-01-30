@@ -31,10 +31,10 @@ const Q_Home = () => {
       <TouchableOpacity
         style={styles.startbutton}
         onPress={() => navigation.navigate('Q_Default_1')}>
-        <Text style={styles.starttxt}>시작하기</Text>
+        <Text style={styles.starttxt}>시작하기!</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.laterbutton} onPress={() => null}>
-        <Text style={styles.latertxt}>나중에 할래요</Text>
+        <Text style={styles.latertxt}>나중에 할래요!</Text>
       </TouchableOpacity>
     </ImageBackground>
   );
