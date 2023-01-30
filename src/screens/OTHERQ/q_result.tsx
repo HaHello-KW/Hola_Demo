@@ -10,6 +10,7 @@ import {
   Touchable,
 } from 'react-native';
 
+//tse
 import {ImageBackground} from 'react-native';
 import Homebg from '../../img/home_start.png';
 import NextButton from '../../Buttons/nextButton';
