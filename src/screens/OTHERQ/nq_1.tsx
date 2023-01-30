@@ -15,7 +15,7 @@ import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
-import UserAimg from '../../../assets/images/nq1Img.png';
+import UserAimg from '../../img/I_A.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
@@ -75,7 +75,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button1,
-            {backgroundColor: isSelect[0] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[0] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(0)}>
           <Text style={styles.text}>종합비타민</Text>
@@ -84,7 +84,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button2,
-            {backgroundColor: isSelect[1] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[1] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(1)}>
           <Text style={styles.text}>칼슘</Text>
@@ -93,7 +93,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button3,
-            {backgroundColor: isSelect[2] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[2] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(2)}>
           <Text style={styles.text}>철분</Text>
@@ -102,7 +102,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button4,
-            {backgroundColor: isSelect[3] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[3] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(3)}>
           <Text style={styles.text}>엽산</Text>
@@ -111,7 +111,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button5,
-            {backgroundColor: isSelect[4] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[4] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(4)}>
           <Text style={styles.text}>마그네슘</Text>
@@ -120,7 +120,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button6,
-            {backgroundColor: isSelect[5] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[5] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(5)}>
           <Text style={styles.text}>오메가 3</Text>
@@ -129,7 +129,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button7,
-            {backgroundColor: isSelect[6] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[6] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(6)}>
           <Text style={styles.text}>코엔자임큐텐</Text>
@@ -138,7 +138,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button8,
-            {backgroundColor: isSelect[7] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[7] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(7)}>
           <Text style={styles.text}>아세틸시스테인</Text>
@@ -147,7 +147,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button9,
-            {backgroundColor: isSelect[8] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[8] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(8)}>
           <Text style={styles.text}>아연</Text>
@@ -156,7 +156,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button10,
-            {backgroundColor: isSelect[9] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[9] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(9)}>
           <Text style={styles.text}>레스베라트롤</Text>
@@ -165,7 +165,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button11,
-            {backgroundColor: isSelect[10] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[10] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(10)}>
           <Text style={styles.text}>이노시톨</Text>
@@ -174,7 +174,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button12,
-            {backgroundColor: isSelect[11] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[11] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(11)}>
           <Text style={styles.text}>요오드</Text>
@@ -183,7 +183,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button13,
-            {backgroundColor: isSelect[12] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[12] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(12)}>
           <Text style={styles.text}>셀레늄</Text>
@@ -192,7 +192,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button14,
-            {backgroundColor: isSelect[13] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[13] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(13)}>
           <Text style={styles.text}>프로바이오틱스</Text>
@@ -201,7 +201,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button15,
-            {backgroundColor: isSelect[14] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[14] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(14)}>
           <Text style={styles.text}>글루타치온</Text>
@@ -210,7 +210,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button16,
-            {backgroundColor: isSelect[15] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[15] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(15)}>
           <Text style={styles.text}>타이로신</Text>
@@ -219,7 +219,7 @@ const NQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button17,
-            {backgroundColor: isSelect[16] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[16] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => {
             selectChangeFunction(16);

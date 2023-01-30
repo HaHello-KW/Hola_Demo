@@ -19,7 +19,7 @@ import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 import DateTimePicker from 'react-native-modal-datetime-picker';
 import DateTimePickerModal from 'react-native-modal-datetime-picker';
 import {DefaultStyle} from '../../styling/defaultLayout';
-import HQimg from '../../../assets/images/HQ1.png';
+import HQimg from '../../img/I_A.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 import {useState} from 'react';
 import NextButton from '../../Buttons/nextButton';
@@ -92,7 +92,7 @@ const HQ_2 = ({navigation, route}) => {
     textInput: {
       fontSize: 24,
       fontWeight: '400',
-      color: '#F47100',
+      color: '#4992FF',
       height: 50,
       width: 300,
       textAlign: 'center',

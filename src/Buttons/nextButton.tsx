@@ -63,7 +63,7 @@ NextButton.propTypes = {
 const styles = StyleSheet.create({
   enable: {
     justifyContent: 'center',
-    backgroundColor: '#F47100',
+    backgroundColor: '#4992FF',
     width: 260,
     height: 48,
     borderRadius: 5,

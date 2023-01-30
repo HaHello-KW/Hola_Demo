@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 
 import {ImageBackground} from 'react-native';
-import Homebg from '../../../assets/images/home_start.png';
+import Homebg from '../../img/home_start.png';
 import NextButton from '../../Buttons/nextButton';
 
 import {UserStyle} from '../../styling/userLayout';
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     lineHeight: 24,
     fontFamily: 'Noto Sans KR',
-    color: '#F47100',
+    color: '#4992FF',
   },
 });
 export default Q_RESULT;

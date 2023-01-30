@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
   textInput: {
     fontSize: 24,
     fontWeight: '400',
-    color: '#F47100',
+    color: '#4992FF',
     height: 50,
     width: 300,
     textAlign: 'center',
@@ -265,13 +265,13 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 16,
     lineHeight: 23,
-    color: '#FF7C00',
+    color: '#4992FF',
   },
   input: {
     alignItems: 'center',
     fontSize: 24,
     fontWeight: '400',
-    color: '#F47100',
+    color: '#4992FF',
     justifyContent: 'center',
   },
   container_test: {

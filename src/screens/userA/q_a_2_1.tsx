@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     // lineHeight: 34.75,
     fontSize: 24,
     fontWeight: '400',
-    color: '#F47100',
+    color: '#4992FF',
     justifyContent: 'center',
   },
   container: {flex: 1},

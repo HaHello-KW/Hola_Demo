@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {Box, HStack} from '@react-native-material/core';
 import {ImageBackground} from 'react-native';
-import homebg from '../../assets/images/home_start.png';
+import homebg from '../img/home_start.png';
 
 const MyUpBar_wq = () => {
   return (

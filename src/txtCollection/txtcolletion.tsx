@@ -60,7 +60,7 @@ const TxtCollection = {
   //임시
   q_a_1: {
     level: 4,
-    imgPath: images.userA,
+    imgPath: images.I_A,
     quiestionType: 'Button_Selector',
     questionId: 'Q_userA_1',
     questionTitle: '나는',
@@ -72,7 +72,7 @@ const TxtCollection = {
   },
   q_a_1_1: {
     level: 4,
-    imgPath: images.userA,
+    imgPath: images.I_A,
     quiestionType: 'Threeline_Picker',
     questionId: 'Q_userA_1_1',
     // questionTitle: '나는',
@@ -84,7 +84,7 @@ const TxtCollection = {
   },
   q_a_2: {
     level: 5,
-    imgPath: images.userA,
+    imgPath: images.I_A,
     quiestionType: 'Button_Selector',
     questionId: 'Q_userA_2',
     questionTitle: '나는 아이를',
@@ -96,7 +96,7 @@ const TxtCollection = {
   },
   q_a_2_1: {
     level: 5,
-    imgPath: images.userA,
+    imgPath: images.I_A,
     quiestionType: 'Threeline_Picker',
     questionId: 'Q_userA_2_1',
     // questionTitle: '나는',
@@ -108,7 +108,7 @@ const TxtCollection = {
   },
   q_a_2_2: {
     level: 5,
-    imgPath: images.userA,
+    imgPath: images.I_A,
     quiestionType: 'Button_Selector',
     questionId: 'Q_userA_2_2',
     questionTitle: '나는',
@@ -120,7 +120,7 @@ const TxtCollection = {
   },
   q_a_2_3: {
     level: 5,
-    imgPath: images.userA,
+    imgPath: images.I_A,
     quiestionType: 'Threeline_Picker',
     questionId: 'Q_userA_2_3',
     // questionTitle: '나는',
@@ -132,7 +132,7 @@ const TxtCollection = {
   },
   q_a_3: {
     level: 6,
-    imgPath: images.userA,
+    imgPath: images.I_A,
     quiestionType: 'Button_Selector',
     questionId: 'Q_userA_3',
     questionTitle: '나는 난자 냉동을',
@@ -157,7 +157,7 @@ const TxtCollection = {
       '하해호님에게 맞는 콘텐츠를 추천해드려요.',
       '다음 설문에 답변해보세요',
     ],
-    imgPath: images.userA,
+    imgPath: images.I_A,
   },
   hq_1: {
     title: '나는 여성호르몬 검사를',

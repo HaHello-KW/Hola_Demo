@@ -16,7 +16,7 @@ import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import {DefaultStyle} from '../../styling/defaultLayout';
 import GobackButton from '../../Buttons/gobackButton';
 
-import UserAimg from '../../../assets/images/userA.png';
+import UserAimg from '../../img/I_A.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 import NextButton from '../../Buttons/nextButton';
 const WQ_3 = ({navigation, route}) => {
@@ -87,7 +87,7 @@ const WQ_3 = ({navigation, route}) => {
     textInput: {
       fontSize: 24,
       fontWeight: '400',
-      color: '#F47100',
+      color: '#4992FF',
       height: 50,
       width: 300,
       textAlign: 'center',

@@ -5,8 +5,9 @@ import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
 import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 
-import HQimg from '../../../assets/images/HQ1.png';
+//import HQimg from '../../../assets/images/HQ1.png';
 //import HQimg from '../../../assets/images/HQ1.png'
+import HQimg from '../../img/I_A.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';

@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: '900',
     textAlign: 'center',
-    color: '#f47100',
+    color: '#4992FF',
     lineHeight: 40,
   },
   description: {
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   startbutton: {
     width: 250,
     height: 48,
-    backgroundColor: '#f47100',
+    backgroundColor: '#4992FF',
     borderRadius: 4,
     justifyContent: 'center',
     marginBottom: '4%',
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
     width: 250,
     height: 48,
     backgroundColor: 'transparent',
-    borderColor: '#f47100',
+    borderColor: '#4992FF',
     borderWidth: 1,
     borderRadius: 4,
     justifyContent: 'center',

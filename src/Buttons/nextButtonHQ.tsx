@@ -23,7 +23,7 @@ export default class NextButton extends Component<Next, any> {
 const styles = StyleSheet.create({
   button: {
     justifyContent: 'center',
-    backgroundColor: '#F47100',
+    backgroundColor: '#4992FF',
     width: 260,
     height: 48,
     borderRadius: 5,

@@ -16,7 +16,7 @@ const MyUpBar = ({level}: props, {navigation}) => {
   }
   return (
     <>
-      <Box w="100%" h="18%" style={{backgroundColor: '#FFAF49'}}>
+      <Box w="100%" h="18%" style={{backgroundColor: '#4992FF'}}>
         <HStack style={styles.boxline} fill center spacing={8}>
           {arr}
         </HStack>
@@ -58,7 +58,7 @@ const styles = StyleSheet.create({
     marginLeft: '3%',
   },
   boxlineDone: {
-    backgroundColor: '#F47100',
+    backgroundColor: '#042454',
   },
   boxlineYet: {
     backgroundColor: '#FFFFFF',

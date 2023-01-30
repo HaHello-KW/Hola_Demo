@@ -15,7 +15,7 @@ import NextButtonHQ from '../../Buttons/nextButtonHQ'; //HQ부터
 import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 
-import HQimg from '../../../assets/images/HQ1.png';
+import HQimg from '../../img/I_A.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
@@ -127,7 +127,7 @@ const HQ_3 = ({navigation, route}) => {
               style={[
                 styles.button,
                 styles.buttonClose,
-                {backgroundColor: isNullAmh() ? '#BDBDBD' : '#FF7C00'},
+                {backgroundColor: isNullAmh() ? '#BDBDBD' : '#4992FF'},
               ]}
               //amh수치값이 입력되지 않았으면 modal을 닫을 수 없음
               disabled={isNullAmh()}
@@ -165,7 +165,7 @@ const HQ_3 = ({navigation, route}) => {
               style={[
                 styles.button,
                 styles.buttonClose,
-                {backgroundColor: isNullFsh() ? '#BDBDBD' : '#FF7C00'},
+                {backgroundColor: isNullFsh() ? '#BDBDBD' : '#4992FF'},
               ]}
               //amh수치값이 입력되지 않았으면 modal을 닫을 수 없음
               disabled={isNullFsh()}
@@ -202,7 +202,7 @@ const HQ_3 = ({navigation, route}) => {
               style={[
                 styles.button,
                 styles.buttonClose,
-                {backgroundColor: isNullLh() ? '#BDBDBD' : '#FF7C00'},
+                {backgroundColor: isNullLh() ? '#BDBDBD' : '#4992FF'},
               ]}
               //amh수치값이 입력되지 않았으면 modal을 닫을 수 없음
               disabled={isNullLh()}
@@ -239,7 +239,7 @@ const HQ_3 = ({navigation, route}) => {
               style={[
                 styles.button,
                 styles.buttonClose,
-                {backgroundColor: isNullTsh() ? '#BDBDBD' : '#FF7C00'},
+                {backgroundColor: isNullTsh() ? '#BDBDBD' : '#4992FF'},
               ]}
               //amh수치값이 입력되지 않았으면 modal을 닫을 수 없음
               disabled={isNullTsh()}
@@ -276,7 +276,7 @@ const HQ_3 = ({navigation, route}) => {
               style={[
                 styles.button,
                 styles.buttonClose,
-                {backgroundColor: isNullE2() ? '#BDBDBD' : '#FF7C00'},
+                {backgroundColor: isNullE2() ? '#BDBDBD' : '#4992FF'},
               ]}
               //amh수치값이 입력되지 않았으면 modal을 닫을 수 없음
               disabled={isNullE2()}
@@ -311,7 +311,7 @@ const HQ_3 = ({navigation, route}) => {
               top: 40,
               width: 100,
               height: 100,
-              borderRadius: 100,
+
               overflow: 'hidden',
               //borderWidth: 3,
               borderColor: 'blue',
@@ -320,8 +320,8 @@ const HQ_3 = ({navigation, route}) => {
             source={
               // amh수치값이 입력되지 않았으면 AMH파일을 불러오고 입력됐으면 AMHSelect파일을 불러옴
               isSelect[0]
-                ? require('../../../assets/images/AMHSelect.png')
-                : require('../../../assets/images/AMH.png')
+                ? require('../../../assets/images/AMH_COLORED.png')
+                : require('../../../assets/images/AMH_EMPTY.png')
             }
           />
         </Pressable>
@@ -341,7 +341,7 @@ const HQ_3 = ({navigation, route}) => {
               //bottom: '20%',
               width: 100,
               height: 100,
-              borderRadius: 10,
+
               overflow: 'hidden',
               //borderWidth: 3,
               borderColor: 'blue',
@@ -350,8 +350,8 @@ const HQ_3 = ({navigation, route}) => {
             source={
               // amh수치값이 입력되지 않았으면 AMH파일을 불러오고 입력됐으면 AMHSelect파일을 불러옴
               isSelect[1]
-                ? require('../../../assets/images/FSHSelect.png')
-                : require('../../../assets/images/FSH.png')
+                ? require('../../../assets/images/FSH_COLORED.png')
+                : require('../../../assets/images/FSH_EMPTY.png')
             }
           />
         </Pressable>
@@ -370,7 +370,7 @@ const HQ_3 = ({navigation, route}) => {
               top: 20,
               width: 100,
               height: 100,
-              borderRadius: 100,
+
               overflow: 'hidden',
               //borderWidth: 3,
               borderColor: 'blue',
@@ -379,8 +379,8 @@ const HQ_3 = ({navigation, route}) => {
             source={
               // amh수치값이 입력되지 않았으면 AMH파일을 불러오고 입력됐으면 AMHSelect파일을 불러옴
               isSelect[2]
-                ? require('../../../assets/images/LH_colored.png')
-                : require('../../../assets/images/LH.png')
+                ? require('../../../assets/images/LH_COLORED.png')
+                : require('../../../assets/images/LH_EMPTY.png')
             }
           />
         </Pressable>
@@ -398,7 +398,7 @@ const HQ_3 = ({navigation, route}) => {
               top: 170,
               width: 100,
               height: 100,
-              borderRadius: 40,
+
               overflow: 'hidden',
               //borderWidth: 3,
               borderColor: 'blue',
@@ -407,8 +407,8 @@ const HQ_3 = ({navigation, route}) => {
             source={
               // amh수치값이 입력되지 않았으면 AMH파일을 불러오고 입력됐으면 AMHSelect파일을 불러옴
               isSelect[3]
-                ? require('../../../assets/images/TSH_colored.png')
-                : require('../../../assets/images/TSH.png')
+                ? require('../../../assets/images/TSH_COLORED.png')
+                : require('../../../assets/images/TSH_EMPTY.png')
             }
           />
         </Pressable>
@@ -426,7 +426,6 @@ const HQ_3 = ({navigation, route}) => {
               top: 60,
               width: 100,
               height: 100,
-              borderRadius: 40,
               overflow: 'hidden',
               //borderWidth: 3,
               borderColor: 'blue',
@@ -435,8 +434,8 @@ const HQ_3 = ({navigation, route}) => {
             source={
               // amh수치값이 입력되지 않았으면 AMH파일을 불러오고 입력됐으면 AMHSelect파일을 불러옴
               isSelect[4]
-                ? require('../../../assets/images/E2_colored.png')
-                : require('../../../assets/images/E2.png')
+                ? require('../../../assets/images/E2_COLORED.png')
+                : require('../../../assets/images/E2_EMPTY.png')
             }
           />
         </Pressable>
@@ -517,7 +516,7 @@ const styles = StyleSheet.create({
   inputText: {
     fontSize: 19,
     //fontWeight: '400',
-    color: '#F47100',
+    color: '#4992FF',
     // marginTop: 20,
     textAlign: 'center',
     // lineHeight: 34.75,

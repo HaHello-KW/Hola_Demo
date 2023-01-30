@@ -31,7 +31,7 @@ function SelectionButton({txt, isSelected, handlePress, elementIndex}: props) {
       <TouchableOpacity
         style={[
           styles.button,
-          {backgroundColor: isSelected ? '#F47100' : '#f2f2f2'},
+          {backgroundColor: isSelected ? '#4992FF' : '#f2f2f2'},
         ]}
         onPress={() => handlePress(elementIndex)}>
         <Text style={[styles.txt, {color: isSelected ? '#fbfbfb' : '#242424'}]}>

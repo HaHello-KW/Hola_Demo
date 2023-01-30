@@ -16,12 +16,12 @@ import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
-import UserAimg from '../../../assets/images/userA.png';
+import UserAimg from '../../img/I_A.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import {Box, HStack} from '@react-native-material/core';
 
-import Homebg from '../../../assets/images/home_start.png';
+import Homebg from '../../img/home_start.png';
 import {ImageBackground} from 'react-native';
 import {unstable_getNormalizedScrollLeft} from '@mui/utils';
 

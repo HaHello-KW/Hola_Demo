@@ -18,7 +18,7 @@ import SelectionButtonHQ from '../../Buttons/selectionButtonHQ'; //HQ부터
 import GobackButton from '../../Buttons/gobackButton';
 import SelectionButton_V2 from '../../Buttons/2selectionButton_v';
 
-import UserAimg from '../../../assets/images/iq1Img.png';
+import UserAimg from '../../img/I_A.png';
 import UserImg from '../../Buttons/userImgHQ'; //HQ부터
 
 import MyUpBar_wq from '../../upbar/UpBar_WQ';
@@ -97,7 +97,7 @@ const IQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button1,
-            {backgroundColor: isSelect[0] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[0] ? '#4992FF' : '#E0E0E0'},
           ]}
           //첫번째 버튼(고혈압) -> 첫번째 배열의 index는 0
           onPress={() => selectChangeFunction(0)}>
@@ -107,7 +107,7 @@ const IQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button2,
-            {backgroundColor: isSelect[1] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[1] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(1)}>
           <Text style={styles.text}>당뇨</Text>
@@ -116,7 +116,7 @@ const IQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button3,
-            {backgroundColor: isSelect[2] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[2] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(2)}>
           <Text style={styles.text}>갑상선 항진증</Text>
@@ -125,7 +125,7 @@ const IQ_1 = ({navigation, route}) => {
           activeOpacity={0.8}
           style={[
             styles.button4,
-            {backgroundColor: isSelect[3] ? '#F47100' : '#E0E0E0'},
+            {backgroundColor: isSelect[3] ? '#4992FF' : '#E0E0E0'},
           ]}
           onPress={() => selectChangeFunction(3)}>
           <Text style={styles.text}>갑상선 저하증</Text>

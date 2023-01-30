@@ -14,7 +14,8 @@ import {
 
 import {ImageBackground} from 'react-native';
 // import {RootStackParamList} from '../../../App';
-import Homebg from '../../../assets/images/home_start.png';
+//import Homebg from '../../../assets/images/home_start.png';
+import Homebg from '../../img/home_start.png';
 import GobackButton from '../../Buttons/gobackButton';
 import NextButton from '../../Buttons/nextButton';
 
