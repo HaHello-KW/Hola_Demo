@@ -17,7 +17,7 @@ import {ImageBackground} from 'react-native';
 import Homebg from '../../img/home_start.png';
 import GobackButton from '../../Buttons/gobackButton';
 import NextButton from '../../Buttons/nextButton';
-
+//
 const Q_Home = () => {
   const navigation = useNavigation();
   return (
