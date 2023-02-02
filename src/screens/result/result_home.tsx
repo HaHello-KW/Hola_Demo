@@ -75,7 +75,7 @@ const RESULT_HOME = ({navigation, route}) => {
           />
         </TouchableOpacity>
         {/* <View style={styles.graph_base}>
-          
+
           <>{Chart()}</>
         </View> */}
       </View>
@@ -164,7 +164,7 @@ const RESULT_HOME = ({navigation, route}) => {
               }}>
               <Image
                 style={styles.A_image}
-                source={require('../../../assets/images/userA.png')}
+                source={require('../../img/I_A.png')}
               />
               {/* <Text style={styles.content1}>여유로운 똑똑이 유형</Text> */}
               <Text style={styles.content2}>
